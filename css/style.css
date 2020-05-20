@@ -1,0 +1,7 @@
+@media screen and (min-width: 1000px) {
+	.nav-center
+	{
+		display:flex !important;
+		justify-content: center;
+	}
+}
