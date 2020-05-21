@@ -5,3 +5,12 @@
 		justify-content: center;
 	}
 }
+
+@font-face {
+	font-family: "myGeorgia";
+	src: url(/fontfamily/Georgia-PersonalUse.otf),
+}
+@font-face {
+	font-family: "Goudy";
+	src: url(/fontfamily/Goudy-Old-Style-Regular.ttf);
+}

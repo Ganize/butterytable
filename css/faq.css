@@ -1,0 +1,27 @@
+hr{
+    width:35%;
+    border: 1.5px solid;
+    color: #C18281;
+}
+
+.words{
+    text-align: center;
+    margin-top:10px;
+    text-transform: uppercase;
+    font-family: myGeorgia;
+    font-size: 20px;
+    color: #726061;
+}
+
+li{
+    margin: 0 0 10px 0;
+    color: #E4B8B4;
+    font-size: 18px;
+}
+.breakline{
+    margin: 0 0 20px 0;
+    font-family: myGeorgia;
+    font-size:16px;
+    font-style: italic;
+    color: #A09A9A;
+}

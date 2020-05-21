@@ -1,9 +1,15 @@
 <!-- Header-->
 <?php include('templates/header.php');?>
 
-Index Page, Home has an active class
+
 <?php
 include 'db_connection.php';
+=======
+
+
+<a href="https://www.facebook.com/butterytable/"><i class="fa fa-facebook-square"></i></a>
+<a href="https://www.instagram.com/butterytablebakery/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+>>>>>>> 393f4add8c66fa930cd30cb74c799fd00f97068b
 
 $conn = OpenCon();
 
@@ -31,3 +37,4 @@ CloseCon($conn);
 </form>
 <!--Footer-->
 <?php include('templates/footer.php');?>
+
