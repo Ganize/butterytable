@@ -1,17 +1,15 @@
 <!-- Header-->
-<?php include('templates/header.php');?>
+<?php include('templates/header.php'); ?>
 
 
 <?php
-	include 'db_connection.php';
-	$conn = openCon();
-	if($conn)
-	{
-		echo "Connected Successfully";
-    
-	}
-	
-	closeCon($conn);
+include 'db_connection.php';
+$conn = openCon();
+if ($conn) {
+    echo "Connected Successfully";
+}
+
+closeCon($conn);
 
 ?>
 
@@ -20,7 +18,7 @@
 <a href="https://www.instagram.com/butterytablebakery/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 
 <div class="form-container">
-    <form action="/butterytable/login/insert.php" method="post">
+    <form action="/butterytable/create/insert.php" method="post">
         <div class="form-group">
             <label for="user_name">Username</label>
             <input type="text" name="user_name" id="user_name">
@@ -32,11 +30,10 @@
         <div class="form-group">
             <label for="email">Email Address</label>
             <input type="text" name="email" id="email">
-       </div>
-        <button class="btn" type="submit" name="register_user" >Save</button>
+        </div>
+        <button class="btn" type="submit" name="register_user">Save</button>
     </form>
 </div>
 
 <!--Footer-->
-<?php include('templates/footer.php');?>
-
+<?php include('templates/footer.php'); ?>
