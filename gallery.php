@@ -1,7 +1,7 @@
 <!-- Header-->
 <?php include('templates/header.php');?>
 
-Index Page, Home has an active class
+Test
 
 <!--Footer-->
 <?php include('templates/footer.php');?>

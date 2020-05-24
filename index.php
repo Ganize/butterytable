@@ -1,26 +1,26 @@
 <!-- Header-->
 <?php include('templates/header.php');?>
 
-
-<?php
-	include 'db_connection.php';
-	$conn = openCon();
-	if($conn)
-	{
-		echo "Connected Successfully";
+<?php if (isset($_SESSION['username'])):?>
+    <div>
+        <?php 
+            echo $_SESSION['username'];
     
-	}
-	
-	closeCon($conn);
+         ?>
+    </div>
 
-?>
+<?php else :?>
+    <div>
+        Hello
+    </div>
+<?php endif ?>
 
 
 <a href="https://www.facebook.com/butterytable/"><i class="fa fa-facebook-square"></i></a>
 <a href="https://www.instagram.com/butterytablebakery/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 
 <div class="form-container">
-    <form action="/butterytable/login/insert.php" method="post">
+    <form action="includes/signup.inc.php" method="post">
         <div class="form-group">
             <label for="user_name">Username</label>
             <input type="text" name="user_name" id="user_name">
@@ -34,6 +34,7 @@
             <input type="text" name="email" id="email">
        </div>
         <button class="btn" type="submit" name="register_user" >Save</button>
+        <button class="btn" type="submit" name="login" >Login</button>
     </form>
 </div>
 
