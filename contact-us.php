@@ -2,64 +2,96 @@
 <?php include('templates/header.php');?>
 <link rel="stylesheet" href="css/contact.css" type="text/css">
 
-<input type="button" value="Enquiry"/>
-
-<input type="button" value="Quotation"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
+
+
+<?php if(isset($_SESSION['userId'])):?>
+    <div>
+        <?php 
+ 	
+            echo $_SESSION['userUid'];
+            echo $_SESSION['userEmail'];
+        ?>
+    </div>
+
+
+<?php endif;?>
 <div>
-	<div class="form-container">
-		<div>Quotation Form</div>
-		<form action="includes/quotation.inc.php" method="post">
-			<div class="form-group contact-group">
-				<label for="quotation-name">Name*</label>
-				<input type="text" name="quotation-name" id="quotation-name">
-			</div>
-			<div class="form-group contact-group">
-				<label for="quotation-email">Email*</label>
-				<input type="email" name="quotation-email" id="quotation-email">
-			</div>
-			<div class="form-group contact-group">
-				<label for="quotation-contact">Contact Number*</label>
-				<input type="text" maxlength="8" name="quotation-contact" id="quotation-contact">
-			</div>
-			<div class="form-group contact-group">
-				<label for="quotation-size">Serving Size/Quantity</label>
-				<input type="number" name="quotation-size" id="quotation-size">
-			</div>
-			<div class="form-group contact-group">
-				<label for="quotation-category">Category</label>
-				<select name="quotation-category" id="quotation-category">
-				  <option value="test1">test1</option>
-				  <option value="test2">test2</option>
-				</select>
-			</div>
-			<div class="form-group contact-group">
-				<label for="quotation-flavour">Cake Flavour</label>
-				<select name="quotation-flavour" id="quotation-flavour">
-				  <option value="test3">test3</option>
-				  <option value="test4">test4</option>
-				</select>
-			</div>
+<?php 
 
+		require 'includes/db_conn.inc.php';
 
-			<div class="form-group contact-group">
-				<label for="">Cake Design</label>
-				<textarea name="quotation-design" id="quotation-design"></textarea>
-			</div>
-			<div class="form-group contact-group">
-				<label for="">Date of Collection</label>
-				<input type="checkbox" id="quotation-collection" name="quotation-collection" value="Self-Collection">
-				<input type="checkbox" id="quotation-delivery" name="quotation-collection" value="Delivery from $15">
-			</div>
-			<div class="form-group contact-group">
-				<label for="">Additional Comments</label>
-				<textarea name="quotation-comments" id="quotation-comments"></textarea>
-			</div>
-			<button class="btn" type="submit" name="btn-quotation" >Submit</button>
-		</form>
-	</div>
+		$sql =  "SELECT * FROM test_flavour WHERE catergoryId= 1";
+		$stmt = mysqli_stmt_init($conn);
+		if(!mysqli_stmt_prepare($stmt, $sql))
+		{
+			header("Location: contact-us.php?error=sqlerror");
+			exit();
+		}
+		else
+		{
+			mysqli_stmt_execute($stmt);
+			$result = mysqli_stmt_get_result($stmt);
+			while($row = mysqli_fetch_assoc($result)) //Fectching the data from result
+			{
+				echo "</br>".$row["name"];
+				echo "</br>".$row["id"];
+
+				$sql1 =  "SELECT * FROM bt_wishlist WHERE EXISTS (SELECT * FROM test_flavour WHERE bt_wishlist.user_id = ?  && catergoryId = ? && flavourId = ?)";
+				$stmt1 = mysqli_stmt_init($conn);
+				if(!mysqli_stmt_prepare($stmt1, $sql1))
+				{
+					//header("Location: contact-us.php?error=sqlerror");
+					exit();
+				}
+				else
+				{
+					mysqli_stmt_bind_param($stmt1, "iii", $_SESSION['userUid'] , $row["id"], $row["catergoryId"]); //Prepare statement
+					mysqli_stmt_execute($stmt1);
+					mysqli_stmt_store_result($stmt1);
+
+					$resultCheck = mysqli_stmt_num_rows($stmt1); //Check if there is any row
+					if ($resultCheck > 0) {
+						echo '<span class="fa fa-star checked" id="menuid_'.$row["id"].'" name="'.$row["id"].'"></span>';
+					}
+					else
+					{
+						echo '<span class="fa fa-star" id="menuid_'.$row["id"].'" name="'.$row["id"].'"></span>';
+					}
+				}				
+			}
+		}
+	
+?>
 </div>
+<script>
+	jQuery(document).ready(function($){
+		jQuery(".fa-star").click(function(){
+			var flavourId = $(this).attr("name");
+			var selectedId = $(this).attr("id");
+			var catergoryId = 1;
+			$.ajax({
+				type: "POST",
+				url: "includes/wishlist.inc.php",
+				data: { fId: flavourId, cId: catergoryId} ,
+				}).done(function( msg ) {
+					var target_star = document.getElementById(selectedId);
+					if(msg == 0){
+ 						target_star.classList.remove("checked");
+					}
+					else if(msg == 1){
+						target_star.classList.add("checked");
+					}
+			  	});	
+			});
+		});
+	
+</script>
+
+<!--Footer-->
+<?php include('templates/footer.php'); ?>
 
 <!--Footer-->
 <?php include('templates/footer.php');?>

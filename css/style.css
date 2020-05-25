@@ -63,3 +63,21 @@
 {
   background-image: url('../images/password.png');
 }
+
+.container
+{
+  max-width: 500px;
+  margin: auto;
+}
+
+.checked
+{
+	color:orange !important;
+}
+
+.fa-star
+{
+	color:grey;
+	cursor: pointer;
+}
+
