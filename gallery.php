@@ -1,6 +1,5 @@
 <!-- Header-->
-<?php include('templates/header.php'); ?>
-
+<?php include('templates/header.php');?>
 <?php
 
 require 'includes/db_conn.inc.php';

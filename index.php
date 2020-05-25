@@ -1,6 +1,6 @@
 <!-- Header-->
 <?php include('templates/header.php'); ?>
-
+<link rel="stylesheet" href="css/index.css" type="text/css">
 <?php
 
 require 'includes/db_conn.inc.php';
@@ -16,8 +16,8 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
 }
 
 ?>
-<div class="container-fluid">
-    <div class="row justify-content-center mb-2" >
+<div class="container-fluid" style="background-color:#F7ECEC;">
+    <div class="row justify-content-center mb-2">
         <div class="col-lg-10">
             <div id="demo" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
@@ -46,27 +46,55 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
                         }
                     ?>
                         <div class="carousel-item <?= $actives; ?>">
-                            <img src="images/<?= $row['gallery_path'] ?>" width="100%" height="800px">
+                            <img src="images/<?= $row['gallery_path'] ?>" width="100%" height="670px">
                         </div>
 
                     <?php $i++;
                     } ?>
                 </div>
-
-                <!-- Left and right controls -->
-                <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" href="#demo" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
-
             </div>
         </div>
     </div>
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+<div class="butterytable">
+    <h2>Buttery Table</h2>
+    <hr style="width: 20%; border-color: #C18281;" />
+    <div class="quotes">
+        <p>Hand-baked cake perfection and meticulously coated with buttercream and fondant alike</p>
+        <p>We serve customsied cakes and desserts that are lower in sugar</p>
+    </div>
+    <a href="#" class="button">get a quotes</a>
+</div>
+<div class="posts">
+    <h2>Posts</h2>
+    <hr style="width: 8%; border-color: #C18281;" />
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            <img src="images/cake1.jpg" width="350px" height="350px">
+            </div>
+            <div class="col">
+            <img src="images/cake2.jpg" width="350px" height="350px">
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="socialmedia">
+    <h2 style="color: white;">Follow us</h2>
+    <hr style="width: 8%; border-color: #FFFFFF;" />
+    <div class="iconphotos">
+        <img src="images/carousell.png" width="45px" height="45px">
+    </div>
 </div>
 
-
-<!-- <a href="https://www.facebook.com/butterytable/"><i class="fa fa-facebook-square"></i></a>
-<a href="https://www.instagram.com/butterytablebakery/"><i class="fa fa-instagram" aria-hidden="true"></i></a> -->
-
+<!--Footer-->
+<?php include('templates/footer.php'); ?>
