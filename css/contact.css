@@ -1,0 +1,10 @@
+.contact-group input
+{
+	padding-left:0px;
+}
+
+.contact-group label
+{
+	background: white;
+    width: fit-content;
+}

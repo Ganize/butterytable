@@ -2,15 +2,7 @@
 
 <?php include('../templates/header.php');?>
 
-<?php if(isset($_SESSION['userId'])):?>
-    <div>
-        <?php 
-            echo $_SESSION['userId'];
-            echo $_SESSION['userUid'];
-            echo $_SESSION['userEmail'];
-        ?>
-    </div>
-<?php endif;?>
+
 <?php if(isset($_GET['error'])): ?>
     <div>
         <?php if($_GET['error'] == "emptyfields"):?>
