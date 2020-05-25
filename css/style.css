@@ -4,6 +4,11 @@
 		display:flex !important;
 		justify-content: center;
 	}
+	.nav-link{
+		font-family: myGeorgia;
+		font-size:22px;
+		color:#A2A2A2;
+	}
 }
 
 @font-face {
@@ -51,10 +56,4 @@
 .form-group input[name="password"]
 {
   background-image: url('../images/password.png');
-}
-
-.container
-{
-  max-width: 500px;
-  margin: auto;
 }
