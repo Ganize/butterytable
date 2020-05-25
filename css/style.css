@@ -20,7 +20,25 @@
 	src: url(/fontfamily/Goudy-Old-Style-Regular.ttf);
 }
 
-.login-container
+.grid-login-container
+{
+	display:grid;
+	grid-template-columns: auto auto;
+}
+.grid-login-container .login-container,.grid-login-container .signup-container
+{
+	 text-align:center;
+}
+
+.login-title
+{
+	border-bottom:1px solid #C88C8C;
+	width: fit-content;
+	margin:auto;
+	margin-bottom: 20px;
+}
+
+/*.login-container
 {
 	border:1px solid black;
 	padding: 10px;
@@ -45,7 +63,7 @@
   background-repeat: no-repeat;
   padding-left: 40px;
   border: 1px solid black;
-  /*border-bottom:2px solid black;*/
+  border-bottom:2px solid black;
 
 }
 .form-group input:focus
@@ -63,12 +81,8 @@
 {
   background-image: url('../images/password.png');
 }
+*/
 
-.container
-{
-  max-width: 500px;
-  margin: auto;
-}
 
 .checked
 {
