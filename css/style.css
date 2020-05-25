@@ -4,6 +4,11 @@
 		display:flex !important;
 		justify-content: center;
 	}
+	.nav-link{
+		font-family: myGeorgia;
+		font-size:22px;
+		color:#A2A2A2;
+	}
 }
 
 @font-face {
@@ -75,3 +80,4 @@
 	color:grey;
 	cursor: pointer;
 }
+
