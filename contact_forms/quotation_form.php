@@ -1,12 +1,3 @@
-<!-- Header-->
-<?php include('templates/header.php');?>
-<link rel="stylesheet" href="css/contact.css" type="text/css">
-
-<input type="button" value="Enquiry"/>
-
-<input type="button" value="Quotation"/>
-
-
 <div>
 	<div class="form-container">
 		<div>Quotation Form</div>
@@ -42,6 +33,7 @@
 				</select>
 			</div>
 
+
 			<div class="form-group contact-group">
 				<label for="">Cake Design</label>
 				<textarea name="quotation-design" id="quotation-design"></textarea>
@@ -59,6 +51,3 @@
 		</form>
 	</div>
 </div>
-
-<!--Footer-->
-<?php include('templates/footer.php');?>
