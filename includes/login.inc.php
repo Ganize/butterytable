@@ -14,7 +14,7 @@
 		}
 		else
 		{
-			$sql =  "SELECT * FROM user WHERE user_name= ?";
+			$sql =  "SELECT * FROM bt_user WHERE user_name= ?";
 			$stmt = mysqli_stmt_init($conn);
 			if(!mysqli_stmt_prepare($stmt, $sql))
 			{

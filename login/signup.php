@@ -3,7 +3,7 @@
 <?php include('../templates/header.php');?>
 
 <div class="container">
-    <div class="form-container">
+    <div class="login-container">
         <form action="../includes/signup.inc.php" method="post">
             <div class="form-group">
                 <label for="user_name">Username</label>

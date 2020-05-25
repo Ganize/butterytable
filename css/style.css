@@ -20,7 +20,7 @@
 	src: url(/fontfamily/Goudy-Old-Style-Regular.ttf);
 }
 
-.form-container
+.login-container
 {
 	border:1px solid black;
 	padding: 10px;
@@ -32,6 +32,11 @@
 {
 	display:block;
 	margin-bottom:0px;
+	position: relative;
+  	top:10px;
+  	left:5px;
+  	background: white;
+    width: fit-content;
 }
 .form-group input
 {
@@ -39,8 +44,9 @@
   background-size: contain;
   background-repeat: no-repeat;
   padding-left: 40px;
-  border:none;
-  border-bottom:2px solid black;
+  border: 1px solid black;
+  /*border-bottom:2px solid black;*/
+
 }
 .form-group input:focus
 {
