@@ -1,0 +1,70 @@
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    background-size: 100%, 100%;
+    background-image: none;
+}
+
+.carousel-control-next-icon:after {
+    content: '>';
+    font-size: 55px;
+    color: #C18570;
+}
+
+.carousel-control-prev-icon:after {
+    content: '<';
+    font-size: 55px;
+    color: #C18570;
+}
+
+.butterytable {
+    width: 100%;
+    height: 30%;
+    border: 1px solid #000;
+}
+
+.posts {
+    background-color: #F7ECEC;
+    width: 100%;
+    height: 50%;
+    border: 1px solid #000;
+}
+
+.socialmedia {
+    background-color: #C18281;
+    width: 100%;
+    height: 200px;
+    border: 1px solid #000;
+}
+
+h2 {
+    font-family: Goudy;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: #726061;
+    font-weight: bold;
+    text-align: center;
+    padding-top:35px;
+}
+
+.quotes{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    font-family: myGeorgia;
+    font-size:20px;
+    color:#968D8D;
+}
+
+.button {
+    background-color: #E9B7B8;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 30px;
+    text-transform: uppercase;
+  }
