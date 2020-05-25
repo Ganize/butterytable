@@ -30,7 +30,7 @@
 		}
 		else
 		{
-			$sql = "SELECT user_name FROM user WHERE user_name=?"; //Check username exists
+			$sql = "SELECT user_name FROM bt_user WHERE user_name=?"; //Check username exists
 			$stmt = mysqli_stmt_init($conn);
 			if(!mysqli_stmt_prepare($stmt, $sql))
 			{
@@ -51,7 +51,7 @@
 				}
 				else
 				{
-					$sql = "INSERT INTO user (user_name, password, email) VALUES (?, ? ,?)" ;
+					$sql = "INSERT INTO bt_user (user_name, password, email) VALUES (?, ? ,?)" ;
 					$stmt = mysqli_stmt_init($conn);
 					if(!mysqli_stmt_prepare($stmt, $sql))
 					{

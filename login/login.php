@@ -19,7 +19,7 @@
     </div>
 <?php endif; ?>
 <div class="container">
-    <div class="form-container">
+    <div class="login-container">
         <form action="../includes/login.inc.php" method="post">
             <div class="form-group">
                 <label for="user_name">Username</label>
@@ -29,7 +29,6 @@
                 <label for="password">Password</label>
                 <input type="text" name="password" id="password">
             </div>
-
             <button class="btn" type="submit" name="login" >Login</button>
         </form>
     </div>

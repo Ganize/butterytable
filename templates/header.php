@@ -3,6 +3,7 @@
 <?php $currentPage = 'index'; ?>
 <?php $link = "http://localhost/butterytable/" ?>
 <?php session_start(); ?>
+<?php date_default_timezone_set('Asia/Singapore'); ?>
 
 
 <!doctype html>
