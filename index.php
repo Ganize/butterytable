@@ -70,31 +70,42 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
         <p>Hand-baked cake perfection and meticulously coated with buttercream and fondant alike</p>
         <p>We serve customsied cakes and desserts that are lower in sugar</p>
     </div>
-    <a href="#" class="button">get a quotes</a>
+    <a href="#" class="btn-quotes button">get a quotes</a>
 </div>
 <div class="posts">
     <h2>Posts</h2>
     <hr style="width: 8%; border-color: #C18281;" />
 
-    <div class="container">
+    <div class="container post-container">
         <div class="row">
-            <div class="col">
-            <img src="images/cake1.jpg" width="350px" height="350px">
+            <div class="col post-col">
+                <div class="post-grid">
+                    <div>
+                      <img src="images/cake1.jpg">
+                    </div>
+                    <div>
+                        <h2>test</h2>
+                        <hr class="bline"></hr>
+                     </div>
+                </div>
             </div>
-            <div class="col">
-            <img src="images/cake2.jpg" width="350px" height="350px">
+           
+            <div class="col post-col">
+                <div class="post-grid">
+                    <div>
+                        <img src="images/cake2.jpg">
+                    </div>
+                    <div>
+                        <h2>test</h2>
+                        <hr class="bline"></hr>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     
 </div>
-<div class="socialmedia">
-    <h2 style="color: white;">Follow us</h2>
-    <hr style="width: 8%; border-color: #FFFFFF;" />
-    <div class="iconphotos">
-        <img src="images/carousell.png" width="45px" height="45px">
-    </div>
-</div>
+
 
 <!--Footer-->
 <?php include('templates/footer.php'); ?>
