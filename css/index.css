@@ -20,26 +20,24 @@
 .butterytable {
     width: 100%;
     height: 30%;
-    border: 1px solid #000;
+    padding: 70px;
 }
 
 .posts {
     background-color: #F7ECEC;
     width: 100%;
     height: 50%;
-    border: 1px solid #000;
+
 }
 
 .socialmedia {
     background-color: #C18281;
     width: 100%;
     height: 200px;
-    border: 1px solid #000;
 }
 
 h2 {
     font-family: Goudy;
-    font-size: 35px;
     text-transform: uppercase;
     color: #726061;
     font-weight: bold;
@@ -49,26 +47,49 @@ h2 {
 
 .quotes {
     width: 100%;
-    height: 200px;
     text-align: center;
     font-family: myGeorgia;
-    font-size: 20px;
-    color: #968D8D;
+    font-size:18px;
+    color:#968D8D;
 }
 
-.button {
-    background-color: #E9B7B8;
-    border: none;
-    color: white;
-    padding: 15px 32px;
+.btn-quotes
+{
+    display:flex;
+    justify-content: center;
+    margin:auto;
+    width:200px;
+    margin-top: 35px;
+}
+
+.iconphotos
+{
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 30px;
-    text-transform: uppercase;
+}
+.iconphotos img
+{
+    margin-right:40px;
 }
 
-.iconphotos {
-    align-items: center;
+.iconphotos img:nth-child(3)
+{
+    margin:0px;
+}
+
+
+.post-grid img
+{
+    width:200px;
+    height: 200px;
+}
+
+.post-grid
+{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.post-col
+{
+    padding:35px;
 }

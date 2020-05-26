@@ -33,9 +33,11 @@
 	</head>
   <body>
 		<div>
-			<a href="http://localhost/butterytable/index"><img src="images/BT_Logo.jpg" width="200px" height="200px" class="img-fluid mx-auto d-block "></a>
+
+		<a href="http://localhost/butterytable/index"><img src="<?php echo $link; ?>/images/BT_Logo.jpg" width="200px" height="200px" class="img-fluid mx-auto d-block "></a>
+
 		</div>	
-		<nav class="navbar navbar-expand-lg navbar-light">			
+		<nav class="navbar navbar-expand-lg navbar-light" style="margin-bottom: 50px;">			
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>
@@ -52,9 +54,11 @@
 						"FAQ" =>"faq");
 
 						foreach ($nav_bar as $name => $url) {
-							echo '<li class="nav-item px-5"'.(($currentPage === $name) ? '"active" ': '').'><a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">'.$name.'</a></li>';
+							echo '<li class="nav-item px-5 '.(($currentPage === $url) ? 'active" ': '"').'><a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">'.$name.'</a></li>';
 						}
 					?>
 				</ul>
+			</div>
 		</nav> 
-		
+ <div id="page-container">
+   <div id="content-wrap">
