@@ -79,20 +79,22 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
     <div class="container">
         <div class="row">
             <div class="col">
-            <img src="images/cake1.jpg" width="350px" height="350px">
+                <img src="images/cake1.jpg" width="350px" height="350px">
             </div>
             <div class="col">
-            <img src="images/cake2.jpg" width="350px" height="350px">
+                <img src="images/cake2.jpg" width="350px" height="350px">
             </div>
         </div>
     </div>
-    
+
 </div>
 <div class="socialmedia">
     <h2 style="color: white;">Follow us</h2>
     <hr style="width: 8%; border-color: #FFFFFF;" />
     <div class="iconphotos">
+        <img src="images/facebook_footer.png" width="30px" height="30px">
         <img src="images/carousell.png" width="45px" height="45px">
+        <img src="images/instagram_footer.png" width="30px" height="30px">
     </div>
 </div>
 
