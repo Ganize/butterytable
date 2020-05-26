@@ -34,7 +34,7 @@
   <body>
 		<div>
 
-		<a href="http://localhost/butterytable/index"><img src="<?php echo $link; ?>/images/BT_Logo.jpg" width="200px" height="200px" class="img-fluid mx-auto d-block "></a>
+		<a href="http://localhost/butterytable/index"><img src="<?php echo $link; ?>/images/icon/BT_Logo.jpg" width="200px" height="200px" class="img-fluid mx-auto d-block "></a>
 
 		</div>	
 		<nav class="navbar navbar-expand-lg navbar-light" style="margin-bottom: 50px;">			

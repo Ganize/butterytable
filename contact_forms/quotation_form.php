@@ -1,3 +1,6 @@
+<!-- Header-->
+<?php include('templates/header.php');?>
+
 <div>
 	<div class="form-container">
 		<div>Quotation Form</div>
@@ -51,3 +54,5 @@
 		</form>
 	</div>
 </div>
+
+<?php include('templates/footer.php'); ?>

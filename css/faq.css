@@ -1,27 +1,33 @@
-hr{
-    width:35%;
-    border: 1.5px solid;
-    color: #C18281;
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #E4B8B4;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10 10 10 10px;
 }
 
-.words{
+h2 {
     text-align: center;
-    margin-top:10px;
+    margin-top: 10px;
     text-transform: uppercase;
     font-family: myGeorgia;
-    font-size: 20px;
-    color: #726061;
+    font-size: 38px;
+    color: #C18570;
 }
 
-li{
-    margin: 0 0 10px 0;
-    color: #E4B8B4;
-    font-size: 18px;
-}
-.breakline{
-    margin: 0 0 20px 0;
+.group {
+    text-transform: uppercase;
     font-family: myGeorgia;
-    font-size:16px;
-    font-style: italic;
-    color: #A09A9A;
+    font-size: 24px;
+    text-align: center;
+    color: #726061;
+    font-weight: bold;
+    padding-bottom: 43px;
+}
+
+.words {
+    font-weight: normal;
+    text-transform: none;
+    font-size: 18px;
 }

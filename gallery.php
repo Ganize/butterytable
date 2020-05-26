@@ -1,5 +1,13 @@
 <!-- Header-->
 <?php include('templates/header.php');?>
+<link rel="stylesheet" href="css/gallery.css" type="text/css">
+
+<h3>Gallery</h3>
+<hr class="bline"></hr>
+<div class="test">
+    helo
+</div>
+
 <?php
 
 require 'includes/db_conn.inc.php';
@@ -19,7 +27,4 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
     }
 }
 ?>
-
-<link rel="stylesheet" href="css/gallery.css" type="text/css">
-
 <?php include('templates/footer.php'); ?>

@@ -53,15 +53,15 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
                     } ?>
                 </div>
             </div>
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
         </div>
     </div>
-    <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#demo" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </a>
 </div>
 <div class="butterytable">
     <h2>Buttery Table</h2>
@@ -81,15 +81,16 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
             <div class="col post-col">
                 <div class="post-grid">
                     <div>
-                      <img src="images/cake1.jpg">
+                        <img src="images/cake1.jpg">
                     </div>
                     <div>
                         <h2>test</h2>
-                        <hr class="bline"></hr>
-                     </div>
+                        <hr class="bline">
+                        </hr>
+                    </div>
                 </div>
             </div>
-           
+
             <div class="col post-col">
                 <div class="post-grid">
                     <div>
@@ -97,7 +98,8 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
                     </div>
                     <div>
                         <h2>test</h2>
-                        <hr class="bline"></hr>
+                        <hr class="bline">
+                        </hr>
                     </div>
                 </div>
             </div>

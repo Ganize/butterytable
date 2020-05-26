@@ -1,30 +1,33 @@
+
 h2 {
-    text-align: center;
-    font-family: myGeorgia;
-    font-size: 35px;
-    color: #C18570;
-    text-transform: uppercase;
+  text-align: center;
+  font-family: myGeorgia;
+  font-size: 35px;
+  color: #C18570;
+  text-transform: uppercase;
 }
 
 hr{
-    width:10%;
-    border: 1.5px solid;
-    color: #C18281;
+  width:10%;
+  border: 1.5px solid;
+  color: #C18281;
+  margin-top: 10px;
 }
 p{
-    text-align: center;
-    font-family: myGeorgia;
-    font-size: 15px;
-    color: #968D8D;
+  text-align: center;
+  font-family: myGeorgia;
+  font-size: 17px;
+  color: #968D8D;
 }
 
-  /* Create two equal columns that floats next to each other */
+/* 
+
+
   .column {
     float: left;
     width: 50%;
   }
   
-  /* Clear floats after the columns */
   .row:after {
     content: "";
     display: table;
@@ -39,16 +42,9 @@ p{
     width: 50%;
     background-color: #F7ECEC;
   }
-
-  .div2 {
-    width: 70%;
-    padding: 50px;
-    margin: 0 auto;
-  }
   
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
     .column {
       width: 100%;
     }
-  }
+  } */

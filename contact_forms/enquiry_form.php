@@ -1,5 +1,6 @@
 
-<div>
+<link rel="stylesheet" href="css/enquiry.css" type="text/css">
+<div class="rec-container">
 	<div class="form-container">
 		<div>Enquiry Form</div>
 		<form action="includes/enquiry.inc.php" method="post">
