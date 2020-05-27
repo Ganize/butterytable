@@ -37,7 +37,7 @@
 		<a href="http://localhost/butterytable/index"><img src="<?php echo $link; ?>/images/icon/BT_Logo.jpg" width="200px" height="200px" class="img-fluid mx-auto d-block "></a>
 
 		</div>	
-		<nav class="navbar navbar-expand-lg navbar-light" style="margin-bottom: 50px;">			
+		<nav class="navbar navbar-expand-lg" style="margin-bottom: 50px;">			
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>

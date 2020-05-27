@@ -1,6 +1,30 @@
-h3{
+h3 {
     text-align: center;
+    font-family: myGeorgia;
+    font-size: 40px;
+    color: #C18570;
+    text-transform: uppercase;
+    margin-bottom: 29px;
 }
-.test{
+
+.iconphotos {
     text-align: center;
+    margin-bottom: 30px;
+    padding-left: 47px;
+}
+
+.iconphotos img {
+    margin-right: 40px;
+}
+
+.iconphotos img:nth-child(3) {
+    margin-left: 10px;
+}
+
+#borderimg {
+    border: 1px solid #C18570;
+    width:400px;
+    height:400px;
+    margin-right:15px;
+    margin-bottom:40px;
 }

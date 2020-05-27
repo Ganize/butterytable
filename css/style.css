@@ -40,10 +40,18 @@ body p
 {
 	display:grid;
 	grid-template-columns: 40% auto;
+	font-family: myGeorgia;
+	color: #898381;
+	font-size:19px;
 }
-.form-group input
+.form-group input 
 {
-	border: 1px solid #F9D9D9;
+	border: 1px solid #C18570;
+}
+
+.form-group textarea 
+{
+	border: 1px solid #C18570;
 }
 
 .form-group div:first-child 
