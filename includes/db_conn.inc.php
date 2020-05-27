@@ -12,7 +12,6 @@
 		die("Connect failed: %s\n". $conn -> error);
 	}
 
-
 // function openCon()
 // {
 // 	$servername = "localhost";
