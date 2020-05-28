@@ -20,70 +20,73 @@
 	src: url(/fontfamily/Goudy-Old-Style-Regular.ttf);
 }
 
-body p
-{
+body p {
 	font-family: "myGeorgia";
 }
 
-.grid-login-container
-{
-	display:grid;
+.grid-login-container {
+	display: grid;
 	grid-template-columns: auto auto;
 }
-.grid-login-container .login-container,.grid-login-container .signup-container
-{
-	 text-align: center;
-	 margin: auto;
+
+.grid-login-container .login-container, .grid-login-container .signup-container {
+	text-align: center;
+	margin: auto;
 }
 
-.form-group
-{
-	display:grid;
+.form-group {
+	display: grid;
 	grid-template-columns: 40% auto;
 	font-family: myGeorgia;
 	color: #898381;
-	font-size:19px;
+	font-size: 19px;
 }
-.form-group input 
-{
+
+.form-group input {
 	border: 1px solid #C18570;
 }
 
-.form-group textarea 
-{
+.form-group textarea {
 	border: 1px solid #C18570;
 }
 
-.form-group div:first-child 
-{
+.form-group div:first-child {
 	text-align: right;
 }
 
-.form-group div:nth-child(2)
-{
+.form-group div:nth-child(2) {
 	text-align: left;
-	margin-left:20px;
+	margin-left: 20px;
 }
 
-.bline
-{
-	width: 200px; 
+.bline {
+	width: 200px;
 	border-color: #C18281;
 }
 
-.button
-{
+.button {
 	background-color: #E9B7B8;
-    border: none;
-    color: white;
-    padding: 7px 40px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 30px;
-    text-transform: uppercase;
-    cursor: pointer;
+	border: none;
+	color: white;
+	padding: 7px 40px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 30px;
+	text-transform: uppercase;
+}
+
+.form-group input:focus {
+	outline: none;
+}
+
+.form-group input[name="user_name"] {
+	background-image: url('../images/user.png');
+}
+
+.form-group input[name="password"] {
+	background-image: url('../images/password.png');
 }
 
 .checked {
@@ -96,74 +99,20 @@ body p
 }
 
 #page-container {
-  position: relative;
-  min-height: 80vh;
+	position: relative;
+	min-height: 80vh;
 }
 
 #content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
+	padding-bottom: 2.5rem;
+	/* Footer height */
 }
 
-footer
-{
+footer {
 	text-align: center;
 	background: #C38687;
 	position: absolute;
-  	bottom: 0;
-  	width: 100%;
-  	height: 2.5rem;  
-  	padding: 10px;
-}
-
-.user-nav-bar
-{
-
-    padding: 20px;
-}
-
-.account-container, .wishlist-container
-{
-	padding: 50px;
-}
-
-.user-nav-bar li a
-{
-	font-size:18px;
-}
-
-.user-nav-container, .account-container, .wishlist-container
-{
-		border: 1px solid black;
-}
-
-.account-grid
-{
-	display: grid;
-	grid-template-columns: 30% auto;
-	height: 90vh;
-}
-
-.user-details
-{
-	padding-left: 40px;
-}
-
-.container
-{
-	height:100vh;
-}
-
-.account-hr
-{
-	width:100px;
-	text-align:left;
-	margin-left:0;
-	border-color: #C18281;
-}
-
-.wa-row div
-{
-	display: inline;
-	width: 20px;
-
+	bottom: 0;
+	width: 100%;
+	height: 2.5rem;
 }

@@ -7,12 +7,10 @@
 <?php if(isset($_SESSION['userId'])):?>
     <div>
         <?php 
- 	
             echo $_SESSION['userUid'];
             echo $_SESSION['userEmail'];
         ?>
     </div>
-
 
 <?php endif;?>
 <div>
