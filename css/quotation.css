@@ -16,3 +16,8 @@ h4{
     font-family: myGeorgia;
     color: #726061;
 }
+
+.form-group select 
+{
+	border: 1px solid #C18570;
+}

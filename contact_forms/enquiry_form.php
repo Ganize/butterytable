@@ -1,8 +1,20 @@
+<?php include('../templates/header.php'); ?>
 
-<link rel="stylesheet" href="css/enquiry.css" type="text/css">
-<div class="rec-container">
+<a href="#" class="button">Enquiry</a>
+
+<a href="#" class="button">quotation</a>
+
+<br />
+
+<link rel="stylesheet" href="../css/enquiry.css" type="text/css">
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
 	<div class="form-container">
-		<div>Enquiry Form</div>
+		<h4>Enquiry Form</h4>
+		<hr class="eline"></hr>
+		<br/>
 		<form action="includes/enquiry.inc.php" method="post">
 			<div class="form-group contact-group">
 				<label for="enquiry-name">Name*</label>
@@ -24,7 +36,16 @@
 				<label for="enquiry-message">Message</label>
 				<textarea name="enquiry-message" id="enquiry-message"></textarea>
 			</div>
-			<button class="btn" type="submit" name="btn-enquiry" >Submit</button>
+			<button class="btn button" type="submit" name="btn-enquiry" >Submit</button>
 		</form>
 	</div>
-</div>
+    </div>
+    <div class="col-6">
+	<img src="../images/icon/enquiry.jpg" width="450px" height="450px">
+    </div>
+  </div>
+
+
+	<!--  -->
+
+<?php include('../templates/footer.php'); ?>
