@@ -107,6 +107,7 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
     </div>
 
 </div>
+<?php echo $_SESSION["user_role"];?>
 
 <!--Footer-->
 <?php include('templates/footer.php'); ?>

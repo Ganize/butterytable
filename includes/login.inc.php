@@ -3,27 +3,27 @@
 		//require will emit a fatal error ( E_COMPILE_ERROR ) and halt the script
 		require 'db_conn.inc.php';
 
-		$user_name = $_POST['user_name'];
+		$user_email = $_POST['user_email'];
 		$password = $_POST['password'];
 
 
-		if(empty($user_name) || empty($password) ) //Error when Empty Field
+		if(empty($user_email) || empty($password) ) //Error when Empty Field
 		{
-			header("Location: ../login/login.php?error=emptyfield");
+			header("Location: ../login.php?error=emptyfield&&user_email=".$user_email."&&password=".$password);
 			exit();
 		}
 		else
 		{
-			$sql =  "SELECT * FROM bt_user WHERE user_name= ?";
+			$sql =  "SELECT * FROM bt_user WHERE user_email= ?";
 			$stmt = mysqli_stmt_init($conn);
 			if(!mysqli_stmt_prepare($stmt, $sql))
 			{
-				header("Location: ../login/login.php?error=sqlerror");
+				header("Location: ../login.php?error=sqlerror");
 				exit();
 			}
 			else
 			{
-				mysqli_stmt_bind_param($stmt, "s", $user_name);
+				mysqli_stmt_bind_param($stmt, "s", $user_email);
 				mysqli_stmt_execute($stmt);
 				$result = mysqli_stmt_get_result($stmt);
 
@@ -32,28 +32,29 @@
 					$pwdCheck = password_verify($password, $row['password']);
 					if($pwdCheck == false)
 					{
-						header("Location: ../login/login.php?error=wrongpwd");
+						header("Location: ../login.php?error=wrongpwd");
 						exit();
 					}
 					else if($pwdCheck == true)
 					{
 						session_start();
-						$_SESSION['userId'] = $row['user_name'];
+						$_SESSION['userEmail'] = $row['user_email'];
 						$_SESSION['userUid'] = $row['user_id'];
-						$_SESSION['userEmail'] = $row['email'];
+						$_SESSION['user_role'] = $row['user_role'];
+				
 
-						header("Location: ../login/login.php?login=success");
+						header("Location: ../index.php?login=success");
 						exit();
 					}
 					else
 					{
-						header("Location: ../login/login.php?error=wrongpwd");
+						header("Location: ../login.php?error=wrongpwd");
 						exit();
 					}
 				}
 				else
 				{
-					header("Location: ../login/login.php?error=nouser");
+					header("Location: ../login.php?error=nouser");
 					exit();
 				}
 			}
@@ -61,7 +62,7 @@
 	}
 	else
 	{
-		header("Location: ../login/login.php");
+		header("Location: ../login.php");
 		exit();
 	}
 ?>
