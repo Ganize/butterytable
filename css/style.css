@@ -20,6 +20,11 @@
 	src: url(/fontfamily/Goudy-Old-Style-Regular.ttf);
 }
 
+body
+{
+	 overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
 body p
 {
 	font-family: "myGeorgia";
@@ -147,11 +152,11 @@ footer
 {
 	padding-left: 40px;
 }
-
+/*
 .container
 {
 	height:100vh;
-}
+}*/
 
 .account-hr
 {
