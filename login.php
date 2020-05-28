@@ -15,7 +15,7 @@
     <div class="login-container">
         <p>SIGN IN</p>
         <hr class="bline">
-        <form action="/includes/login.inc.php" method="post">
+        <form action="/butterytable/includes/login.inc.php" method="post">
             <div class="form-group">
                 <div>
                      <label for="user_email">Email :</label>
@@ -43,13 +43,13 @@
          <p>CREATE A NEW ACCOUNT</p>
         <hr class="bline">
 
-        <form action="/includes/signup.inc.php" method="post">
+        <form action="/butterytable/includes/signup.inc.php" method="post">
             <div class="form-group">
                 <div>
-                    <label for="email">Email :</label>
+                    <label for="user_email">Email :</label>
                 </div>
                 <div>
-                    <input type="text" name="email" id="email">
+                    <input type="text" name="user_email" id="email">
                 </div>
            </div>
             <div class="form-group">

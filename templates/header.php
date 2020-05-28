@@ -2,7 +2,28 @@
 <?php $title = 'Home'; ?>
 <?php $currentPage = 'index'; ?>
 <?php $link = "http://localhost/butterytable/" ?>
-<?php session_start(); ?>
+<?php 
+
+    if(!isset($_SESSION)) 
+    { 
+       session_start(); 
+    } 
+
+// 10 mins in seconds
+// $inactive = 600; 
+
+// $session_life = time() - $_session['timeout'];
+
+// if($session_life > $inactive)
+// {  
+// 	session_destroy(); 
+// 	header("Location: logoutpage.php");     
+// }
+
+// $_session['timeout']=time();
+
+?>
+
 <?php date_default_timezone_set('Asia/Singapore'); ?>
 
 
@@ -32,9 +53,52 @@
 	    <title><?php echo($title); ?></title>
 	</head>
   <body>
+
 		<div>
 
-		<a href="http://localhost/butterytable/index"><img src="<?php echo $link; ?>/images/icon/BT_Logo.jpg" width="200px" height="200px" class="img-fluid mx-auto d-block "></a>
+			<div class="nav-header">
+				
+			<?php if(isset($_SESSION['userUid'])):?>
+
+				<div>
+					<div class="dropdown">
+						<button class="dropbtn"><?php echo $_SESSION['userEmail']?></button>
+						<div class="dropdown-content">
+							<a href="account/my-account.php">Account</a>
+							<a href="<?php echo $link;?>includes/logout.inc.php">Logout</a>
+						
+						</div>
+					</div>
+				</div>
+			<!-- 	<div>
+					<div class="dropdown">
+						<button class="dropbtn"></button>
+						<div class="dropdown-content">
+						<a href="#">Link 1</a>
+						<a href="#">Link 2</a>
+						<a href="#">Link 3</a>
+					</div>
+				</div> -->
+					
+			<?php else: ?>
+				<div>
+					<a href="/butterytable/login.php">LOG IN</a>
+				</div>
+			<?php endif;?>
+
+				<!-- <div class="vl"></div> -->
+				<div class="iconphotos nav-header-div">
+					<a href="https://www.facebook.com/butterytable"><img src="<?php echo $link;?>/images/icon/facebook_header.png" width="25px" height="25px"></a>
+					<a href="https://sg.carousell.com/butterytablebakery/"><img src="<?php echo $link;?>/images/icon/carousell.png" width="35px" height="35px"></a>	
+					<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link;?>/images/icon/instagram_header.png" width="25px" height="25px"></a>
+				</div>
+
+				<!-- <div class="vl"></div> -->
+				<div class ="nav-header-div" style="margin-left: 10px;">
+						<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link;?>/images/icon/instagram_header.png" width="25px" height="25px"></a>
+				</div>
+			</div>
+			<a href="http://localhost/butterytable/index"><img src="<?php echo $link; ?>/images/icon/BT_Logo.jpg" width="200px" height="200px" class="img-fluid mx-auto d-block "></a>
 
 		</div>	
 		<nav class="navbar navbar-expand-lg" style="margin-bottom: 50px;">			
