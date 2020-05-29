@@ -11,10 +11,15 @@
   <div class="col-md-6" style="margin: auto;">
    
       <div class="story-header">
+
+  <div class="col-md-6">
+    <div>
+      <div>
+
         <h2>Our Story</h2>
         <hr>
       </div>
-      <div>
+      <div style="padding-top: 110px;">
         <p>
           At Butterytable bakery, we aim to serve customised cakes and desserts that are lower in sugar.
         </p>
@@ -38,27 +43,5 @@
     </div>
   </div>
 </div>
-<!-- <div class="rec-contain container">
-  <div class="row">
-    <div class="col">
-    </div>
-    <div class="col">
-      2 of 2
-    </div>
-  </div> -->
-
-<!-- <div class="row">
-  <div class="column left">
-  
-  </div>
-  <div class="column right"> 
-      
-      <div>
-           
-</div>
-  </div>
-</div> -->
-
-
 <!--Footer-->
 <?php include('templates/footer.php'); ?>

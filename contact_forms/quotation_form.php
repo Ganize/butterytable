@@ -45,8 +45,6 @@
 							<option value="test4">test4</option>
 						</select>
 					</div>
-
-
 					<div class="form-group contact-group">
 						<label for="">Cake Design</label>
 						<textarea name="quotation-design" id="quotation-design"></textarea>
@@ -65,8 +63,8 @@
 			</div>
 		</div>
 		<div class="col-6">
-				<img src="../images/icon/quotation.jpg" width="450px" height="600px">
-			</div>
+			<img src="../images/icon/quotation.jpg" width="450px" height="600px">
+		</div>
 		<div>
 		</div>
 	</div>
