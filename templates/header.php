@@ -64,7 +64,7 @@
 					<div class="dropdown">
 						<button class="dropbtn"><?php echo $_SESSION['userEmail']?></button>
 						<div class="dropdown-content">
-							<a href="account/my-account.php">Account</a>
+							<a href="<?php echo $link;?>account/my-account.php">Account</a>
 							<a href="<?php echo $link;?>includes/logout.inc.php">Logout</a>
 						
 						</div>

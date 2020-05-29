@@ -8,9 +8,9 @@
     <img src="images/icon/ourstory.jpg" class="img-fluid" alt="Cakes">
   </div>
 
-  <div class="col-md-6" style="display:flex; align-items:  center;">
-    <div>
-      <div>
+  <div class="col-md-6" style="margin: auto;">
+   
+      <div class="story-header">
         <h2>Our Story</h2>
         <hr>
       </div>
@@ -34,7 +34,7 @@
         <p>
           You can contact us at our quotation/inquiry form for any orders/inquiries.
         </p>
-      </div>
+      
     </div>
   </div>
 </div>

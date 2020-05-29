@@ -20,6 +20,20 @@ p{
   color: #968D8D;
 }
 
+/*.story-header
+{
+  position: absolute; 
+  top:0; 
+  width: 100%; 
+  text-align: center;
+}
+
+.story-right-container
+{
+  display:flex; 
+  align-items: center;
+}*/
+
 /* 
 
 

@@ -166,10 +166,39 @@ footer
 	border-color: #C18281;
 }
 
-.wa-row div
+.wa-row
+{
+	display: grid;
+	grid-template-columns: 30% 30% 30%;
+	margin-bottom: 25px;
+}
+
+.fname
+{
+	display: none;
+}
+
+.wish_grid:hover .fname
+{
+	background-color: rgba(0, 0, 0, 0.4);
+	position:absolute;
+	width:150px; 
+	height:150px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+
+/*.wa-row div
 {
 	display: inline;
 	width: 20px;
+}*/
+
+.wa-row div span 
+{
+	position:absolute;
 }
 
 .nav-profile
@@ -241,3 +270,8 @@ footer
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
+.a-name div
+{
+	display:inline;
+	margin-right:30px;
+}

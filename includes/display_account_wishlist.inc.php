@@ -15,8 +15,16 @@
 	}
 	else
 	{
-		
-		mysqli_stmt_bind_param($stmt, "i", $_SESSION['userUid']); //Prepare statement
+
+		if(isset($_GET["user_id"]))
+		{
+			mysqli_stmt_bind_param($stmt, "i", $_GET["user_id"]); //Prepare statement
+		}
+		else
+		{
+			mysqli_stmt_bind_param($stmt, "i", $_SESSION['userUid']); //Prepare statement
+		}
+	
 		mysqli_stmt_execute($stmt);
 		$result = mysqli_stmt_get_result($stmt);
 		while($row = mysqli_fetch_assoc($result)) //Fectching the data from result
@@ -44,9 +52,14 @@
 					}
 
 					
-					echo "<div>";
-					echo $row1["flavour_name"];
-					echo '<span class="fa fa-star checked" id="menuid_'. $flavour_id .'" name="'. $flavour_id .'"></span>';
+					echo '<div class="wish_grid">';
+					echo '<div class="fname">'.$row1["flavour_name"].'</div>';
+					if(!isset($_GET["user_id"]))
+					{
+						echo '<span class="fa fa-star checked" id="menuid_'. $flavour_id .'" name="'. $flavour_id .'"></span>';
+					}
+					
+					echo '<img src="http://localhost/butterytable/'.$row1["img_path"].'" alt="Girl in a jacket" width="150" height="150">';
 					echo "</div>";
 
 					if($count == 2)

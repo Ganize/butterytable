@@ -1,11 +1,14 @@
-
-
 <?php 
 session_start();
 
-if($_SESSION["user_role"] == "ujiz4_guest")
+if(empty($_SESSION["user_role"]) || empty($_SESSION["userUid"]))
 {
-	header("Location: ../index.php");
+	header("Location: ../404.php");
+	exit();
+}
+else if($_SESSION["user_role"] != "ujiz4_admin")
+{
+	header("Location: ../404.php");
 	exit();
 }
 else
@@ -24,7 +27,14 @@ else
 				<div>
 					MEMBERS LIST
 					<hr class="account-hr">
+					<table width="100%">
+					<tr>
+						<th>ID</th>
+						<th>Email</th>
+						<th>Role</th>
+					</tr>
 					  <?php require("../includes/display_member.inc.php");?>
+					</table>
 				</div>
 			</div>
 		</div>
