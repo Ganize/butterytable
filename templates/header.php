@@ -101,7 +101,6 @@ if (!isset($_SESSION)) {
 		<a href="http://localhost/butterytable/index"><img src="<?php echo $link; ?>/images/icon/BT_Logo.jpg" width="200px" height="200px" class="img-fluid mx-auto d-block "></a>
 	</div>
 
-	<header>
 		<a href="#main-menu" id="main-menu-toggle" class="menu-toggle" aria-label="Open main menu" onclick="openNav()">
 			<span class="sr-only">Open main menu</span>
 			<span class="fa fa-bars" aria-hidden="true"></span>
@@ -129,20 +128,6 @@ if (!isset($_SESSION)) {
 				</ul>
 		</nav>
 		<a href="#main-menu-toggle" class="backdrop" tabindex="-1" aria-hidden="true" hidden></a>
-
-		<script> 
-        function openNav() { 
-            document.getElementById( 
-              ".main-menu-toggle").style.width = "100%"; 
-        } 
-  
-        function closeNav() { 
-            document.getElementById( 
-              "myNav").style.width = "0%"; 
-        } 
-    </script> 
-	</header>
-
 
 	<div id="page-container">
 		<div id="content-wrap">
