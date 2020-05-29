@@ -19,32 +19,3 @@ p{
   font-size: 17px;
   color: #968D8D;
 }
-
-/* 
-
-
-  .column {
-    float: left;
-    width: 50%;
-  }
-  
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  .left {
-    width: 50%;
-  }
-  
-  .right {
-    width: 50%;
-    background-color: #F7ECEC;
-  }
-  
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
-  } */
