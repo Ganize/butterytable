@@ -29,8 +29,8 @@
 	display: none;
 	left: -200px;
 	top: 0;
-	overflow-y: scroll;
-	overflow-x: visible;
+	/*overflow-y: scroll;
+	overflow-x: visible;*/
 	transition: left 0.3s ease, box-shadow 0.3s ease;
 	z-index: 999;
 }
@@ -231,14 +231,6 @@ body p {
 	outline: none;
 }
 
-.form-group input[name="user_name"] {
-	background-image: url('../images/user.png');
-}
-
-.form-group input[name="password"] {
-	background-image: url('../images/password.png');
-}
-
 .checked {
 	color: orange !important;
 }
@@ -286,7 +278,8 @@ footer {
 .account-grid {
 	display: grid;
 	grid-template-columns: 30% auto;
-	height: 90vh;
+	height: 100vh;
+	overflow-y: scroll;
 }
 
 .user-details {
@@ -522,3 +515,17 @@ footer {
 	}
   }
 
+.valid
+{
+	background:#E3F7B5;	
+}
+
+.non-valid
+{
+	background:	#FFCCCB;
+}
+
+.pass-validation
+{
+	color:red;
+}

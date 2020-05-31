@@ -2,7 +2,7 @@
 
 	require 'db_conn.inc.php';
 
-	$sql =  "SELECT * FROM bt_flavour WHERE menu_id = 1";
+	$sql =  "SELECT * FROM bt_flavour";
 	$stmt = mysqli_stmt_init($conn);
 	if(!mysqli_stmt_prepare($stmt, $sql))
 	{

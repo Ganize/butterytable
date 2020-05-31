@@ -23,6 +23,7 @@ if (!isset($_SESSION)) {
 
 ?>
 
+
 <?php date_default_timezone_set('Asia/Singapore'); ?>
 
 
@@ -43,7 +44,8 @@ if (!isset($_SESSION)) {
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
+	<script src="<?php echo $link ?>/scripts/custom.js"></script>
+	<script src="<?php echo $link ?>/scripts/validation.js"></script>
 	<!-- Font Awesome JavaScript -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -68,21 +70,9 @@ if (!isset($_SESSION)) {
 							<a href="<?php echo $link;?>account/my-account.php">Account</a>
 							<a href="<?php echo $link;?>includes/logout.inc.php">Logout</a>
 
-							<a href="account/my-account.php">Account</a>
-							<a href="<?php echo $link; ?>includes/logout.inc.php">Logout</a>
-
 						</div>
 					</div>
 				</div>
-				<!-- 	<div>
-					<div class="dropdown">
-						<button class="dropbtn"></button>
-						<div class="dropdown-content">
-						<a href="#">Link 1</a>
-						<a href="#">Link 2</a>
-						<a href="#">Link 3</a>
-					</div>
-				</div> -->
 
 			<?php else : ?>
 				<div>
@@ -104,17 +94,18 @@ if (!isset($_SESSION)) {
 		<a href="http://localhost/butterytable/index"><img src="<?php echo $link; ?>/images/icon/BT_Logo.jpg" width="200px" height="200px" class="img-fluid mx-auto d-block "></a>
 	</div>
 
-		<a href="#main-menu" id="main-menu-toggle" class="menu-toggle" aria-label="Open main menu" onclick="openNav()">
+		<a class="menu-toggle" aria-label="Open main menu" onclick="openNav()">
 			<span class="sr-only">Open main menu</span>
 			<span class="fa fa-bars" aria-hidden="true"></span>
 		</a>
 
 		<nav id="main-menu" class="main-menu" aria-label="Main menu">
-			<a href="#main-menu-toggle" id="main-menu-close" class="menu-close" aria-label="Close main menu">
+			<a id="main-menu-close" class="menu-close" aria-label="Close main menu" onclick="closeNav()" >
 				<span class="sr-only">Close main menu</span>
 				<span class="fa fa-close" aria-hidden="true"></span>
 			</a>
-			<ul class="navbar-nav">
+			<!--<ul class="navbar-nav">-->
+				<ul class="nav_bar">
 					<?php 
 						$nav_bar = array(
 						"Home" => "index",
@@ -125,7 +116,8 @@ if (!isset($_SESSION)) {
 						"FAQ" =>"faq");
 
 						foreach ($nav_bar as $name => $url) {
-							echo '<li class="nav-item px-5 '.(($currentPage === $url) ? 'active" ': '"').'><a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">'.$name.'</a></li>';
+							echo '<li style="margin:auto;" class="nav-item '.(($currentPage === $url) ? 'active" ': '"').'><a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">'.$name.'</a></li>';
+						
 						}
 					?>
 				</ul>

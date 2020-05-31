@@ -11,4 +11,6 @@
 	{
 		die("Connect failed: %s\n". $conn -> error);
 	}
+
+	 require_once("function.php");
 ?>

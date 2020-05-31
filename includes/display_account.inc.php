@@ -20,16 +20,10 @@
 		$result = mysqli_stmt_get_result($stmt);
 
 		if($row = mysqli_fetch_assoc($result)) //Fectching the data from result
-		{
-			
-				$user_email = $row["user_email"];
-				$user_first = $row["first_name"];
-				$user_last = $row["last_name"];
-		}
-		else
-		{
-			header("Location: ../login.php?error=nouser");
-			exit();
+		{	
+			$user_email = $row["user_email"];
+			$user_first = $row["first_name"];
+			$user_last = $row["last_name"];
 		}
 	}
 ?>

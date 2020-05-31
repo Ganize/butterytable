@@ -10,10 +10,17 @@
 		$email = $_POST['email'];
 
 		$current_pass = $_POST['current_pass'];
-		$password = $_POST['password'];
-		$password_repeat = $_POST['password_repeat'];
+		$password = $_POST['new_password'];
+		$password_repeat = $_POST['repeat_password'];
+
+		$address_1 = $_POST['address_1'];
+		$address_2 = $_POST['address_2'];
+		$user_floor = $_POST['user_floor'];
+		$user_unit = $_POST['user_unit'];
+		$user_postal = $_POST['user_postal'];
 
 		$url = "";
+
 
 
 		$sql =  "UPDATE bt_user SET first_name = ?, last_name = ?, user_email = ? WHERE user_id =?;";
@@ -30,6 +37,71 @@
 
 			$_SESSION['userEmail'] = $email;
 		}
+
+
+		$sql =  "SELECT * FROM bt_address WHERE user_id =?;";
+		$stmt = mysqli_stmt_init($conn);
+		if(!mysqli_stmt_prepare($stmt, $sql))
+		{
+			header("Location: ../account/my-account.php?error=sqlerror");
+			exit();
+		}
+		else
+		{
+
+			mysqli_stmt_bind_param($stmt, "i", $_SESSION["userUid"]);
+			mysqli_stmt_execute($stmt);
+			$result = mysqli_stmt_get_result($stmt);
+
+			if($row = mysqli_fetch_assoc($result)) //Fectching the data from result
+			{
+				$sql =  "UPDATE bt_address SET address_1 = ?, address_2 = ?, user_floor = ? , user_unit = ?, user_postal = ? WHERE user_id =?;";
+				if(!mysqli_stmt_prepare($stmt, $sql))
+				{
+					header("Location: ../account/my-account.php?error=sqlerror");
+					exit();
+				}
+				else
+				{			
+					if(!checkDigit($user_floor))
+					{
+						header("Location: ../account/my-account.php?error=user_floor");
+						exit();
+					}
+
+					$e_address_1 = encryptString($address_1);
+					$e_address_2 = encryptString($address_2);
+					$e_user_floor =  encryptString($user_floor);
+					$e_user_unit = encryptString($user_unit);
+					$e_user_postal = encryptString($user_postal);
+
+					mysqli_stmt_bind_param($stmt, "sssssi", $e_address_1 , $e_address_2 , $e_user_floor, $e_user_unit , $e_user_postal , $_SESSION["userUid"]);
+					mysqli_stmt_execute($stmt);
+				}
+			}
+			else
+			{
+				$sql = "INSERT INTO bt_address (user_id, address_1, address_2, user_floor, user_unit, user_postal) VALUES (?, ?, ?, ?, ?, ?)";
+				if(!mysqli_stmt_prepare($stmt, $sql))
+				{
+					header("Location: ../account/my-account.php?error=sqlerror");
+					exit();
+				}
+				else
+				{
+					$e_address_1 = encryptString($address_1);
+					$e_address_2 = encryptString($address_2);
+					$e_user_floor =  encryptString($user_floor);
+					$e_user_unit = encryptString($user_unit);
+					$e_user_postal = encryptString($user_postal);
+
+					mysqli_stmt_bind_param($stmt, "isssss", $_SESSION["userUid"], $e_address_1, $e_address_2, $e_user_floor, $e_user_unit, $e_user_postal);
+					mysqli_stmt_execute($stmt);					
+				}
+			}
+		}
+
+	
 		
 
 		if(!empty($current_pass))

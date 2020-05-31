@@ -6,6 +6,7 @@ if (isset($_POST['register_user'])) {
 	$user_email = $_POST['user_email'];
 	$password = $_POST['password'];
 	$passwordRepeat = $_POST['password-repeat'];
+	$default_role = 'ujiz4_guest';
 
 	if (empty($user_email) || empty($password)) //Error when Empty Field
 	{
@@ -55,7 +56,7 @@ if (isset($_POST['register_user'])) {
 				else 
 				{
 					$hash_password = password_hash($password, PASSWORD_DEFAULT); //Use password_hash
-					mysqli_stmt_bind_param($stmt, "sss", $user_email, $hash_password, 'guest'); //Prepare statement
+					mysqli_stmt_bind_param($stmt, "sss", $user_email, $hash_password, $default_role); //Prepare statement
 					mysqli_stmt_execute($stmt);
 
 
@@ -72,6 +73,7 @@ if (isset($_POST['register_user'])) {
 						mysqli_stmt_execute($stmt);
 						$result = mysqli_stmt_get_result($stmt);
 
+
 						if($row = mysqli_fetch_assoc($result)) //Fectching the data from result
 						{
 							session_start();
@@ -82,10 +84,19 @@ if (isset($_POST['register_user'])) {
 							header("Location: ../index.php?signup=success");
 							exit();
 						}
+						else
+						{
+							header("Location: ../index.php?signup=fail");
+							exit();
+						}
 					}
+
 					mysqli_stmt_close($stmt);
 					mysqli_close($conn);
 				}
+
+			
+
 			}
 		}
 	}
