@@ -515,6 +515,7 @@ footer {
 	}
   }
 
+/*Validation*/
 .valid
 {
 	background:#E3F7B5;	
@@ -528,4 +529,104 @@ footer {
 .pass-validation
 {
 	color:red;
+}
+
+
+/*CSSS TABLE*/
+.data-table, .data-table td
+{
+	border:1px solid #D3D3D3;
+}
+
+.data-table td, .data-table th
+{
+	padding: 10px;
+}
+
+.data-table th
+{
+	background :#F8F8FF;
+}
+
+.image_btn_container a
+{
+	margin-left: 20px;
+}
+
+.account-group
+{
+	grid-template-columns: 20% auto !important;
+
+}
+.account-group div:first-child
+{
+	text-align :left;
+}
+
+.chkbox-list div
+{
+	display:inline;
+	margin-left:20px;
+}
+
+.uploader {
+    position:relative; 
+    overflow:hidden; 
+    /*width:300px; */
+    height:350px;
+    min-height: 350px;
+    background:#f3f3f3; 
+    border:2px dashed #e8e8e8;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#filePhoto{
+    /*position:absolute;*/
+    width:350px;
+    height:300px;
+/*    top:-50px;
+    left:0;*/
+    z-index:2;
+    opacity:0;
+    cursor:pointer;
+}
+
+.uploader img{
+    /*position:absolute;*/
+    width:302px;
+    height:auto;
+    top:-1px;
+    left:-1px;
+    z-index:1;
+    border:none;
+}
+
+.upload-text
+{
+	position: absolute;
+}
+
+.filephoto-container
+{
+	border-style: dotted;
+	z-index: 2;
+}
+
+
+.fs-active
+{
+	position: absolute;
+	border-style: none;
+	width: 100vw;
+    height: 100vh;
+}
+
+.fu-active
+{
+	width: 100vw !important;
+    height: 100vh !important;
 }

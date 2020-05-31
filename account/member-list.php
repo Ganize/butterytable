@@ -27,11 +27,11 @@ else
 				<div>
 					MEMBERS LIST
 					<hr class="account-hr">
-					<table width="100%">
+					<table width="100%" class="data-table">
 					<tr>
 						<th>ID</th>
 						<th>Email</th>
-						<th>Role</th>
+						<th></th>
 					</tr>
 					  <?php require("../includes/display_member.inc.php");?>
 					</table>

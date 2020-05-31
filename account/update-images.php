@@ -31,15 +31,20 @@ else
 					<div>
 						Update site images here.
 					</div>
-					<table width="100%">
+					<table width="100%" class="data-table">
 					<tr>
 						<th>ID</th>
 						<th>Item Name</th>
 						<th>Page</th>
 						<th>Category</th>
+						<th></th>
 					</tr>
 					  <?php require("../includes/display_account_image.inc.php");?>
 					</table>
+					<div class="image_btn_container" style="margin-top: 20px; display: flex; justify-content: center;">
+						<a href="image-form" class="button">Add</a>
+						<a href="#" class="button">Delete</a>
+					</div>
 				</div>
 			</div>
 		</div>
