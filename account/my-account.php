@@ -10,14 +10,9 @@ if (empty($_SESSION["user_role"]) || empty($_SESSION["userUid"])) {
 
 ?>
 
-<<<<<<< HEAD
-<?php include('../includes/display_account.inc.php'); ?>
-<?php include('../includes/display_account_address.inc.php'); ?>
-=======
 <?php include('../includes/display_account.inc.php');?>
 <?php include('../includes/display_account_address.inc.php');?>
 	<script src="<?php echo $link ?>/scripts/account.js"></script>
->>>>>>> a609db8759e2bf171f24232d53984f071a2aa0f9
 
 <div class="container" style="margin-bottom:10px; height:100vh;">
 	<div class="account-grid">
@@ -31,15 +26,7 @@ if (empty($_SESSION["user_role"]) || empty($_SESSION["userUid"])) {
 							MY ACCOUNT
 						</div>
 						<hr class="account-hr">
-<<<<<<< HEAD
-						<div style="font-family:myGeorgia; color:#707070; font-style: italic; font-size:15px;">
-							Update account information here.
-						</div>
-						<br />
-						<div class="account-label">
-=======
 						<div class="">
->>>>>>> a609db8759e2bf171f24232d53984f071a2aa0f9
 							<div style="float:right;">
 								<label for="last_name">Last Name :</label>
 								<div>
@@ -126,17 +113,11 @@ if (empty($_SESSION["user_role"]) || empty($_SESSION["userUid"])) {
 								<input style="border: 1px solid #C18570;" type="password" name="repeat_password" id="repeat_password">
 								<span class="pass-validation"></span>
 							</div>
-<<<<<<< HEAD
-						</div>
-						<button style="display:flex;margin:auto;margin-top:20px;" class="button" type="submit" name="update_user">UPDATE</button>
-				</form>
-=======
 							<input type="button" style="display:flex;margin:auto;margin-top:20px;" id="btnSubmit" class="button" type="submit" name="update_user" value="UPDATE"/>
 
 							<button style="display:none" id="submit_form" class="button" type="submit" name="update_user">UPDATE</button>
 					</form>
 				</div>
->>>>>>> a609db8759e2bf171f24232d53984f071a2aa0f9
 			</div>
 		</div>
 	</div>

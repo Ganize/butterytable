@@ -28,9 +28,18 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
                         if ($i == 0) {
                             $actives = 'active';
                         }
+                        $string = $row['category'];
+                        if (!empty($string) || !is_null($string)) {
+                            $stringresult = explode(",", $string);
+                            foreach ($stringresult as $j) {
+                                if ($j == 'slideshow') {
                     ?>
-                        <li data-target="#demo" data-slide-to="<?= $i; ?>" class="<? $actives; ?> "></li>
-                    <?php $i++;
+                                    <li data-target="#demo" data-slide-to="<?= $i; ?>" class="<? $actives; ?> "></li>
+                    <?php
+                                }
+                            }
+                        }
+                        $i++;
                     } ?>
                 </ul>
 
@@ -43,14 +52,20 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
                         if ($i == 0) {
                             $actives = 'active';
                         }
-                        // $string = $row['category'];
-                        // echo $string;
+                        $string = $row['category'];
+                        echo $string;
+                        if (!empty($string) || !is_null($string)) {
+                            $stringresult = explode(",", $string);
+                            foreach ($stringresult as $j) {
+                                if ($j == 'slideshow') {
                     ?>
-                        <div class="carousel-item <?= $actives; ?>">
-                            <img src="images/<?= $row['gallery_path'] ?>" width="100%" height="670px">
-                        </div>
-
-                    <?php $i++;
+                                    <div class="carousel-item <?= $actives; ?>">
+                                        <img src="images/<?= $row['gallery_path'] ?>" width="100%" height="670px">
+                                    </div>
+                    <?php }
+                            }
+                        }
+                        $i++;
                     } ?>
                 </div>
             </div>
