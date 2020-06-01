@@ -22,10 +22,7 @@ jQuery(document).ready(function(){
 		}
 	});
 
-	$("#repeat_password").keyup(function (e) {
-		console.log($("#repeat_password").val());
-		console.log($("#new_password").val());
-		
+	$("#repeat_password").keyup(function (e) {		
 
 		if($("#repeat_password").val() != $("#new_password").val())
 		{
@@ -43,8 +40,19 @@ jQuery(document).ready(function(){
 		}
 	});
 
-
-
+	$('.validation_text').keyup(function(value){	
+	    if($(this).val() == "")
+		{
+			$(this).addClass("non-valid");
+			$(this).removeClass("valid");
+		}
+		else
+		{	
+			$(this).addClass("valid");
+			$(this).removeClass("non-valid");		
+		
+		}
+	});
 
 });
 

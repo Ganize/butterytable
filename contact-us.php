@@ -1,6 +1,7 @@
 <!-- Header-->
 <?php include('templates/header.php');?>
 <link rel="stylesheet" href="css/contact.css" type="text/css">
+<
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -13,11 +14,12 @@
     </div>
 
 <?php endif;?>
-<div>
-<?php require 'includes/display_wishlist.inc.php'?>
 
-</div>
-<script>
+<?php include 'contact_forms/enquiry_form.php';?>
+
+
+
+<!-- <script>
 	jQuery(document).ready(function($){
 		jQuery(".fa-star").click(function(){
 			var flavourId = $(this).attr("name");
@@ -42,7 +44,7 @@
 			});
 		});
 	
-</script>
+</script> -->
 
 <!--Footer-->
 <?php include('templates/footer.php'); ?>

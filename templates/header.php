@@ -65,7 +65,8 @@ if (!isset($_SESSION)) {
 
 				<div>
 					<div class="dropdown">
-						<button class="dropbtn"><?php echo $_SESSION['userEmail'] ?></button>
+						<img width="25px" height="25px" class="dropbtn"src="<?php echo $link;?>images/icon/login.png"/>
+					<!-- 	<button class="dropbtn"><?php echo $_SESSION['userEmail'] ?></button> -->
 						<div class="dropdown-content">
 							<a href="<?php echo $link;?>account/my-account.php">Account</a>
 							<a href="<?php echo $link;?>includes/logout.inc.php">Logout</a>
@@ -80,12 +81,17 @@ if (!isset($_SESSION)) {
 				</div>
 			<?php endif; ?>
 
+
+			<div class="vl"></div>
+
 			<!-- <div class="vl"></div> -->
-			<div class="iconphotos nav-header-div">
+			<div class="nav-header-div">
 				<a href="https://www.facebook.com/butterytable"><img src="<?php echo $link; ?>/images/icon/facebook_header.png" width="25px" height="25px"></a>
 				<a href="https://sg.carousell.com/butterytablebakery/"><img src="<?php echo $link; ?>/images/icon/carousell.png" width="35px" height="35px"></a>
 				<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link; ?>/images/icon/instagram_header.png" width="25px" height="25px"></a>
 			</div>
+
+			<div class="vl"></div>
 
 			<div class="nav-header-div" style="margin-left: 10px;">
 				<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link; ?>/images/icon/instagram_header.png" width="25px" height="25px"></a>

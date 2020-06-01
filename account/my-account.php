@@ -15,6 +15,7 @@ else
 
 <?php include('../includes/display_account.inc.php');?>
 <?php include('../includes/display_account_address.inc.php');?>
+	<script src="<?php echo $link ?>/scripts/account.js"></script>
 
 <div class="container" style="margin-bottom:10px; height:100vh;">
 	<div class="account-grid">
@@ -28,7 +29,7 @@ else
 							MY ACCOUNT
 						</div>
 						<hr class="account-hr">
-						<div>
+						<div class="">
 							<div style="float:right;">
 								<label for="last_name">Last Name :</label>	
 								<div>
@@ -116,7 +117,9 @@ else
 									<span class="pass-validation"></span>
 								</div>
 							</div>
-							<button style="display:flex;margin:auto;margin-top:20px;" class="button" type="submit" name="update_user">UPDATE</button>
+							<input type="button" style="display:flex;margin:auto;margin-top:20px;" id="btnSubmit" class="button" type="submit" name="update_user" value="UPDATE"/>
+
+							<button style="display:none" id="submit_form" class="button" type="submit" name="update_user">UPDATE</button>
 					</form>
 				</div>
 			</div>

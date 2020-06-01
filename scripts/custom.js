@@ -21,6 +21,25 @@ jQuery(document).ready(function($){
 			}
 	  	});	
 	});
+
+	/* For Contact Form */
+	jQuery("#btnQuotation").click(function(){
+		$.ajax({
+		type: "POST",
+		url:   "contact_forms/quotation_form.php",
+		}).done(function( msg ) {
+			jQuery("#form_container").html(msg);
+	  	});	
+	});
+
+	jQuery("#btnEnquiry").click(function(){
+		$.ajax({
+		type: "POST",
+		url:   "contact_forms/enquiry_form.php",
+		}).done(function( msg ) {
+			jQuery("#form_container").html(msg);
+	  	});	
+	});
 });
 
 

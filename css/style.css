@@ -340,15 +340,13 @@ footer {
 .nav-header {
 	text-align: right;
 }
-
-.nav-header {
-	display: grid;
-	grid-template-columns: auto auto auto;
-	width: 300px;
-	text-align: center;
-	position: absolute;
-	right: 0px;
+.nav-header>div
+{
+	display: inline;
+	margin-right: 20px;
 }
+
+
 
 .nav-header .iconphotos img {
 	margin: 0px;
@@ -629,4 +627,10 @@ footer {
 {
 	width: 100vw !important;
     height: 100vh !important;
+}
+
+.hr-right
+{
+	margin-right:0px;
+	margin-left: auto;
 }
