@@ -1,4 +1,4 @@
-	<div class="user-nav-container">
+	<div class="user-nav-container" style="border: 1px solid #C18570;">
 		<nav>			
 			<ul class="navbar-nav user-nav-bar">
 				<?php 

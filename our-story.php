@@ -11,7 +11,7 @@
   <div class="col-md-6" style="margin: auto;">
    
       <div class="story-header">
-
+  </div>
   <div class="col-md-6">
     <div>
       <div>

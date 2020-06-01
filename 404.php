@@ -1,10 +1,4 @@
 
-<!-- Header-->
-
-
-<!--Footer-->
-
-
 <?php include('templates/header.php');?>
 
 	<div id="notfound">

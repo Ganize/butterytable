@@ -46,4 +46,3 @@
 
 <!--Footer-->
 <?php include('templates/footer.php'); ?>
-
