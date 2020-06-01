@@ -1,12 +1,12 @@
-<?php include('../templates/header.php'); ?>
 
-<a href="#" class="button">Enquiry</a>
+<div id="form_container">
+<input type="button" class="button" id="btnEnquiry" value="Enquiry"/>
 
-<a href="#" class="button">quotation</a>
+<input type="button" class="button" id="btnQuotation" value="Quotation"/>
 
 <br />
 
-<link rel="stylesheet" href="../css/enquiry.css" type="text/css">
+<link rel="stylesheet" href="http://localhost/butterytable/css/enquiry.css" type="text/css">
 
 <div class="container">
 	<div class="row">
@@ -42,11 +42,7 @@
 			</div>
 		</div>
 		<div class="col-6">
-			<img src="../images/icon/enquiry.jpg" width="450px" height="450px">
+			<img src="http://localhost/butterytable/images/icon/enquiry.jpg" width="450px" height="450px">
 		</div>
 	</div>
-
-
-	<!--  -->
-
-	<?php include('../templates/footer.php'); ?>
+</div>

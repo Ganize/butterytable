@@ -22,10 +22,7 @@
 						foreach ($nav_bar as $name => $url) {
 							echo '<li class="nav-item '.(($currentPage === $url) ? 'active" ': '"').'><a  style="display: block" class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">'.$name.'</a></li>';
 						}
-
 					}
-
-					
 				?>
 			</ul>
 		</nav> 

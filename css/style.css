@@ -340,15 +340,13 @@ footer {
 .nav-header {
 	text-align: right;
 }
-
-.nav-header {
-	display: grid;
-	grid-template-columns: auto auto auto;
-	width: 300px;
-	text-align: center;
-	position: absolute;
-	right: 0px;
+.nav-header>div
+{
+	display: inline;
+	margin-right: 20px;
 }
+
+
 
 .nav-header .iconphotos img {
 	margin: 0px;
@@ -629,9 +627,17 @@ footer {
     height: 100vh !important;
 }
 
+<<<<<<< HEAD
 .account-label
 {
 	font-family: myGeorgia;
 	font-size: 19px;
 	color:#726061;
 }
+=======
+.hr-right
+{
+	margin-right:0px;
+	margin-left: auto;
+}
+>>>>>>> a609db8759e2bf171f24232d53984f071a2aa0f9

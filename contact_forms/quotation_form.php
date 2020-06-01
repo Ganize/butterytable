@@ -1,10 +1,10 @@
-<!-- Header-->
-<?php include('../templates/header.php'); ?>
-<link rel="stylesheet" href="../css/quotation.css" type="text/css">
+<div id="form_container">
 
-<a href="#" class="button">Enquiry</a>
+<link rel="stylesheet" href="http://localhost/butterytable/css/quotation.css" type="text/css">
 
-<a href="#" class="button">quotation</a>
+<input type="button" class="button" id="btnEnquiry" value="Enquiry"/>
+
+<input type="button" class="button" id="btnQuotation" value="Quotation"/>
 
 <div class="container">
 	<div class="row">
@@ -63,10 +63,9 @@
 			</div>
 		</div>
 		<div class="col-6">
-			<img src="../images/icon/quotation.jpg" width="450px" height="600px">
+			<img src="http://localhost/butterytable/images/icon/quotation.jpg" width="450px" height="600px">
 		</div>
 		<div>
 		</div>
 	</div>
-
-	<?php include('../templates/footer.php'); ?>
+</div>
