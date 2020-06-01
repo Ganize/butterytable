@@ -26,7 +26,14 @@
         while ($row = $result->fetch_assoc()) {
             if ($count % 4 == 0)
                 echo '<tr>';
-            echo "<td class='std_success_td'><img id='borderimg' src='../images/{$row['gallery_path']}' /></td>";
+            // echo "<td class='std_success_td'><img id='borderimg'  class='img-responsive' src='../images/{$row['gallery_path']}' /><  /td>";
+            echo "<div class='responsive'>
+            <div class='gallery'>
+            <td><img src='../images/{$row['gallery_path']}'width='600' height='400'>
+            <div class='desc'>Add a description of the image here</div> </td>
+            </div>
+            </div>";
+            
             if ($count % 4 == 3)
                 echo '</tr>';
             $count++;

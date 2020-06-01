@@ -80,7 +80,6 @@ if (!isset($_SESSION)) {
 				</div>
 			<?php endif; ?>
 
-			<!-- <div class="vl"></div> -->
 			<div class="iconphotos nav-header-div">
 				<a href="https://www.facebook.com/butterytable"><img src="<?php echo $link; ?>/images/icon/facebook_header.png" width="25px" height="25px"></a>
 				<a href="https://sg.carousell.com/butterytablebakery/"><img src="<?php echo $link; ?>/images/icon/carousell.png" width="35px" height="35px"></a>

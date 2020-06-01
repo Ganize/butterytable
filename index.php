@@ -14,7 +14,6 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
 }
-
 ?>
 <div class="container-fluid" style="background-color:#F7ECEC;">
     <div class="row justify-content-center mb-2">
@@ -44,6 +43,8 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
                         if ($i == 0) {
                             $actives = 'active';
                         }
+                        // $string = $row['category'];
+                        // echo $string;
                     ?>
                         <div class="carousel-item <?= $actives; ?>">
                             <img src="images/<?= $row['gallery_path'] ?>" width="100%" height="670px">

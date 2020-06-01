@@ -261,6 +261,8 @@ footer {
 
 .user-nav-bar {
 	padding: 20px;
+	text-decoration: none;
+	
 }
 
 .account-container, .wishlist-container {
@@ -269,6 +271,12 @@ footer {
 
 .user-nav-bar li a {
 	font-size: 18px;
+	font-family: myGeorgia;
+	color:#A2A2A2;
+}
+
+.user-nav-bar > .active{
+	color:green;
 }
 
 .user-nav-container, .account-container, .wishlist-container {
@@ -319,14 +327,6 @@ footer {
     color:white;
 }
 
-/*.wa-row div
-{
-=======
-.wa-row div {
->>>>>>> fe98ace2bd45bcf70bde31ecccad46e75372530c
-	display: inline;
-	width: 20px;
-}*/
 
 .wa-row div span 
 {
@@ -536,16 +536,14 @@ footer {
 .data-table, .data-table td
 {
 	border:1px solid #D3D3D3;
+	text-align: center; 
+	font-family:myGeorgia; 
+	font-size:16px;
 }
 
 .data-table td, .data-table th
 {
 	padding: 10px;
-}
-
-.data-table th
-{
-	background :#F8F8FF;
 }
 
 .image_btn_container a
@@ -629,4 +627,11 @@ footer {
 {
 	width: 100vw !important;
     height: 100vh !important;
+}
+
+.account-label
+{
+	font-family: myGeorgia;
+	font-size: 19px;
+	color:#726061;
 }
