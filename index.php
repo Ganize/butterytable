@@ -28,45 +28,51 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
                         if ($i == 0) {
                             $actives = 'active';
                         }
-                        $string = $row['category'];
-                        if (!empty($string) || !is_null($string)) {
-                            $stringresult = explode(",", $string);
+
+                        if (!empty($row['category']) || !is_null($row['category'])) {
+                            $stringresult = explode(",", $row['category']);
                             foreach ($stringresult as $j) {
                                 if ($j == 'slideshow') {
                     ?>
-                                    <li data-target="#demo" data-slide-to="<?= $i; ?>" class="<? $actives; ?> "></li>
-                    <?php
+                         <li data-target="#demo" data-slide-to="" class="<? $actives; ?> "></li>
+                    <?php 
+                             $i++;
                                 }
                             }
                         }
-                        $i++;
+                      
                     } ?>
                 </ul>
 
                 <!-- The slideshow -->
                 <div class="carousel-inner">
                     <?php
-                    $i = 0;
-                    foreach ($result as $row) {
+                        $i = 0;
+                        foreach ($result as $row) {
                         $actives = '';
+                       
                         if ($i == 0) {
                             $actives = 'active';
                         }
-                        $string = $row['category'];
-                        echo $string;
-                        if (!empty($string) || !is_null($string)) {
-                            $stringresult = explode(",", $string);
+
+                        //If empty
+                        if (!empty($row['category']) || !is_null($row['category'])) {
+                            $stringresult = explode(",",  $row['category']);
+
                             foreach ($stringresult as $j) {
                                 if ($j == 'slideshow') {
                     ?>
                                     <div class="carousel-item <?= $actives; ?>">
                                         <img src="images/<?= $row['gallery_path'] ?>" width="100%" height="670px">
                                     </div>
-                    <?php }
+                    <?php 
+                        $i++;
+                                }
                             }
                         }
-                        $i++;
-                    } ?>
+                    }
+                        
+                    ?>
                 </div>
             </div>
             <!-- Left and right controls -->
