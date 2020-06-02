@@ -57,7 +57,6 @@
 							echo '<div class="row-'.$row_num.' wa-row" >';
 						}
 
-						
 						echo '<div class="wish_grid">';
 						echo '<div class="fname">'.$row1["flavour_name"].'</div>';
 						if(!isset($_GET["user_id"]) && $_SESSION["user_role"] != "ujiz4_admin")
