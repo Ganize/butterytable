@@ -3,16 +3,17 @@
 
 <link rel="stylesheet" href="css/story.css" type="text/css">
 
-<div class="row">
-  <div class="col-md-6">
+<div style="display:grid; grid-template-columns: 50% 50%;">
+  <div>
     <img src="images/icon/ourstory.jpg" class="img-fluid" alt="Cakes">
   </div>
 
-  <div class="col-md-6" style="margin: auto;">
+  <div>
    
       <div class="story-header">
   </div>
-  <div class="col-md-6">
+  
+  <div style="padding:25px;">
     <div>
       <div>
 

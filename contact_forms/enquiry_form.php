@@ -1,14 +1,5 @@
 
-<div id="form_container">
-<input type="button" class="button" id="btnEnquiry" value="Enquiry"/>
-
-<input type="button" class="button" id="btnQuotation" value="Quotation"/>
-
-<br />
-
-<link rel="stylesheet" href="http://localhost/butterytable/css/enquiry.css" type="text/css">
-
-<div class="container">
+<div id="form_container" style="margin-top:30px;margin-bottom: 30px;">
 	<div class="row">
 		<div class="col-6">
 			<div class="form-container">
@@ -19,15 +10,15 @@
 				<form action="includes/enquiry.inc.php" method="post">
 					<div class="form-group contact-group">
 						<label for="enquiry-name">Name*</label>
-						<input type="text" name="enquiry-name" id="enquiry-name">
+						<input type="text" name="enquiry-name" id="enquiry-name" class="require">
 					</div>
 					<div class="form-group contact-group">
 						<label for="enquiry-email">Email*</label>
-						<input type="email" name="enquiry-email" id="enquiry-email">
+						<input type="email" name="enquiry-email" id="enquiry-email" class="require">
 					</div>
 					<div class="form-group contact-group">
 						<label for="enquiry-contact">Contact Number*</label>
-						<input type="number" name="enquiry-contact" maxlength="8" id="enquiry-contact">
+						<input type="number" name="enquiry-contact" maxlength="8" id="enquiry-contact" class="require">
 					</div>
 					<div class="form-group contact-group">
 						<label for="enquiry-subject">Subject</label>
@@ -37,7 +28,7 @@
 						<label for="enquiry-message">Message</label>
 						<textarea name="enquiry-message" id="enquiry-message"></textarea>
 					</div>
-					<button class="btn button" type="submit" name="btn-enquiry">Submit</button>
+					<button class="button" type="submit" name="btn-enquiry">Submit</button>
 				</form>
 			</div>
 		</div>

@@ -33,6 +33,7 @@
 	overflow-x: visible;*/
 	transition: left 0.3s ease, box-shadow 0.3s ease;
 	z-index: 999;
+	margin-bottom: 35px;
 }
 
 .main-menu ul {
@@ -340,6 +341,7 @@ footer {
 
 .nav-header {
 	text-align: right;
+
 }
 .nav-header>div
 {
@@ -381,6 +383,7 @@ footer {
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 	z-index: 1;
+	text-align: left;
 }
 
 /* Links inside the dropdown */

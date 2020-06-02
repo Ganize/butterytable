@@ -1,12 +1,5 @@
-<div id="form_container">
 
-<link rel="stylesheet" href="http://localhost/butterytable/css/quotation.css" type="text/css">
-
-<input type="button" class="button" id="btnEnquiry" value="Enquiry"/>
-
-<input type="button" class="button" id="btnQuotation" value="Quotation"/>
-
-<div class="container">
+<div id="form_container" style="margin-top:30px;margin-bottom: 30px;">
 	<div class="row">
 		<div class="col-6">
 			<div class="form-container">
@@ -17,15 +10,15 @@
 				<form action="includes/quotation.inc.php" method="post">
 					<div class="form-group contact-group">
 						<label for="quotation-name">Name*</label>
-						<input type="text" name="quotation-name" id="quotation-name">
+						<input type="text" name="quotation-name" id="quotation-name" class="require">
 					</div>
 					<div class="form-group contact-group">
 						<label for="quotation-email">Email*</label>
-						<input type="email" name="quotation-email" id="quotation-email">
+						<input type="email" name="quotation-email" id="quotation-email" class="require">
 					</div>
 					<div class="form-group contact-group">
 						<label for="quotation-contact">Contact Number*</label>
-						<input type="text" maxlength="8" name="quotation-contact" id="quotation-contact">
+						<input type="text" maxlength="8" name="quotation-contact" id="quotation-contact" class="require">
 					</div>
 					<div class="form-group contact-group">
 						<label for="quotation-size">Serving Size/Quantity</label>
@@ -58,7 +51,7 @@
 						<label for="">Additional Comments</label>
 						<textarea name="quotation-comments" id="quotation-comments"></textarea>
 					</div>
-					<button class="btn button" type="submit" name="btn-quotation">Submit</button>
+					<button class="button" type="submit" name="btn-quotation">Submit</button>
 				</form>
 			</div>
 		</div>
@@ -66,6 +59,6 @@
 			<img src="http://localhost/butterytable/images/icon/quotation.jpg" width="450px" height="600px">
 		</div>
 		<div>
-		</div>
 	</div>
 </div>
+
