@@ -18,7 +18,7 @@
 					</div>
 					<div class="form-group contact-group">
 						<label for="enquiry-contact">Contact Number*</label>
-						<input type="number" name="enquiry-contact" maxlength="8" id="enquiry-contact" class="require">
+						<input type="text" name="enquiry-contact" maxlength="8" id="enquiry-contact" class="require digits">
 					</div>
 					<div class="form-group contact-group">
 						<label for="enquiry-subject">Subject</label>

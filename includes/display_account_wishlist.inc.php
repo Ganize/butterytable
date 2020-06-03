@@ -39,7 +39,8 @@
 				$flavour_id = $row["flavour_id"];
 				$menu_id = $row["menu_id"];
 		
-				$sql1 =  "SELECT * FROM bt_flavour WHERE flavour_id = ? && menu_id= ?";
+				//$sql1 =  "SELECT * FROM bt_flavour WHERE flavour_id = ? && menu_id= ?";
+				$sql1 =  "SELECT * FROM bt_flavour";
 				$stmt1 = mysqli_stmt_init($conn);
 				if(!mysqli_stmt_prepare($stmt1, $sql1))
 				{
@@ -48,7 +49,7 @@
 				}
 				else
 				{
-					mysqli_stmt_bind_param($stmt1, "ii", $flavour_id,  $menu_id); //Prepare statement
+					//mysqli_stmt_bind_param($stmt1, "ii", $flavour_id,  $menu_id); //Prepare statement
 					mysqli_stmt_execute($stmt1);
 					$result1 = mysqli_stmt_get_result($stmt1);
 					if($row1 = mysqli_fetch_assoc($result1)){ //Fectching the data from result

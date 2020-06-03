@@ -65,8 +65,10 @@
 }
 
 .main-menu a:hover, .main-menu a:focus {
-	background: #333;
-	text-decoration: underline;
+	background: #E9B7B8;
+	color:white;
+
+    display: block
 }
 
 .main-menu .menu-close {
@@ -634,4 +636,94 @@ footer {
 {
 	margin-right:0px;
 	margin-left: auto;
+}
+
+.nav-header-mobile
+{
+	display: none;
+	text-align:left;
+}
+
+.account-last-name
+{
+	float:right;
+}
+
+.account-border-style
+{
+	border: 1px solid #C18570;
+}
+
+@media only screen and (max-width: 600px) {
+	.main-menu a {
+   		display: initial;
+   	}
+   	.nav-header-mobile
+	{
+		display: initial !important;
+		text-align:left;
+	}
+	.nav-header
+	{
+		display: none;
+	}
+	.nav-header>div
+	{
+		margin-right:10px;
+	}
+
+	.nav-header-div>a
+	{
+		padding:10px;
+	}
+
+	/*Account menu*/
+	.account-grid
+	{
+		display:initial;
+	}
+	.user-details
+	{
+		padding-left: 0px;
+	}
+	.container
+	{
+		overflow: scroll;
+	}
+
+	.account-container, .wishlist-container {
+    	padding: 20px;
+	}
+
+	.account-last-name
+	{
+		float:none;
+		grid-area: account-last-name;
+	}
+
+	.account-first-name
+	{
+		float:none;
+		grid-area: account-first-name;
+	}
+
+	.name-container
+	{
+		display: grid;
+		grid-template-areas: 'account-first-name' 'account-last-name';
+	}
+	.wa-row
+	{
+		display:initial;
+	}
+	.wish_grid
+	{
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.nav-item
+	{
+		margin-bottom: 15px!important;
+	}
 }

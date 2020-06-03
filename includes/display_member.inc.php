@@ -44,7 +44,6 @@
 			$result = mysqli_stmt_get_result($stmt);
 			while($row = mysqli_fetch_assoc($result)) //Fectching the data from result
 			{
-
 				echo "<tr>";
 				echo "<td>".$row["user_id"]."</td>";
 

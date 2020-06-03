@@ -32,11 +32,9 @@
 						</select>
 					</div>
 					<div class="form-group contact-group">
-						<label for="quotation-flavour">Cake Flavour</label>
-						<select name="quotation-flavour" id="quotation-flavour">
-							<option value="test3">test3</option>
-							<option value="test4">test4</option>
-						</select>
+						
+						<?php include '../includes/display_quotation_flavour.inc.php';?>		
+						
 					</div>
 					<div class="form-group contact-group">
 						<label for="">Cake Design</label>

@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 	jQuery(".fa-star").click(function(){
-	var flavourId = $(this).attr("name");
+	var galleryId = $(this).attr("name");
 	var selectedId = $(this).attr("id");
 	var menu_id = 1;
 
@@ -9,7 +9,7 @@ jQuery(document).ready(function($){
 	$.ajax({
 		type: "POST",
 		url:   "../includes/wishlist.inc.php",
-		data: { fId: flavourId, cId: menu_id} ,
+		data: { gId: galleryId} ,
 		}).done(function( msg ) {
 			console.log(msg);
 			var target_star = document.getElementById(selectedId);

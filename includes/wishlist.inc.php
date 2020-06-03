@@ -1,8 +1,8 @@
 <?php
 	require 'db_conn.inc.php';
 	session_start();
-	$flavour_id = $_POST["fId"];
-	$menu_id = $_POST["cId"];
+	$gallery_id = $_POST["gId"];
+	// $menu_id = $_POST["cId"];
 	$user_id =  $_SESSION['userUid'];
 
 	$sql = "SELECT * FROM bt_wishlist WHERE user_id=? && flavour_id=?"; //Check username exists

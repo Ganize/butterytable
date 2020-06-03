@@ -58,9 +58,7 @@ if (!isset($_SESSION)) {
 <body>
 
 	<div>
-
 		<div class="nav-header">
-
 			<?php if (isset($_SESSION['userUid'])) : ?>
 
 				<div>
@@ -111,22 +109,61 @@ if (!isset($_SESSION)) {
 				<span class="fa fa-close" aria-hidden="true"></span>
 			</a>
 			<!--<ul class="navbar-nav">-->
-				<ul class="nav_bar">
-					<?php 
-						$nav_bar = array(
-						"Home" => "index",
-						"Our Story" => 	"our-story" , 
-						"Gallery" => 	"gallery" , 
-						"Menu" => "menu", 
-						"Contact Us" => "contact-us", 
-						"FAQ" =>"faq");
+			<ul class="nav_bar">
+				<?php 
+					$nav_bar = array(
+					"Home" => "index",
+					"Our Story" => 	"our-story" , 
+					"Gallery" => 	"gallery" , 
+					"Menu" => "menu", 
+					"Contact Us" => "contact-us", 
+					"FAQ" =>"faq");
 
-						foreach ($nav_bar as $name => $url) {
-							echo '<li style="margin:auto;" class="nav-item '.(($currentPage === $url) ? 'active" ': '"').'><a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">'.$name.'</a></li>';
-						
-						}
-					?>
-				</ul>
+					foreach ($nav_bar as $name => $url) {
+						echo '<li style="margin:auto;" class="nav-item '.(($currentPage === $url) ? 'active" ': '"').'><a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">'.$name.'</a></li>';
+					
+					}
+				?>
+				<li style="position:absolute;bottom:0px; width: 100vw; text-align: center; background:#C38687">
+				<div >
+					<div class="nav-header nav-header-mobile">
+						<?php if (isset($_SESSION['userUid'])) : ?>
+
+							<div>
+								<div class="dropdown">
+									<a href="<?php echo $link; ?>account/my-account">
+										<img width="25px" height="25px" class="dropbtn" src="<?php echo $link;?>images/icon/login_header.png"/>
+									</a>
+								<!-- 	<button class="dropbtn"><?php echo $_SESSION['userEmail'] ?></button> -->
+								
+								</div>
+							</div>
+
+						<?php else : ?>
+							<div>
+								<a href="/butterytable/login_header.php">LOG IN</a>
+							</div>
+						<?php endif; ?>
+
+
+						<div class="vl"></div>
+
+						<!-- <div class="vl"></div> -->
+						<div class="nav-header-div">
+							<a href="https://www.facebook.com/butterytable"><img src="<?php echo $link; ?>images/icon/facebook_footer.png" width="25px" height="25px"></a>
+							<a href="https://sg.carousell.com/butterytablebakery/"><img src="<?php echo $link; ?>images/icon/carousell.png" width="35px" height="35px"></a>
+							<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link; ?>images/icon/instagram_footer.png" width="25px" height="25px"></a>
+						</div>
+
+						<div class="vl"></div>
+
+						<div class="nav-header-div">
+							<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link; ?>/images/icon/instagram_footer.png" width="25px" height="25px"></a>
+						</div>
+					</div>
+				</div>	
+			</li>
+			</ul>
 		</nav>
 		<a href="#main-menu-toggle" class="backdrop" tabindex="-1" aria-hidden="true" hidden></a>
 
