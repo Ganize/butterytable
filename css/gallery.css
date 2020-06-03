@@ -1,79 +1,51 @@
 h3 {
-    text-align: center;
-    font-family: myGeorgia;
-    font-size: 40px;
-    color: #C18570;
-    text-transform: uppercase;
-    margin-bottom: 29px;
+  text-align: center;
+  font-family: myGeorgia;
+  font-size: 40px;
+  color: #C18570;
+  text-transform: uppercase;
+  margin-bottom: 29px;
 }
 
 .iconphotos {
-    text-align: center;
-    margin-bottom: 30px;
-    padding-left: 47px;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-left: 47px;
 }
 
 .iconphotos img {
-    margin-right: 40px;
+  margin-right: 40px;
 }
 
 .iconphotos img:nth-child(3) {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
-/* #borderimg {
-    border: 1px solid #C18570;
-    /* width: 400px;
-    height: 400px;
-    margin-right: 15px;
-    margin-bottom: 40px; 
+.gallery-row {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  margin-bottom: 25px;
+  text-align: center;
 }
- */
+
+#borderimg{
+  border: 1px solid #C18570;
+}
 
 
-div.gallery {
-    border: 1px solid #ccc;
+
+@media only screen and (max-width: 600px) {
+  .gallery-row {
+    display: block;
   }
-  
-  div.gallery:hover {
-    border: 1px solid #777;
+
+  #borderimg{
+    width: 300px;
+    height: 300px;
   }
-  
-  div.gallery img {
-    width: 100%;
-    height: auto;
+
+  .galleryname{
+    align-items: center;
   }
-  
-  div.desc {
-    padding: 15px;
-    text-align: center;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  .responsive {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
-  }
-  
-  @media only screen and (max-width: 700px) {
-    .responsive {
-      width: 49.99999%;
-      margin: 6px 0;
-    }
-  }
-  
-  @media only screen and (max-width: 500px) {
-    .responsive {
-      width: 100%;
-    }
-  }
-  
-  .clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+
+}

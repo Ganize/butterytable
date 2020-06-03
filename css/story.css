@@ -18,48 +18,23 @@ p{
   font-family: myGeorgia;
   font-size: 17px;
   color: #968D8D;
-
 }
 
-/*.story-header
-{
-  position: absolute; 
-  top:0; 
-  width: 100%; 
-  text-align: center;
+.gridstory{
+  display:grid; 
+  grid-template-columns: 50% 50%;
 }
 
-.story-right-container
-{
-  display:flex; 
-  align-items: center;
-}*/
+.storywords{
+  padding-top: 110px;
+}
 
-/* 
-
-
-  .column {
-    float: left;
-    width: 50%;
-  }
-  
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
+@media only screen and (max-width: 600px) {
+  .gridstory{
+    display: block;
   }
 
-  .left {
-    width: 50%;
+  .storywords{
+    padding-top: 0px;
   }
-  
-  .right {
-    width: 50%;
-    background-color: #F7ECEC;
-  }
-  
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
-  } */
+}

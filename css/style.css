@@ -313,6 +313,7 @@ footer {
 	margin-bottom: 25px;
 }
 
+
 .fname
 {
 	display: none;
@@ -349,8 +350,6 @@ footer {
 	display: inline;
 	margin-right: 20px;
 }
-
-
 
 .nav-header .iconphotos img {
 	margin: 0px;
@@ -616,7 +615,6 @@ footer {
 	border-style: dotted;
 	z-index: 2;
 }
-
 
 .fs-active
 {

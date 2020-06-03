@@ -34,14 +34,6 @@
   clear: both;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-
 .div2 {
   width: 30%;
   margin: 0 auto;
@@ -70,4 +62,20 @@ h3{
   font-family: myGeorgia;
   color: #726061;
   font-size: 19px;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+  
+  .div3 {
+    width: 80%;
+    text-align: center;
+  }
+
+  .div2 {
+    width: 80%;
+    text-align: center;
+  }
 }

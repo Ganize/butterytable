@@ -11,34 +11,34 @@
     <a href="https://sg.carousell.com/butterytablebakery/"><img src="../images/icon/carousell.png" width="50px" height="50px"></a>
 </div>
 
-<table width="86" border="0" align="center">
-    <?php
-    require 'includes/db_conn.inc.php';
-    $sql = "SELECT * FROM bt_cakegallery";
-    $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location: ../login/login.php?error=sqlerror");
-        exit();
-    } else {
-        mysqli_stmt_execute($stmt);
-        $result = mysqli_stmt_get_result($stmt);
-        $count = 0;
-        while ($row = $result->fetch_assoc()) {
-            if ($count % 4 == 0)
-                echo '<tr>';
-            // echo "<td class='std_success_td'><img id='borderimg'  class='img-responsive' src='../images/{$row['gallery_path']}' /><  /td>";
-            echo "<div class='responsive'>
-            <div class='gallery'>
-            <td><img src='../images/{$row['gallery_path']}'width='600' height='400'>
-            <div class='desc'>Add a description of the image here</div> </td>
-            </div>
-            </div>";
-            
-            if ($count % 4 == 3)
-                echo '</tr>';
-            $count++;
-        }
-    }
-    ?>
-</table>
+<?php require 'includes/display_gallery.inc.php'?>
+
+
+<!-- <script>
+	jQuery(document).ready(function($){
+		jQuery(".fa-star").click(function(){
+			var flavourId = $(this).attr("name");
+			var selectedId = $(this).attr("id");
+			var menu_id = 1;
+
+			console.log("test");
+			$.ajax({
+				type: "POST",
+				url: "includes/wishlist.inc.php",
+				data: { fId: flavourId, cId: menu_id} ,
+				}).done(function( msg ) {
+
+					var target_star = document.getElementById(selectedId);
+					if(msg == 0){
+ 						target_star.classList.remove("checked");
+					}
+					else if(msg == 1){
+						target_star.classList.add("checked");
+					}
+			  	});	
+			});
+		});
+	
+</script> -->
+
 <?php include('templates/footer.php'); ?>
