@@ -22,9 +22,9 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
             }
             echo '<div><img id="borderimg" src="http://localhost/butterytable/images/' . $row["gallery_path"] . '" width="400" height="400">';
             echo '<div>';
-            echo '<span class="galleryname">' . $row["gallery_name"] . '</span>';
+            echo '<span class="galleryname">'.$row["gallery_name"].'</span>';
             echo '<br />';
-            echo '<span class="fa fa-heart-o"></span> ';
+            echo '<span class="fa fa-heart" name="'.$row["gallery_id"].'" id="menu_'.$row["gallery_id"].'" ></span> ';
             echo '</div>';
             echo '</div>';
 
