@@ -28,6 +28,24 @@ h3 {
   text-align: center;
 }
 
-.borderimg{
+#borderimg{
   border: 1px solid #C18570;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .gallery-row {
+    display: block;
+  }
+
+  #borderimg{
+    width: 300px;
+    height: 300px;
+  }
+
+  .galleryname{
+    align-items: center;
+  }
+
 }

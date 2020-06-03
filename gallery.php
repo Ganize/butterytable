@@ -13,7 +13,8 @@
 
 <?php require 'includes/display_gallery.inc.php'?>
 
-<script>
+
+<!-- <script>
 	jQuery(document).ready(function($){
 		jQuery(".fa-star").click(function(){
 			var flavourId = $(this).attr("name");
@@ -38,6 +39,6 @@
 			});
 		});
 	
-</script>
+</script> -->
 
 <?php include('templates/footer.php'); ?>

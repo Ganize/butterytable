@@ -18,11 +18,14 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
         while ($row = mysqli_fetch_assoc($result)) {
 
             if ($count == 0) {
-                echo '<div class="row-'.$row_num.' gallery-row">';
+                echo '<div class="row-' . $row_num . ' gallery-row">';
             }
-            echo '<div><img class="borderimg" src="http://localhost/butterytable/images/' . $row["gallery_path"] . '" width="400" height="400">';
-            echo '<div class="galleryname">'.$row["gallery_name"].'</div>';
-            echo '<span class="fa fa-star checked"></span>';
+            echo '<div><img id="borderimg" src="http://localhost/butterytable/images/' . $row["gallery_path"] . '" width="400" height="400">';
+            echo '<div>';
+            echo '<span class="galleryname">' . $row["gallery_name"] . '</span>';
+            echo '<br />';
+            echo '<span class="fa fa-heart-o"></span> ';
+            echo '</div>';
             echo '</div>';
 
             if ($count == 3) {
@@ -32,7 +35,6 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
             } else {
                 $count = $count + 1;
             }
-
         }
     }
 }

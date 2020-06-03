@@ -18,7 +18,7 @@
                 </ul>
             </div>
             <br />
-            <ul class="div2">
+            <ul class="div3">
                 <li>Double Chocolate</li>
                 <li>Vanilla Buttercream</li>
                 <li>Zesty Lemon</li>
@@ -69,7 +69,7 @@
                 </ul>
             </div>
             <br />
-            <ul class="div2">
+            <ul class="div3">
                 <li>Fruitilicious </li>
                 <li>Lemon Meringue</li>
                 <li>Chocolate Hazelnut</li>

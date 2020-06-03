@@ -100,7 +100,7 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
 
     <div class="container post-container">
         <div class="row">
-            <div class="col post-col">
+            <div class="col post-col mcol-4">
                 <div class="post-grid">
                     <div>
                         <img src="images/cake1.jpg">
