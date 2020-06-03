@@ -40,7 +40,7 @@
 				$menu_id = $row["menu_id"];
 		
 				//$sql1 =  "SELECT * FROM bt_flavour WHERE flavour_id = ? && menu_id= ?";
-				$sql1 =  "SELECT * FROM bt_flavour";
+				$sql1 =  "SELECT * FROM bt_cakegallery";
 				$stmt1 = mysqli_stmt_init($conn);
 				if(!mysqli_stmt_prepare($stmt1, $sql1))
 				{

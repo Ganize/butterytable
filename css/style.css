@@ -652,6 +652,10 @@ footer {
 	border: 1px solid #C18570;
 }
 
+
+.fa {
+	cursor: pointer !important;
+}
 @media only screen and (max-width: 600px) {
 	.main-menu a {
    		display: initial;
@@ -725,3 +729,4 @@ footer {
 		margin-bottom: 15px!important;
 	}
 }
+
