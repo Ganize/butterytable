@@ -109,7 +109,18 @@ if (!isset($_SESSION)) {
 				<span class="fa fa-close" aria-hidden="true"></span>
 			</a>
 			<!--<ul class="navbar-nav">-->
+				<?php
+					function active($currect_page){
+					  $url_array =  explode('/', $_SERVER['REQUEST_URI']) ;
+					  $url = end($url_array);  
+					  if($currect_page == $url){
+					      return 'active'; //class name in css 
+					  } 
+					}
+				?>
 			<ul class="nav_bar">
+
+			
 				<?php 
 					$nav_bar = array(
 					"Home" => "index",
@@ -120,7 +131,7 @@ if (!isset($_SESSION)) {
 					"FAQ" =>"faq");
 
 					foreach ($nav_bar as $name => $url) {
-						echo '<li style="margin:auto;" class="nav-item '.(($currentPage === $url) ? 'active" ': '"').'><a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">'.$name.'</a></li>';
+						echo '<li style="margin:auto;" class="nav-item '.active($url).'"><a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">'.$name.'</a></li>';
 					
 					}
 				?>

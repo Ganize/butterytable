@@ -1,7 +1,7 @@
 
-<div id="form_container" style="margin-top:30px;margin-bottom: 30px;">
-	<div class="row">
-		<div class="col-6">
+<div id="form_container" class="contact-container" style="margin-top:30px;margin-bottom: 30px;">
+	<div class="row me-row">
+		<div class="col-7 g-form">
 			<div class="form-container">
 				<h4>Enquiry Form</h4>
 				<hr class="eline">
@@ -32,7 +32,7 @@
 				</form>
 			</div>
 		</div>
-		<div class="col-6">
+		<div class="col-5 g-img">
 			<img src="http://localhost/butterytable/images/icon/enquiry.jpg" width="450px" height="450px">
 		</div>
 	</div>

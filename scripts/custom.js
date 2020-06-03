@@ -8,7 +8,7 @@ jQuery(document).ready(function($){
 
 	$.ajax({
 		type: "POST",
-		url:   "includes/wishlist.inc.php",
+		url:   "http://localhost/butterytable/includes/wishlist.inc.php",
 		data: { gId: galleryId} ,
 		}).done(function( msg ) {
 			console.log(msg);
@@ -24,7 +24,6 @@ jQuery(document).ready(function($){
 
 	/* For Contact Form */
 	jQuery("#btnQuotation").click(function(){
-		console.log("test")
 			$.ajax({
 			type: "POST",
 			url:   "contact_forms/quotation_form.php",
@@ -43,7 +42,9 @@ jQuery(document).ready(function($){
 			jQuery("#form_container").html(msg);
 	  	});	
 	});
+
 });
+
 
 
 function openNav()
@@ -55,6 +56,18 @@ function openNav()
 function closeNav()
 {
 	jQuery("#main-menu").attr("aria-expanded","false");
+}
+
+function retrieve_flavour(e)
+{
+	var selectedVal = e.options[e.selectedIndex].value;
+	jQuery.ajax({
+	type: "POST",
+	url:   "includes/display_quotation_flavour.inc.php",
+	data: { mId: selectedVal} ,
+	}).done(function( msg ) {
+		jQuery("#quotation-flavour").replaceWith(msg);
+  	});	
 }
 
 // function retrieveQuotation()

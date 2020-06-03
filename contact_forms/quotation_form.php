@@ -1,7 +1,7 @@
 
-<div id="form_container" style="margin-top:30px;margin-bottom: 30px;">
-	<div class="row">
-		<div class="col-6">
+<div id="form_container" class="contact-container" style="margin-top:30px;margin-bottom: 30px;">
+	<div class="row mq-row">
+		<div class="col-7 g-form">
 			<div class="form-container">
 				<h4>Quotation Form</h4>
 				<hr class="eline">
@@ -27,14 +27,16 @@
 					<div class="form-group contact-group">
 						<label for="quotation-category">Category</label>
 						<select name="quotation-category" id="quotation-category">
-							<option value="test1">test1</option>
-							<option value="test2">test2</option>
+							<option disabled selected value>Select an option</option>
+							<option value="cakes">Cakes</option>
+							<option value="cupcakes">Cupcakes</option>
+							<option value="desserts">Desserts</option>
 						</select>
 					</div>
 					<div class="form-group contact-group">
-						
-						<?php include '../includes/display_quotation_flavour.inc.php';?>		
-						
+						<?php include '../includes/display_quotation_menu.inc.php';?>
+						<div name="quotation-flavour" id="quotation-flavour">
+						</div>					
 					</div>
 					<div class="form-group contact-group">
 						<label for="">Cake Design</label>
@@ -53,7 +55,7 @@
 				</form>
 			</div>
 		</div>
-		<div class="col-6">
+		<div class="col-5 g-img">
 			<img src="http://localhost/butterytable/images/icon/quotation.jpg" width="450px" height="600px">
 		</div>
 		<div>
