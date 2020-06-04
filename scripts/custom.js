@@ -2,10 +2,8 @@ jQuery(document).ready(function($){
 	jQuery(".fa-heart").click(function(){
 	var galleryId = $(this).attr("name");
 	var selectedId = $(this).attr("id");
-	var menu_id = 1;
 
 	var current_host = window.location.href;
-
 	$.ajax({
 		type: "POST",
 		url:   "http://localhost/butterytable/includes/wishlist.inc.php",
@@ -68,6 +66,13 @@ function retrieve_flavour(e)
 	}).done(function( msg ) {
 		jQuery("#quotation-flavour").replaceWith(msg);
   	});	
+}
+
+function order(e)
+{
+	var value = e.name;
+	window.location.href = "../contact-us?gId=" + value.replace("flavour_","");
+		
 }
 
 // function retrieveQuotation()
