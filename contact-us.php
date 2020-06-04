@@ -6,7 +6,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<?php if(isset($_SESSION['userId'])):?>
+<!-- <?php if(isset($_SESSION['userId'])):?>
     <div>
         <?php 
             echo $_SESSION['userUid'];
@@ -14,12 +14,17 @@
         ?>
     </div>
 
-<?php endif;?>
+<?php endif;?> -->
+
 <div>
 	<div class="container">
 		<input type="button" class="button" id="btnEnquiry" value="Enquiry"/>
 		<input type="button" class="button" id="btnQuotation" value="Quotation"/>
-		<?php include 'contact_forms/enquiry_form.php';?>
+        <?php if(empty($_GET["gId"])):?>
+            <?php include 'contact_forms/enquiry_form.php';?>
+        <?php else : ?>
+            <?php include 'contact_forms/quotation_form.php';?>
+        <?php endif;?>
 	</div>
 </div>
 <!--Footer-->

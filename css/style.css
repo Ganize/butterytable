@@ -314,17 +314,23 @@ footer {
 }
 
 
-.fname
+/*.fname
 {
 	display: none;
-}
+}*/
 
 .wish_grid
 {
 	position: relative;
+	margin-left: 20px;
 }
 
-.wish_grid:hover .fname
+.wish_grid .fname
+{
+	text-align: center;
+}
+
+/*.wish_grid:hover .fname
 {
 	background-color: rgba(0, 0, 0, 0.4);
 	position:absolute;
@@ -333,7 +339,7 @@ footer {
 	display: block;
 	text-align: center;
     color:white;
-}
+}*/
 
 
 .wa-row div span 
@@ -375,7 +381,7 @@ footer {
 
 /* The container <div> - needed to position the dropdown content */
 
-.dropdown {
+.dropdown,.nav-dropdown {
 	position: relative;
 	display: inline-block;
 }
@@ -665,6 +671,11 @@ footer {
 {
 	color: red;
 }
+
+#quotation-design, #quotation-comments, #enquiry-message
+{
+	resize:none;
+}
 @media only screen and (max-width: 600px) {
 	.main-menu a {
    		display: initial;
@@ -782,5 +793,24 @@ footer {
 	{
 		width: 230px;
 	}
+	.nav-dropdown
+	{
+		display:block;
+	}
+
+	.nav-dropdown .dropdown-content
+	{
+		position: initial;
+	}
+
+	.nav-dropdown .dropdown-content a
+	{
+		display: block;
+	}
+
+/*		.wish_grid:hover div
+	{
+		left: 50px;
+	}*/
 }
 

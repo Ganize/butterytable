@@ -119,8 +119,6 @@ if (!isset($_SESSION)) {
 					}
 				?>
 			<ul class="nav_bar">
-
-			
 				<?php 
 					$nav_bar = array(
 					"Home" => "index",
@@ -131,7 +129,22 @@ if (!isset($_SESSION)) {
 					"FAQ" =>"faq");
 
 					foreach ($nav_bar as $name => $url) {
-						echo '<li style="margin:auto;" class="nav-item '.active($url).'"><a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">'.$name.'</a></li>';
+						if($name === "Gallery")
+						{
+							echo '<li style="margin:auto;" class="nav-item nav-dropdown dropdown'.active($url).'">';
+							echo '<a class="nav-link dropbtn" href="#">Gallery</a>';
+							echo '<div class="dropdown-content">';
+							echo '<a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">Cakes</a>';
+							echo '<a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">Cupcake</a>';
+							echo '<a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">Dessert</a>';
+							echo '</li>';
+							echo '</div>';
+						}
+						else
+						{
+							echo '<li style="margin:auto;" class="nav-item '.active($url).'"><a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">'.$name.'</a></li>';
+						}
+
 					
 					}
 				?>
