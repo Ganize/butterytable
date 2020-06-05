@@ -63,7 +63,7 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
                                 if ($j == 'slideshow') {
                     ?>
                                     <div class="carousel-item <?= $actives; ?>">
-                                        <img src="images/<?= $row['gallery_path'] ?>" width="100%" height="670px">
+                                        <img class="caroimg" src="images/<?= $row['gallery_path'] ?>" width="50%">
                                     </div>
                     <?php 
                         $i++;

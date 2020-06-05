@@ -124,7 +124,6 @@ if (!isset($_SESSION)) {
 			<ul class="nav_bar">
 				<?php 
 					$nav_bar = array(
-					"Home" => "index",
 					"Our Story" => 	"our-story" , 
 					"Gallery" => 	"gallery" , 
 					"Menu" => "menu", 
@@ -188,7 +187,7 @@ if (!isset($_SESSION)) {
 						<div class="vl"></div>
 
 						<div class="nav-header-div">
-							<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link; ?>/images/icon/wishlist.png" width="25px" height="25px"></a>
+							<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link; ?>/images/icon/heart.png" width="25px" height="25px"></a>
 						</div>
 						<?php endif;?>
 					</div>

@@ -47,6 +47,7 @@
 .img-container {
   text-align: center;
   display: block;
+  background-color: #F7ECEC;
 }
 
 h3{
@@ -72,10 +73,12 @@ h3{
   .div3 {
     width: 80%;
     text-align: center;
+    list-style:none;
   }
 
   .div2 {
     width: 80%;
     text-align: center;
+    list-style:none;
   }
 }
