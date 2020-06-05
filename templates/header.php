@@ -89,12 +89,14 @@ if (!isset($_SESSION)) {
 				<a href="https://sg.carousell.com/butterytablebakery/"><img src="<?php echo $link; ?>/images/icon/carousell.png" width="35px" height="35px"></a>
 				<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link; ?>/images/icon/instagram_header.png" width="25px" height="25px"></a>
 			</div>
+			<?php if (isset($_SESSION['userUid'])) : ?>
 
 			<div class="vl"></div>
 
 			<div class="nav-header-div" style="margin-left: 10px;">
-				<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link; ?>/images/icon/instagram_header.png" width="25px" height="25px"></a>
+				<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link; ?>/images/icon/wishlist.png" width="25px" height="25px"></a>
 			</div>
+		<?php endif;?>
 		</div>
 		<a href="http://localhost/butterytable/index"><img src="<?php echo $link; ?>/images/icon/BT_Logo.jpg" width="200px" height="200px" class="img-fluid mx-auto d-block "></a>
 	</div>
@@ -128,10 +130,13 @@ if (!isset($_SESSION)) {
 					"Contact Us" => "contact-us", 
 					"FAQ" =>"faq");
 
+
+
 					foreach ($nav_bar as $name => $url) {
+
 						if($name === "Gallery")
 						{
-							echo '<li style="margin:auto;" class="nav-item nav-dropdown dropdown'.active($url).'">';
+							echo '<li style="margin:auto;" class="nav-item nav-dropdown dropdown '.active($url).'">';
 							echo '<a class="nav-link dropbtn" href="#">Gallery</a>';
 							echo '<div class="dropdown-content">';
 							echo '<a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">Cakes</a>';
@@ -178,12 +183,13 @@ if (!isset($_SESSION)) {
 							<a href="https://sg.carousell.com/butterytablebakery/"><img src="<?php echo $link; ?>images/icon/carousell.png" width="35px" height="35px"></a>
 							<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link; ?>images/icon/instagram_footer.png" width="25px" height="25px"></a>
 						</div>
-
+						<?php if (isset($_SESSION['userUid'])) : ?>
 						<div class="vl"></div>
 
 						<div class="nav-header-div">
-							<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link; ?>/images/icon/instagram_footer.png" width="25px" height="25px"></a>
+							<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link; ?>/images/icon/wishlist.png" width="25px" height="25px"></a>
 						</div>
+						<?php endif;?>
 					</div>
 				</div>	
 			</li>

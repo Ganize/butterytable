@@ -29,14 +29,22 @@
 				mysqli_stmt_execute($stmt1);
 				mysqli_stmt_store_result($stmt1);
 
-				$resultCheck = mysqli_stmt_num_rows($stmt1); //Check if there is any row
-				if ($resultCheck > 0) {
-					echo '<span class="fa fa-star checked" id="menuid_'.$gallery_id.'" name="'. $gallery_id .'"></span>';
+				if(current_url() == "contact-us")
+				{
+
+					echo '<option name="" value="" id="menuid_'.$gallery_id.'" name="'. $gallery_id .'"></span>';
 				}
 				else
 				{
-					echo '<span class="fa fa-star" id="menuid_'.$gallery_id.'" name="'.$gallery_id .'"></span>';
-				}
+					$resultCheck = mysqli_stmt_num_rows($stmt1); //Check if there is any row
+					if ($resultCheck > 0) {
+						echo '<span class="fa fa-star checked" id="menuid_'.$gallery_id.'" name="'. $gallery_id .'"></span>';
+					}
+					else
+					{
+						echo '<span class="fa fa-star" id="menuid_'.$gallery_id.'" name="'.$gallery_id .'"></span>';
+					}
+				}			
 			}				
 		}
 	}	

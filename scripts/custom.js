@@ -41,15 +41,18 @@ jQuery(document).ready(function($){
 	  	});	
 	});
 
+	if(document.getElementById("quotation-option") != null)
+	{
+		var q_option = document.getElementById("quotation-option");
+		display_menu_form(q_option);
+	}
+
 });
-
-
 
 function openNav()
 {
 	jQuery("#main-menu").attr("aria-expanded","true");
 }
-
 
 function closeNav()
 {
@@ -71,8 +74,23 @@ function retrieve_flavour(e)
 function order(e)
 {
 	var value = e.name;
-	window.location.href = "../contact-us?gId=" + value.replace("flavour_","");
-		
+	window.location.href = "../contact-us?gId=" + value.replace("flavour_","");		
+}
+
+function display_menu_form(e)
+{
+	var selectedVal = e.options[e.selectedIndex].value;
+	switch(selectedVal)
+	{
+		case "customize":
+			jQuery(".form-wishlist").hide();
+			jQuery(".form-customize").show();
+			break;
+		case "wishlist":
+			jQuery(".form-wishlist").show();
+			jQuery(".form-customize").hide();
+			break;
+	}
 }
 
 // function retrieveQuotation()

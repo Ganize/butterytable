@@ -11,7 +11,7 @@
 	else
 	{
 		echo '<label for="quotation-flavour">Cake Flavour</label>';
-		echo '<select name="quotation-menu" id="quotation-menu" onchange="retrieve_flavour(this)" style="width:fit-content";>';
+		echo '<select name="quotation-menu" id="quotation-menu" onchange="retrieve_flavour(this)" style="width:fit-content;">';
 		echo '<option disabled selected value>Select an option</option>';
 		mysqli_stmt_execute($stmt);
 		$result = mysqli_stmt_get_result($stmt);

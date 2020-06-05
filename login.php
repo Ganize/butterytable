@@ -49,7 +49,7 @@
                     <label for="user_email">Email :</label>
                 </div>
                 <div>
-                    <input type="text" name="user_email" id="email">
+                    <input type="email" name="user_email" id="register_email">
                 </div>
            </div>
             <div class="form-group">
@@ -57,7 +57,7 @@
                     <label for="password">Password :</label>
                 </div>
                 <div>
-                    <input type="password" name="password" id="password">
+                    <input type="password" name="password" id="new_password">
                 </div>
             </div>
             <div class="form-group">
@@ -65,7 +65,7 @@
                     <label for="password-repeat">Confirm Password :</label>
                 </div>
                 <div>
-                    <input type="password" name="password-repeat" id="password">
+                    <input type="password" name="password-repeat" id="repeat_password">
                 </div>
             </div>
             <button class="button" type="submit" name="register_user">REGISTER</button>
