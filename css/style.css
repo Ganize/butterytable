@@ -227,6 +227,11 @@ body p {
 	text-transform: uppercase;
 }
 
+.button:focus {
+	outline: none;
+	box-shadow: none;
+}
+
 .form-group input:focus {
 	outline: none;
 }

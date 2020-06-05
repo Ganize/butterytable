@@ -122,7 +122,6 @@ if (!isset($_SESSION)) {
 			<ul class="nav_bar">
 				<?php 
 					$nav_bar = array(
-					"Home" => "index",
 					"Our Story" => 	"our-story" , 
 					"Gallery" => 	"gallery" , 
 					"Menu" => "menu", 

@@ -23,7 +23,7 @@ h3 {
 
 .gallery-row {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 33% 33% 33%;
   margin-bottom: 25px;
   text-align: center;
 }
@@ -36,10 +36,10 @@ h3 {
   align-items: center;
   font-family: myGeorgia;
   color: #A2A2A2;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .gallery-row {
     display: block;
   }
@@ -47,10 +47,17 @@ h3 {
     width: 300px;
     height: 300px;
   }
-}
-
-@media only screen and (max-width: 1024px) {
-  .gallery-row {
-    grid-template-columns: 50% 50%;
+  .gallery-row > div {
+    margin-bottom: 18px;
   }
 }
+
+/* @media only screen and (min-width: 1440px) {
+  .gallery-row {
+    grid-template-columns: 33% 33% 33%;
+  }
+  .gallery-row > div {
+    margin-bottom: 18px;
+  }
+} */
+

@@ -53,7 +53,7 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
             echo '</div>';
             echo '</div>';
 
-            if ($count == 3) {
+            if ($count == 2) {
                 echo '</div>';
                 $count = 0;
                 $row_num = $row_num + 1;
