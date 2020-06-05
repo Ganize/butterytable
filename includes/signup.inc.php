@@ -12,7 +12,8 @@ if (isset($_POST['register_user'])) {
 	{
 		header("Location: ../login/signup.php?error=emptyfield&email=" . $user_email);
 		exit();
-	} else if (!filter_var($user_email, FILTER_VALIDATE_EMAIL)) //Error when not email
+	} 
+	else if (!filter_var($user_email, FILTER_VALIDATE_EMAIL)) //Error when not email
 	{
 		header("Location: ../login/signup.php?error=invalidemail&email=" . $user_email);
 		exit();
@@ -94,9 +95,6 @@ if (isset($_POST['register_user'])) {
 					mysqli_stmt_close($stmt);
 					mysqli_close($conn);
 				}
-
-			
-
 			}
 		}
 	}

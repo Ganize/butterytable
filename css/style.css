@@ -1,3 +1,13 @@
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
 .sr-only {
 	position: absolute;
 	width: 1px;
@@ -210,7 +220,7 @@ body p {
 }
 
 .bline {
-	width: 200px;
+	width: 100px;
 	border-color: #C18281;
 }
 
@@ -405,9 +415,6 @@ footer {
 }
 
 /* Show the dropdown menu on hover */
-
-/*Merge Chnages*/
-
 .a-name div {
 	display: inline;
 	margin-right: 30px;
@@ -415,16 +422,6 @@ footer {
 
 .dropdown:hover .dropdown-content {
 	display: block;
-}
-
-* {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-body {
-	padding: 0;
-	margin: 0;
 }
 
 #notfound {

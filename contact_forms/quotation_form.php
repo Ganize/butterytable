@@ -120,4 +120,11 @@
 		    return false;
 		}
 	});
+
+
+	if(document.getElementById("quotation-option") == null)
+	{
+		jQuery(".form-customize").show();
+	}
+
 </script>
