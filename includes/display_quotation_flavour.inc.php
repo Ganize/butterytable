@@ -18,6 +18,7 @@
 		$result = mysqli_stmt_get_result($stmt);
 		
 		if (mysqli_num_rows($result) == 0) {
+			echo $_POST["mId"];
 			echo '<div id="quotation-flavour">No flavour in the menu</div>';
 		}
 		else
@@ -26,7 +27,7 @@
 			echo '<option disabled selected value> -- Select an option -- </option>';
 			while($row = mysqli_fetch_assoc($result)) //Fectching the data from result
 			{	
-				echo '<option value="'.$row["flavour_id"].'">'.ucwords($row["flavour_name"]).'</option>';
+				echo '<option value="'.$row["flavour_name"].'">'.ucwords($row["flavour_name"]).'</option>';
 			}
 			echo '</select>';
 		}

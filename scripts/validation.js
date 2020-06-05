@@ -15,12 +15,13 @@ jQuery(document).ready(function(){
 
 	});
 
-	$(".digits").keypress(function (e) {
+	jQuery(".digits").keypress(function (e) {
 		//if the letter is not digit then display error and don't type anything
 		if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
 		    return false;
 		}
 	});
+	
 
 	$("#repeat_password").keyup(function (e) {		
 
@@ -55,6 +56,7 @@ jQuery(document).ready(function(){
 	});
 
 });
+
 
 
 function validateEmail(email) {

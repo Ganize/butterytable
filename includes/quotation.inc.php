@@ -7,18 +7,23 @@
 		$quotation_email = $_POST['quotation-email'];
 		$quotation_contact = $_POST['quotation-contact'];
 		$quotation_size = $_POST['quotation-size'];
-		$quotation_category = $_POST['quotation-category'];
-		$quotation_menu = $_POST['quotation-menu'];
-		$quotation_flavour = $_POST['quotation-flavour'];
+
+		$quotation_category = "";
+		$quotation_menu = "";
+		$quotation_flavour = "";
+
 		$quotation_design = $_POST['quotation-design'];
 		$quotation_collection = $_POST['quotation-collection'];
 		$quotation_comments = $_POST['quotation-comments'];
-		echo $quotation_menu;
+
+		$quotation_option = $_POST['quotation-option'];
+		$quotation_wishlist = "";
 
 
-		if(empty($quotation_name) || empty($quotation_email) || empty($quotation_contact) || empty($quotation_size)  || empty($quotation_category) || empty($quotation_flavour) || empty($quotation_menu) || empty($quotation_design) ||  empty($quotation_collection) ) //Error when Empty Field
+		if(empty($quotation_name) || empty($quotation_email) || empty($quotation_contact) || empty($quotation_size)  || empty($quotation_design) ||  empty($quotation_collection) ) //Error when Empty Field
 		{
-			header("Location: ../contact-us.php?error=emptyfield");
+
+			header("Location: ../contact-us.php?error=emptyfield1");
 			exit();
 		}
 		else if(!filter_var($quotation_email, FILTER_VALIDATE_EMAIL)) //Error when not email
@@ -33,8 +38,39 @@
 		}
 		else
 		{
-			$sql = "INSERT INTO bt_quotation (quotation_name, quotation_email, quotation_contact, quotation_size, quotation_category, quotation_menu, quotation_flavour, quotation_design, quotation_collection, quotation_comments, quotation_datetime ) VALUES (?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?)" ;
+			if($quotation_option == "wishlist")
+			{
+				if( empty($_POST['quotation-wishlist']))
+				{
+					header("Location: ../contact-us.php?error=emptyfield2");
+					exit();
+				}
+				else
+				{
+					$quotation_wishlist = $_POST['quotation-wishlist'];
+				}
+
+				$sql = "INSERT INTO bt_quotation (quotation_name, quotation_email, quotation_contact, quotation_size, quotation_wishlist, quotation_design, quotation_collection, quotation_comments, quotation_datetime ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			}
+			else
+			{
+				if( empty($_POST['quotation-category']) || empty($_POST['quotation-menu']) || empty($_POST['quotation-flavour']) )
+				{
+					header("Location: ../contact-us.php?error=emptyfield3");
+					exit();
+				}
+				else
+				{
+					$quotation_category = $_POST['quotation-category'];
+					$quotation_menu = $_POST['quotation-menu'];
+					$quotation_flavour = $_POST['quotation-flavour'];
+				}
+
+				$sql = "INSERT INTO bt_quotation (quotation_name, quotation_email, quotation_contact, quotation_size, quotation_category, quotation_menu, quotation_flavour, quotation_design, quotation_collection, quotation_comments, quotation_datetime ) VALUES (?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?)" ;
+			}
+
 			$stmt = mysqli_stmt_init($conn);
+
 			if(!mysqli_stmt_prepare($stmt, $sql))
 			{
 				header("Location: ../contact-us.php?error=sqlerror");
@@ -44,7 +80,14 @@
 			{	
 				date_default_timezone_set('Asia/Singapore');
 				$date = date('Y-m-d H:i:s');
-				mysqli_stmt_bind_param($stmt, "ssiisssssss", $quotation_name, $quotation_email, $quotation_contact, $quotation_size, $quotation_category,$quotation_menu, $quotation_flavour, $quotation_design, $quotation_collection, $quotation_comments, $date); //Prepare statement
+				if($quotation_option == "wishlist")
+				{
+					mysqli_stmt_bind_param($stmt, "ssiisssss", $quotation_name, $quotation_email, $quotation_contact, $quotation_size,$quotation_wishlist, $quotation_design, $quotation_collection, $quotation_comments, $date); //Prepare statement
+				}
+				else
+				{
+					mysqli_stmt_bind_param($stmt, "ssiisssssss", $quotation_name, $quotation_email, $quotation_contact, $quotation_size, $quotation_category,$quotation_menu, $quotation_flavour, $quotation_design, $quotation_collection, $quotation_comments, $date); //Prepare statement
+				}
 				mysqli_stmt_execute($stmt);
 				header("Location: ../contact-us.php?result=success");
 				exit();
