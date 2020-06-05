@@ -171,7 +171,7 @@ if (!isset($_SESSION)) {
 
 						<?php else : ?>
 							<div>
-								<a style="color:white" href="/butterytable/login_header.php">LOG IN</a>
+								<a style="color:white" href="/butterytable/login.php">LOG IN</a>
 							</div>
 						<?php endif; ?>
 
