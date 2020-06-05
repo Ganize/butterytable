@@ -95,9 +95,12 @@
 						}
 						else
 						{
-							if($_GET["gId"] == $row1["gallery_id"])
+							if($_GET)
 							{
+								if($_GET["gId"] == $row1["gallery_id"])
+								{
 								echo '<option value="'.$row1["gallery_name"].'" selected >'.$row1["gallery_name"].'</option>';
+								}
 							}
 							else
 							{

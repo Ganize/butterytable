@@ -1,7 +1,12 @@
 <!--Configuration-->
-<?php $title = 'Home'; ?>
-<?php $currentPage = 'index'; ?>
-<?php $link = "http://localhost/butterytable/" ?>
+<?php 
+	$title = 'Home'; 
+	$currentPage = 'index';
+	$link = "http://localhost/butterytable/";
+	$DIR = realpath(dirname(__FILE__) . '/..');
+?>
+
+
 <?php
 
 if (!isset($_SESSION)) {
@@ -51,6 +56,10 @@ if (!isset($_SESSION)) {
 
 	<link rel="stylesheet" href="<?php echo $link; ?>/css/style.css" type="text/css">
 
+	<?php 
+		include $DIR.'\includes\wishlist_count.inc.php';
+
+	?>
 
 	<title><?php echo ($title); ?></title>
 </head>
@@ -80,7 +89,6 @@ if (!isset($_SESSION)) {
 				</div>
 			<?php endif; ?>
 
-
 			<div class="vl"></div>
 
 			<!-- <div class="vl"></div> -->
@@ -93,8 +101,8 @@ if (!isset($_SESSION)) {
 
 			<div class="vl"></div>
 
-			<div class="nav-header-div" style="margin-left: 10px;">
-				<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link; ?>/images/icon/wishlist.png" width="25px" height="25px"></a>
+			<div class="nav-header-div wishlist-icon"style="margin-left: 10px;">
+				<a href="/butterytable/account/my-wishlist"><img src="<?php echo $link; ?>/images/icon/wishlist.png" width="25px" height="25px" ></a>
 			</div>
 		<?php endif;?>
 		</div>
@@ -187,7 +195,7 @@ if (!isset($_SESSION)) {
 						<div class="vl"></div>
 
 						<div class="nav-header-div">
-							<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link; ?>/images/icon/heart.png" width="25px" height="25px"></a>
+							<a href="/butterytable/account/my-wishlist"><img src="<?php echo $link; ?>/images/icon/heart.png" class="wishlist-icon" width="25px" height="25px"></a>
 						</div>
 						<?php endif;?>
 					</div>
