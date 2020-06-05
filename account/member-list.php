@@ -18,7 +18,7 @@ if (empty($_SESSION["user_role"]) || empty($_SESSION["userUid"])) {
 		<?php include('user-nav.php'); ?>
 
 		<div class="user-details">
-			<div class="account-container" style="border: 1px solid #C18570;">
+			<div class="account-container">
 				<div style="font-family:myGeorgia; color:#726061; font-weight:bold; font-size:20px;">
 					MEMBERS LIST
 				</div>

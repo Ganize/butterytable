@@ -13,13 +13,12 @@ else
 
 ?>
 
-
 	<div class="container" style="margin-bottom:10px;">
 		<div class="account-grid">
 			<?php include('user-nav.php'); ?>
 			<div class="user-details">
 				<div class="wishlist-container">
-						<div>
+						<div style="font-family:myGeorgia; color:#726061; font-weight:bold; font-size:20px;">
 							MY WISHLIST
 							<hr class="account-hr">
 						</div>

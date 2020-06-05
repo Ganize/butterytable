@@ -170,7 +170,7 @@ if (!isset($_SESSION)) {
 
 						<?php else : ?>
 							<div>
-								<a style="color:white" href="/butterytable/login_header.php">LOG IN</a>
+								<a style="color:white" href="/butterytable/login.php">LOG IN</a>
 							</div>
 						<?php endif; ?>
 
@@ -187,7 +187,7 @@ if (!isset($_SESSION)) {
 						<div class="vl"></div>
 
 						<div class="nav-header-div">
-							<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link; ?>/images/icon/wishlist.png" width="25px" height="25px"></a>
+							<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link; ?>/images/icon/heart.png" width="25px" height="25px"></a>
 						</div>
 						<?php endif;?>
 					</div>

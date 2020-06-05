@@ -76,7 +76,6 @@ h2 {
     margin:0px;
 }
 
-
 .post-grid img
 {
     width:200px;
@@ -89,6 +88,11 @@ h2 {
     grid-template-columns: auto auto;
 }
 
+.caroimg{
+    height:600px;
+    margin-left: 25%;
+}
+
 @media only screen and (max-width: 600px) {
     .post-grid{
         display:block;
@@ -98,6 +102,10 @@ h2 {
     }
     .postimg{
         padding-left: 45px;
+    }
+    .caroimg{
+        height:250px;
+        margin-left: 25%;
     }
 }
 

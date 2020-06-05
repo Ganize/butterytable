@@ -294,7 +294,7 @@ footer {
 }
 
 .user-nav-container, .account-container, .wishlist-container {
-	border: 1px solid black;
+	border: 1px solid #C18570;
 }
 
 .account-grid {
@@ -323,19 +323,18 @@ footer {
 	margin-bottom: 25px;
 }
 
-
-/*.fname
-{
-	display: none;
-}*/
+.fname {
+	font-family: myGeorgia;
+	color: #A2A2A2;
+	text-transform: capitalize;
+}
 
 .wish_grid {
 	position: relative;
 	margin-left: 20px;
 }
 
-.wish_grid .fname
-{
+.wish_grid .fname {
 	text-align: center;
 }
 
@@ -387,7 +386,7 @@ footer {
 
 /* The container <div> - needed to position the dropdown content */
 
-.dropdown,.nav-dropdown {
+.dropdown, .nav-dropdown {
 	position: relative;
 	display: inline-block;
 }
@@ -420,6 +419,7 @@ footer {
 }
 
 /* Show the dropdown menu on hover */
+
 .a-name div {
 	display: inline;
 	margin-right: 30px;
@@ -647,10 +647,10 @@ footer {
 	color: #C18281;
 }
 
-#quotation-design, #quotation-comments, #enquiry-message
-{
-	resize:none;
+#quotation-design, #quotation-comments, #enquiry-message {
+	resize: none;
 }
+
 @media only screen and (max-width: 600px) {
 	.main-menu a {
 		display: initial;
@@ -710,7 +710,8 @@ footer {
 		text-align: center;
 	}
 	.button {
-		margin-top: 20px;
+		margin-top: 10px;
+		margin-bottom: 15px;
 	}
 	.mq-row, .me-row {
 		display: grid;
@@ -732,19 +733,13 @@ footer {
 	.form-group textarea {
 		width: 230px;
 	}
-	.nav-dropdown
-	{
-		display:block;
+	.nav-dropdown {
+		display: block;
 	}
-
-	.nav-dropdown .dropdown-content
-	{
+	.nav-dropdown .dropdown-content {
 		position: initial;
 	}
-
-	.nav-dropdown .dropdown-content a
-	{
+	.nav-dropdown .dropdown-content a {
 		display: block;
 	}
 }
-
