@@ -96,6 +96,9 @@ h2 {
     .mcol-4{
         display:block;
     }
+    .postimg{
+        padding-left: 45px;
+    }
 }
 
 .post-col

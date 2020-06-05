@@ -75,7 +75,8 @@ if (!isset($_SESSION)) {
 
 			<?php else : ?>
 				<div>
-					<a href="/butterytable/login.php">LOG IN</a>
+				<img width="25px" height="25px" src="<?php echo $link;?>images/icon/login.png"/>
+					<a style="color:#A2A2A2" href="/butterytable/login.php">LOG IN</a>
 				</div>
 			<?php endif; ?>
 
@@ -165,7 +166,7 @@ if (!isset($_SESSION)) {
 
 						<?php else : ?>
 							<div>
-								<a href="/butterytable/login_header.php">LOG IN</a>
+								<a style="color:white" href="/butterytable/login_header.php">LOG IN</a>
 							</div>
 						<?php endif; ?>
 
