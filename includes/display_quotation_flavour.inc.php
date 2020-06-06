@@ -24,7 +24,7 @@
 		else
 		{
 			echo '<select name="quotation-flavour" id="quotation-flavour" style="width:fit-content";>';
-			echo '<option disabled selected value> -- Select an option -- </option>';
+			echo '<option disabled selected value="-1"> -- Select an option -- </option>';
 			while($row = mysqli_fetch_assoc($result)) //Fectching the data from result
 			{	
 				echo '<option value="'.$row["flavour_name"].'">'.ucwords($row["flavour_name"]).'</option>';

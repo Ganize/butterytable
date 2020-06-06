@@ -113,7 +113,7 @@ if (empty($_SESSION["user_role"]) || empty($_SESSION["userUid"])) {
 								<input class="account-border-style" type="password" name="repeat_password" id="repeat_password">
 								<span class="pass-validation"></span>
 							</div>
-							<input type="button" style="display:flex;margin:auto;margin-top:20px;" id="btnSubmit" class="button" type="submit" name="update_user" value="UPDATE"/>
+							<input type="button" style="display:flex;margin:auto;margin-top:20px;" id="btn_update" class="button" type="submit" name="update_user" value="UPDATE"/>
 
 							<button style="display:none" id="submit_form" class="button" type="submit" name="update_user">UPDATE</button>
 					</form>

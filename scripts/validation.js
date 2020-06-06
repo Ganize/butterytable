@@ -1,6 +1,7 @@
 jQuery(document).ready(function(){
 	$(".pass-validation").hide();
 	$('input[type="email"]').keyup(function(value){	
+		$(this).removeClass("empty");
 	    if (validateEmail($(this).val()))
 		{
 			$(this).addClass("valid");
@@ -19,15 +20,39 @@ jQuery(document).ready(function(){
 		    return false;
 		}
 	});
+
+	jQuery("#new_password").keyup(function (e) {	
+		$(this).removeClass("empty");
+		if($(this).val() == "")	
+		{
+			$(this).addClass("non-valid");
+			$(this).removeClass("valid");
+		}
+		else
+		{
+			$(this).addClass("valid");
+			$(this).removeClass("non-valid");
+			
+		}
+	});
 	
 
 	jQuery("#repeat_password").keyup(function (e) {		
+		$(this).removeClass("empty");
 		if($("#repeat_password").val() != $("#new_password").val())
 		{
 			$(this).addClass("non-valid");
 			$(this).removeClass("valid");
 			
-			$(".pass-validation").text("Password Mismatch!");
+			if($("#new_password").val() == "")
+			{
+				$(".pass-validation").text("Empty Password!");
+			}
+			else
+			{
+				$(".pass-validation").text("Password Mismatch!");
+			}
+		
 			$(".pass-validation").show();
 		}
 		else
@@ -39,6 +64,7 @@ jQuery(document).ready(function(){
 	});
 
 	jQuery('.validation_text').keyup(function(value){	
+		$(this).removeClass("empty");
 	    if($(this).val() == "")
 		{
 			$(this).addClass("non-valid");
@@ -53,23 +79,50 @@ jQuery(document).ready(function(){
 	});
 
 	jQuery("#register_email").focusout(function(e){
-		var r_email = e.target.value;
+		var r_email = e.target.value; 
+		var r_id = e.currentTarget.id;
+
 		$.ajax({
 		type: "POST",
-		url:   "../includes/check_email.inc.php",
+		url:   "includes/check_email.inc.php",
 		data: { e_val: r_email} ,
 		}).done(function( msg ) {
+			var id = document.getElementById(r_id);
+		
 			if(msg == 0)
 			{
-				$(this).addClass("valid");
-				$(this).removeClass("non-valid");	
+				$(id).addClass("valid");
+				$(id).removeClass("non-valid");	
+				$("#email_error").text('');
 			}
 			else
 			{	
-				$(this).addClass("non-valid");
-				$(this).removeClass("valid");	
+
+				$(id).addClass("non-valid");
+				$(id).removeClass("valid");
+				$("#email_error").text(msg);
 			}
 	  	});	
+	});
+
+	jQuery("#btnSubmit").click(function(){
+		var cfm = confirm("Are you sure you want to submit?");
+		if (cfm == true) {
+			var nonValid = jQuery('.non-valid').length;
+	
+			if(nonValid == 0 && checkCategory != 0 && checkPage !=0 && checkImage != "")
+			{
+				jQuery("#submit_form").click();
+			}
+			else
+			{
+				alert("Please fill up all details");
+			}
+		}
+		else
+		{
+			return;
+		}
 	});
 
 });

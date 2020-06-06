@@ -1,5 +1,5 @@
 jQuery(document).ready(function(){
-	jQuery("#btnSubmit").click(function(){
+	jQuery("#btn_update").click(function(){
 		var cfm = confirm("Are you sure you want to submit?");
 		if (cfm == true) {
 			if($.trim(jQuery("#current_pass").val()) != "")

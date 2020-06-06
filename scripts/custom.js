@@ -9,10 +9,9 @@ jQuery(document).ready(function($){
 		url:   "http://localhost/butterytable/includes/wishlist.inc.php",
 		data: { gId: galleryId} ,
 		}).done(function( msg ) {
-			console.log(msg);
 			var target_star = document.getElementById(selectedId);
 			if(msg == 0){
-					target_star.classList.remove("checked");
+				target_star.classList.remove("checked");
 			}
 			else if(msg == 1){
 				target_star.classList.add("checked");
@@ -26,7 +25,6 @@ jQuery(document).ready(function($){
 			type: "POST",
 			url:   "contact_forms/quotation_form.php",
 			}).done(function( msg ) {
-
 				jQuery("#form_container").html(msg);
 		  	});	
 		});
@@ -36,7 +34,6 @@ jQuery(document).ready(function($){
 		type: "POST",
 		url:   "contact_forms/enquiry_form.php",
 		}).done(function( msg ) {
-
 			jQuery("#form_container").html(msg);
 	  	});	
 	});
@@ -82,34 +79,13 @@ function display_menu_form(e)
 	var selectedVal = e.options[e.selectedIndex].value;
 	switch(selectedVal)
 	{
-		case "customize":
-			jQuery(".form-wishlist").hide();
-			jQuery(".form-customize").show();
-			break;
-		case "wishlist":
+		case "0":
 			jQuery(".form-wishlist").show();
 			jQuery(".form-customize").hide();
 			break;
+		case "1":
+			jQuery(".form-customize").show();
+			jQuery(".form-wishlist").hide();
+			break;
 	}
 }
-
-// function retrieveQuotation()
-// {
-// 	jQuery.ajax({
-// 		type: "POST",
-// 		url:   "contact_forms/quotation_form.php",
-// 		}).done(function( msg ) {
-// 			jQuery("#form_container").html(msg);
-// 	  	});	
-// }
-
-// function retrieveEnquiry()
-// {
-// 	jQuery.ajax({
-// 		type: "POST",
-// 		url:   "contact_forms/enquiry_form.php",
-// 		}).done(function( msg ) {
-
-// 			jQuery("#form_container").html(msg);
-// 	  	});	
-// }

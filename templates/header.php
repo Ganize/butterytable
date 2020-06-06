@@ -11,20 +11,20 @@
 
 if (!isset($_SESSION)) {
 	session_start();
+	$_SESSION['LAST_ACTIVITY'] = time();
 }
 
 // 10 mins in seconds
-// $inactive = 600; 
 
-// $session_life = time() - $_session['timeout'];
+ if ($_SESSION['LAST_ACTIVITY'] + 30 * 60 < time()) {
 
-// if($session_life > $inactive)
-// {  
-// 	session_destroy(); 
-// 	header("Location: logoutpage.php");     
-// }
+     // session timed out
+     session_unset();     // unset $_SESSION variable for the run-time 
+     session_destroy();   // destroy session data in storage
+  } else {
 
-// $_session['timeout']=time();
+    // session ok
+ }
 
 ?>
 
@@ -194,7 +194,7 @@ if (!isset($_SESSION)) {
 						<?php if (isset($_SESSION['userUid'])) : ?>
 						<div class="vl"></div>
 
-						<div class="nav-header-div">
+						<div class="nav-header-div ">
 							<a href="/butterytable/account/my-wishlist"><img src="<?php echo $link; ?>/images/icon/heart.png" class="wishlist-icon" width="25px" height="25px"></a>
 						</div>
 						<?php endif;?>
@@ -207,3 +207,4 @@ if (!isset($_SESSION)) {
 
 	<div id="page-container">
 		<div id="content-wrap">
+
