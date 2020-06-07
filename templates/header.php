@@ -58,7 +58,6 @@ if (!isset($_SESSION)) {
 
 	<?php 
 		include $DIR.'\includes\wishlist_count.inc.php';
-
 	?>
 
 	<title><?php echo ($title); ?></title>
@@ -93,9 +92,9 @@ if (!isset($_SESSION)) {
 
 			<!-- <div class="vl"></div> -->
 			<div class="nav-header-div">
-				<a href="https://www.facebook.com/butterytable"><img src="<?php echo $link; ?>/images/icon/facebook_header.png" width="25px" height="25px"></a>
+				<a href="https://www.facebook.com/butterytable"><img src="<?php echo $link; ?>/images/icon/fb.png" width="25px" height="25px"></a>
 				<a href="https://sg.carousell.com/butterytablebakery/"><img src="<?php echo $link; ?>/images/icon/carousell.png" width="35px" height="35px"></a>
-				<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link; ?>/images/icon/instagram_header.png" width="25px" height="25px"></a>
+				<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link; ?>/images/icon/insta.png" width="25px" height="25px"></a>
 			</div>
 			<?php if (isset($_SESSION['userUid'])) : ?>
 
@@ -187,9 +186,9 @@ if (!isset($_SESSION)) {
 
 						<!-- <div class="vl"></div> -->
 						<div class="nav-header-div">
-							<a href="https://www.facebook.com/butterytable"><img src="<?php echo $link; ?>images/icon/facebook_footer.png" width="25px" height="25px"></a>
+							<a href="https://www.facebook.com/butterytable"><img src="<?php echo $link; ?>images/icon/fb.png" width="25px" height="25px"></a>
 							<a href="https://sg.carousell.com/butterytablebakery/"><img src="<?php echo $link; ?>images/icon/carousell.png" width="35px" height="35px"></a>
-							<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link; ?>images/icon/instagram_footer.png" width="25px" height="25px"></a>
+							<a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link; ?>images/icon/insta.png" width="25px" height="25px"></a>
 						</div>
 						<?php if (isset($_SESSION['userUid'])) : ?>
 						<div class="vl"></div>

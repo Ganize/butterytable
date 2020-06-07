@@ -6,12 +6,8 @@
 <hr class="bline">
 </hr>
 <div class="iconphotos">
-  <!--   <a href="http://www.instagram.com/butterytablebakery"><img src="../images/icon/instagram_gallery.png" width="35px" height="35px"></a>
-    <a href="https://www.facebook.com/butterytable"><img src="../images/icon/facebook_gallery.png" width="35px" height="35px"></a>
-    <a href="https://sg.carousell.com/butterytablebakery/"><img src="../images/icon/carousell.png" width="50px" height="50px"></a> -->
-
-      <a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link;?>images/icon/instagram_gallery.png" width="35px" height="35px"></a>
-    <a href="https://www.facebook.com/butterytable"><img src="<?php echo $link;?>images/icon/facebook_gallery.png" width="35px" height="35px"></a>
+      <a href="http://www.instagram.com/butterytablebakery"><img src="<?php echo $link;?>images/icon/insta.png" width="35px" height="35px"></a>
+    <a href="https://www.facebook.com/butterytable"><img src="<?php echo $link;?>images/icon/fb.png" width="35px" height="35px"></a>
     <a href="https://sg.carousell.com/butterytablebakery/"><img src="<?php echo $link;?>images/icon/carousell.png" width="50px" height="50px"></a>
 </div>
 
