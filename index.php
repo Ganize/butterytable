@@ -92,7 +92,7 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
         <p>Hand-baked cake perfection and meticulously coated with buttercream and fondant alike</p>
         <p>We serve customsied cakes and desserts that are lower in sugar</p>
     </div>
-    <a href="#" class="btn-quotes button">get a quotes</a>
+    <a style="text-decoration: none;" href="<?php echo $link;?>contact-us.php?pages=quotation" class="btn-quotes button">get a quote</a>
 </div>
 <div class="posts">
     <h2>Posts</h2>

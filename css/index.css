@@ -107,9 +107,19 @@ h2 {
         height:250px;
         margin-left: 25%;
     }
+
+    .iconphotos{
+        margin-left: 31px;
+    }
 }
 
 .post-col
 {
     padding:35px;
 }
+
+a:hover {
+    text-decoration:none;
+    color:#ffffff;
+  }
+  

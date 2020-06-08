@@ -34,7 +34,7 @@
             </div>
             <br />
             <ul class="div3">
-                <li>Bisscoff Vanilla</li>
+                <li>Biscoff Vanilla</li>
                 <li>Nutella Chocolate</li>
                 <li>Matcha Black Sesame</li>
                 <li>Red Velvet Cream Cheese</li>

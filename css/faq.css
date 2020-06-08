@@ -7,6 +7,15 @@
     margin: 10 10 10 10px;
 }
 
+.dot1 {
+    height: 15px;
+    width: 15px;
+    background-color: #E4B8B4;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10 10 10 10px;
+}
+
 h2 {
     text-align: center;
     margin-top: 10px;
@@ -54,5 +63,9 @@ h2 {
         font-size: 20px;
         text-align: left;
         padding-left: 33px;
+    }
+
+    .dot1{
+        display: none;
     }
 }

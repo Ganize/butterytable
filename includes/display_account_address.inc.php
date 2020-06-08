@@ -1,6 +1,6 @@
 <?php
 	//require will emit a fatal error ( E_COMPILE_ERROR ) and halt the script
-	require 'db_conn.inc.php';
+	// require 'db_conn.inc.php';
 
 	$address_1 = "";
 	$address_2 = "";
@@ -18,10 +18,9 @@
 	}
 	else
 	{
-		mysqli_stmt_bind_param($stmt, "s", $_SESSION["userUid"]);
+		mysqli_stmt_bind_param($stmt, "i", $_SESSION["userUid"]);
 		mysqli_stmt_execute($stmt);
 		$result = mysqli_stmt_get_result($stmt);
-
 		if($row = mysqli_fetch_assoc($result)) //Fectching the data from result
 		{
 			$address_1 = decryptString($row["address_1"]);
@@ -29,6 +28,14 @@
 			$user_floor = decryptString($row["user_floor"]);
 			$user_unit = decryptString($row["user_unit"]);
 			$user_postal = decryptString($row["user_postal"]);
+			echo $address_2;
+			echo 'test';
+			echo 'dot';
+			
+		}
+		else
+		{
+			echo 'test';
 		}
 	}
 ?>

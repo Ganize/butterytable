@@ -28,11 +28,12 @@ else
 			<?php include('user-nav.php'); ?>
 			<div class="user-details">
 				<div class="wishlist-container">
-						<a href="<?php echo $link;?>account/member-list">Back to list </a>
+						<a href="<?php echo $link;?>account/member-list">Back to list</a>
 						<div>
 							User Info
 							<hr class="account-hr">
 							<?php require("../includes/display_member.inc.php");?>
+							<?php require("../includes/display_account_address.inc.php");?>
 						</div>
 						<br>
 						<div>
