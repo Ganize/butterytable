@@ -28,14 +28,7 @@
 			$user_floor = decryptString($row["user_floor"]);
 			$user_unit = decryptString($row["user_unit"]);
 			$user_postal = decryptString($row["user_postal"]);
-			echo $address_2;
-			echo 'test';
-			echo 'dot';
 			
-		}
-		else
-		{
-			echo 'test';
 		}
 	}
 ?>
