@@ -1,21 +1,35 @@
 <?php
-require 'includes/db_conn.inc.php';
+require 'db_conn.inc.php';
 $count = 0;
 $row_num = 0;
-$sql = "SELECT * FROM bt_cakegallery LIMIT 3";
+$test = 0;
+
+
+$start_limit = 0;
+
+if(!empty($_POST["start_limit"]))
+{
+    $start_limit = $_POST["start_limit"];
+ 
+}
+
+$sql = "SELECT * FROM bt_cakegallery LIMIT ?, 3";
 $stmt = mysqli_stmt_init($conn);
 if (!mysqli_stmt_prepare($stmt, $sql)) {
     header("Location: ..gallery.php?error=sqlerror");
     exit();
 } else {
+    mysqli_stmt_bind_param($stmt, "i", $start_limit);
     mysqli_stmt_execute($stmt);
+
     $result = mysqli_stmt_get_result($stmt);
     while ($row = mysqli_fetch_assoc($result)) {
+        $test = 1;
         if (mysqli_num_rows($result) == 0) {
             echo "<p style='text-align:center;'>No item in the gallery</p>";
         } else {
             if ($count == 0) {
-                echo '<div class="row-' . $row_num . ' gallery-row" id="gallerycontainer">';
+                echo '<div class="row-' . $row_num . ' gallery-row gallerycontainer">';
             }
             echo '<div><a href="' . $row["insta_url"] . '" ><img id="borderimg" src="http://localhost/butterytable/images/' . $row["gallery_path"] . '" width="400" height="400">';
             echo '</a><div>';
@@ -47,10 +61,13 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
                 echo '</div>';
                 $count = 0;
                 $row_num = $row_num + 1;
-                echo '<button id="btnGallery" onclick="myFunction()" style="display: flex; margin: 0 auto; margin-bottom: 10px; color:#726061;" class="button">show more</button>';
+            
             } else {
                 $count = $count + 1;
+
             }
         }
-    }
+
+
+    }    
 }
