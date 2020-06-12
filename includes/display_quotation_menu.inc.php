@@ -10,7 +10,7 @@
 	}
 	else
 	{
-		echo '<label for="quotation-flavour">Cake Flavour</label>';
+		echo '<label for="quotation-flavour">Item</label>';
 		echo '<select name="quotation-menu" id="quotation-menu" onchange="retrieve_flavour(this)" style="width:fit-content;">';
 		echo '<option disabled selected value="-1">Select an option</option>';
 		mysqli_stmt_execute($stmt);

@@ -19,10 +19,12 @@
 		
 		if (mysqli_num_rows($result) == 0) {
 			echo $_POST["mId"];
-			echo '<div id="quotation-flavour">No flavour in the menu</div>';
+			echo '<div id="quotation-flavour" class="form-group contact-group form-customize">No flavour in the menu</div>';
 		}
 		else
 		{
+			echo '<div id="quotation-flavour" class="form-group contact-group form-customize">';
+			echo '<label for="quotation-category">Cake Flavour</label>';
 			echo '<select name="quotation-flavour" id="quotation-flavour" style="width:fit-content";>';
 			echo '<option disabled selected value="-1"> -- Select an option -- </option>';
 			while($row = mysqli_fetch_assoc($result)) //Fectching the data from result
@@ -30,6 +32,7 @@
 				echo '<option value="'.$row["flavour_name"].'">'.ucwords($row["flavour_name"]).'</option>';
 			}
 			echo '</select>';
+			echo '</div>';
 		}
 	}
 ?>

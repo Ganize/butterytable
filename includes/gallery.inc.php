@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     $gallery_description = $_POST['gallery_description'];
     $gallery_page = "";
     $quotation_category = $_POST['quotation-category'];
-    $instalink = $_POST['insta_link'];
+    $instalink = $_POST['instalink'];
 
 
     if(!empty($_POST['pages'])) {
@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
     $gallery_id = $_GET["gallery_id"];
 
     if (empty($gallery_name) ||  empty($gallery_description) ||  empty($gallery_page) || empty($gallery_category)) {
-        header("Location: ../account/image-form.php?error=emptyfield");
+        header("Location: ../account/image-form.php?gallery_id=".$gallery_id."&error=emptyfield");
         exit();
     } 
 

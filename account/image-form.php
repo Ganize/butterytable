@@ -63,7 +63,7 @@
 						<option <?php echo ($category === '') ?  "selected" : ""; ?> disabled value="-1">Select an option</option>
 						<option <?php echo ($category === 'cakes') ?  "selected" : ""; ?> value="cakes">Cakes</option>
 						<option <?php echo ($category === 'desserts') ?  "selected" : ""; ?> value="desserts">Desserts</option>
-						<option <?php echo ($category === 'desserts table') ?  "selected" : ""; ?> value="desserts table">Desserts Table</option>
+						<option <?php echo ($category === 'desserts table') ?  "selected" : ""; ?> value="dessert table">Dessert Table</option>
 					</select>
 
 					<div class="form-group account-group">
@@ -123,14 +123,13 @@
 							}
 							?>
 						</div>
-					</div>
-
-					<?php if (isset($_GET["gallery_id"])) : ?>
-						<input style="display:flex;margin:auto;margin-top:20px;" type="button" class="button" id="btnSubmit" value="Update" />
-					<?php else : ?>
-						<input style="display:flex;margin:auto;margin-top:20px;" type="button" class="button" id="btnSubmit" value="Add" />
-					<?php endif; ?>
-
+				
+					<?php if(isset($_GET["gallery_id"])): ?>
+				   		<input style="display:flex;margin:auto;margin-top:20px;" type="button" class="button" id="btn_upload" value = "Update"/>
+				    <?php else: ?>
+				    	<input style="display:flex;margin:auto;margin-top:20px;" type="button" class="button" id="btn_upload" value = "Add"/>
+				    <?php endif;?>
+				
 					<button style="display: none;" class="button" type="submit" id="submit_form" name="submit">UPDATE</button>
 				</form>
 			</div>

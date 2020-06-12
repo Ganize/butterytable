@@ -140,18 +140,31 @@ if ($_SESSION['LAST_ACTIVITY'] + 30 * 60 < time()) {
 			);
 
 			foreach ($nav_bar as $name => $url) {
+				switch($name)
+				{
+					case "Gallery":
+						echo '<li style="margin:auto;" class="nav-item nav-dropdown dropdown ' . active($url) . '">';
+						echo '<a class="nav-link dropbtn" href="' . $link . 'gallery.php">Gallery</a>';
+						echo '<div class="dropdown-content">';
+						echo '<a style="font-size:15px; font-family: myGeorgia; color: #A2A2A2;" class="nav-link" href="' . (($currentPage === $name) ? $link : $link .  'gallerycat/cakes.php') . '">Cakes</a>';
+						echo '<a style="font-size:15px; font-family: myGeorgia; color: #A2A2A2;" class="nav-link" href="' . (($currentPage === $name) ? $link : $link .  'gallerycat/desserts.php') . '">Desserts</a>';
+						echo '<a style="font-size:15px; font-family: myGeorgia; color: #A2A2A2;" class="nav-link" href="' . (($currentPage === $name) ? $link : $link .  'gallerycat/dessertstable.php') . '">Dessert Table</a>';
+						echo '</li>';
+						echo '</div>';
+					break;
 
-				if ($name === "Gallery") {
-					echo '<li style="margin:auto;" class="nav-item nav-dropdown dropdown ' . active($url) . '">';
-					echo '<a class="nav-link dropbtn" href="' . $link . 'gallery.php">Gallery</a>';
-					echo '<div class="dropdown-content">';
-					echo '<a style="font-size:15px; font-family: myGeorgia; color: #A2A2A2;" class="nav-link" href="' . (($currentPage === $name) ? $link : $link .  'gallerycat/cakes.php') . '">Cakes</a>';
-					echo '<a style="font-size:15px; font-family: myGeorgia; color: #A2A2A2;" class="nav-link" href="' . (($currentPage === $name) ? $link : $link .  'gallerycat/desserts.php') . '">Desserts</a>';
-					echo '<a style="font-size:15px; font-family: myGeorgia; color: #A2A2A2;" class="nav-link" href="' . (($currentPage === $name) ? $link : $link .  'gallerycat/dessertstable.php') . '">Dessert Table</a>';
-					echo '</li>';
-					echo '</div>';
-				} else {
-					echo '<li style="margin:auto;" class="nav-item ' . active($url) . '"><a class="nav-link" href="' . (($currentPage === $name) ? $link : $link . $url) . '">' . $name . '</a></li>';
+					case "FAQ":
+						echo '<li style="margin:auto;" class="nav-item nav-dropdown dropdown ' . active($url) . '">';
+						echo '<a class="nav-link dropbtn" href="' . $link . 'gallery.php">FAQ</a>';
+						echo '<div class="dropdown-content">';
+						echo '<a style="font-size:15px; font-family: myGeorgia; color: #A2A2A2;" class="nav-link" href="' . (($currentPage === $name) ? $link : $link .  'gallerycat/cakes.php') . '">Terms & Condition</a>';
+						echo '</li>';
+						echo '</div>';
+					break;
+
+					default:
+						echo '<li style="margin:auto;" class="nav-item ' . active($url) . '"><a class="nav-link" href="' . (($currentPage === $name) ? $link : $link . $url) . '">' . $name . '</a></li>';
+					break;
 				}
 			}
 			?>

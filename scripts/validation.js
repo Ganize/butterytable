@@ -97,7 +97,6 @@ jQuery(document).ready(function(){
 			}
 			else
 			{	
-
 				$(id).addClass("non-valid");
 				$(id).removeClass("valid");
 				$("#email_error").text(msg);
@@ -110,9 +109,9 @@ jQuery(document).ready(function(){
 		if (cfm == true) {
 			var nonValid = jQuery('.non-valid').length;
 	
-			if(nonValid == 0 && checkCategory != 0 && checkPage !=0 && checkImage != "")
+			if(nonValid == 0)
 			{
-				jQuery("#submit_form").click();
+				//jQuery("#submit_form").click();
 			}
 			else
 			{

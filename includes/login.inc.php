@@ -60,6 +60,10 @@
 					header("Location: ../login.php?error=nouser");
 					exit();
 				}
+				mysqli_stmt_close($stmt);
+				mysqli_close($conn);
+
+
 			}
 		}
 	}
