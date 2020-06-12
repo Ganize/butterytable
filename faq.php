@@ -62,7 +62,8 @@
   <span class="dot1"></span>
   </ul>
   <p class="words">
-    We provide a basic happy birthday topper, plastic knife & candles!
+    We provide a basic happy birthday topper, plastic knife & candles & fondant names up to 8 letters!
+    <br>**Additional fondant letters at 50 cents each
   </p>
 </div>
 
@@ -99,7 +100,7 @@
   </p>
 </div>
 
-<div class="group">
+<!-- <div class="group">
   <span class="dot"></span> &nbsp;
   How do I transport my cake home? &nbsp;
   <span class="dot1"></span>
@@ -179,7 +180,7 @@
     <br />
     ***Refunds will be made within a period of 4 weeks from the date of acknowledgement.
   </p>
-</div>
+</div> -->
 
 <!--Footer-->
 <?php include('templates/footer.php'); ?>

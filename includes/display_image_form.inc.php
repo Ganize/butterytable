@@ -5,7 +5,9 @@
 	$gallery_id = "";
 	$gallery_name = "";
 	$gallery_path = "";
+	$category = "";
 	$gallery_category = "";
+	$insta_link = "";
 	$gallery_page = "";
 	$gallery_description = "";
 
@@ -19,7 +21,6 @@
 	}
 	else
 	{
-
 		mysqli_stmt_bind_param($stmt, "s", $_GET["gallery_id"]);
 		mysqli_stmt_execute($stmt);
 		$result = mysqli_stmt_get_result($stmt);
@@ -29,6 +30,8 @@
 			$gallery_id = $row["gallery_id"];
 			$gallery_name = $row["gallery_name"];
 			$gallery_path = $row["gallery_path"];
+			$category = $row["gallerycategory"];
+			$insta_link = $row["insta_url"];
 			$gallery_category = $row["category"];
 			$gallery_page = $row["gallery_page"];
 			$gallery_description = $row["gallery_description"];
