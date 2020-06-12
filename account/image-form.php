@@ -116,9 +116,9 @@
 						</div>
 				
 					<?php if(isset($_GET["gallery_id"])): ?>
-				   		<input style="display:flex;margin:auto;margin-top:20px;" type="button" class="button" id="btnSubmit" value = "Update"/>
+				   		<input style="display:flex;margin:auto;margin-top:20px;" type="button" class="button" id="btn_upload" value = "Update"/>
 				    <?php else: ?>
-				    	<input style="display:flex;margin:auto;margin-top:20px;" type="button" class="button" id="btnSubmit" value = "Add"/>
+				    	<input style="display:flex;margin:auto;margin-top:20px;" type="button" class="button" id="btn_upload" value = "Add"/>
 				    <?php endif;?>
 				
 					<button style="display: none;" class="button" type="submit" id="submit_form" name="submit">UPDATE</button>

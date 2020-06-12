@@ -140,23 +140,34 @@ if (!isset($_SESSION)) {
 
 
 					foreach ($nav_bar as $name => $url) {
+						switch($name)
+						{
+							case "Gallery":
+								echo '<li style="margin:auto;" class="nav-item nav-dropdown dropdown '.active($url).'">';
+								echo '<a class="nav-link dropbtn" href="#">Gallery</a>';
+								echo '<div class="dropdown-content">';
+								echo '<a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">Cakes</a>';
+								echo '<a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">Cupcake</a>';
+								echo '<a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">Dessert</a>';
+								echo '</li>';
+								echo '</div>';
+							break;
 
-						if($name === "Gallery")
-						{
-							echo '<li style="margin:auto;" class="nav-item nav-dropdown dropdown '.active($url).'">';
-							echo '<a class="nav-link dropbtn" href="#">Gallery</a>';
-							echo '<div class="dropdown-content">';
-							echo '<a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">Cakes</a>';
-							echo '<a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">Cupcake</a>';
-							echo '<a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">Dessert</a>';
-							echo '</li>';
-							echo '</div>';
-						}
-						else
-						{
+							case "FAQ":
+								echo '<li style="margin:auto;" class="nav-item nav-dropdown dropdown '.active($url).'">';
+								echo '<a class="nav-link dropbtn" href="#">FAQ</a>';
+								echo '<div class="dropdown-content">';
+								echo '<a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">Cakes</a>';
+								echo '<a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">Cupcake</a>';
+								echo '<a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">Dessert</a>';
+								echo '</li>';
+								echo '</div>';
+							break;
+
+							default:
 							echo '<li style="margin:auto;" class="nav-item '.active($url).'"><a class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">'.$name.'</a></li>';
+							break;
 						}
-
 					
 					}
 				?>

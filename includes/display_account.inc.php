@@ -25,5 +25,7 @@
 			$user_first = $row["first_name"];
 			$user_last = $row["last_name"];
 		}
+		mysqli_stmt_close($stmt);
+		mysqli_close($conn);	
 	}
 ?>

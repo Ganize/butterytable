@@ -89,6 +89,9 @@
 					mysqli_stmt_bind_param($stmt, "ssiisssssss", $quotation_name, $quotation_email, $quotation_contact, $quotation_size, $quotation_category,$quotation_menu, $quotation_flavour, $quotation_design, $quotation_collection, $quotation_comments, $date); //Prepare statement
 				}
 				mysqli_stmt_execute($stmt);
+				
+				mysqli_stmt_close($stmt);
+				mysqli_close($conn);
 				header("Location: ../contact-us.php?result=success");
 				exit();
 			}

@@ -70,7 +70,7 @@ jQuery(document).ready(function(){
        	jQuery("#remove_file").hide();
 	});
 
-	jQuery("#btnSubmit").click(function(){
+	jQuery("#btn_upload").click(function(){
 		var cfm = confirm("Are you sure you want to submit?");
 		if (cfm == true) {
 			var nonValid = jQuery('.non-valid').length;

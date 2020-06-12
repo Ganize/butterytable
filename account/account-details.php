@@ -33,6 +33,10 @@ else
 							User Info
 							<hr class="account-hr">
 							<?php require("../includes/display_member.inc.php");?>
+							<br>
+							User Address
+							<hr class="account-hr">
+
 							<?php require("../includes/display_account_address.inc.php");?>
 						</div>
 						<br>

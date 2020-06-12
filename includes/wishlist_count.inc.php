@@ -32,6 +32,9 @@
 				echo ".wishlist-icon::before{ content: '".$row['total']."';}";
 				echo '</style>';
 			}
+			
+			mysqli_stmt_close($stmt);
+			mysqli_close($conn);
 		}
 	}
 
