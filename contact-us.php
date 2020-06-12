@@ -20,8 +20,10 @@
     <div class="container">
         <input type="button" class="button" id="btnEnquiry" value="Enquiry" />
         <input type="button" class="button" id="btnQuotation" value="Quotation" />
-        <?php if (($_GET["pages"]) == "quotation") : ?>
-            <?php include 'contact_forms/quotation_form.php'; ?>
+        <?php if (!empty($_GET["pages"])) :?>
+            <?php if (($_GET["pages"]) == "quotation") { ?>
+                <?php include 'contact_forms/quotation_form.php'; ?>
+            <?php } ?>
         <?php elseif (empty($_GET["gId"])) : ?>
             <?php include 'contact_forms/enquiry_form.php'; ?>
         <?php else : ?>

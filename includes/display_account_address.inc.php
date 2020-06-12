@@ -57,15 +57,7 @@
 	
 		mysqli_stmt_close($stmt);
 		mysqli_close($conn);	
-
-			$address_1 = decryptString($row["address_1"]);
-			$address_2 = decryptString($row["address_2"]);
-			$user_floor = decryptString($row["user_floor"]);
-			$user_unit = decryptString($row["user_unit"]);
-			$user_postal = decryptString($row["user_postal"]);
 			
-		}
 
 	}
-
 ?>

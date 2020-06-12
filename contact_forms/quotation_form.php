@@ -59,7 +59,7 @@
 
 					<div id="wishlist-container">
 						<div class="form-group contact-group form-wishlist" style="display: none;">
-							<label for="quotation-wishlist">Wishlist Menu</label>
+							<label for="quotation-wishlist">Item</label>
 							<select name="quotation-wishlist" id="quotation-wishlist" onchange="display_menu_form(this)">
 								<option disabled <?php echo (empty($_GET["gId"])) ?  "selected" :  ""; ?> value="-1">Select an option</option>
 								<?php 
@@ -84,7 +84,7 @@
 								<option disabled selected value="-1">Select an option</option>
 								<option value="cakes">Cakes</option>
 								<option value="cupcakes">Cupcakes</option>
-								<option value="desserts">Desserts</option>
+								<option value="desserts">Desserts Table</option>
 							</select>
 						</div>
 
@@ -100,10 +100,11 @@
 									include '../includes/display_quotation_menu.inc.php';
 								}
 							?>
-							<div name="quotation-flavour" id="quotation-flavour">
-							</div>	
+						
 
 						</div>
+						<div name="quotation-flavour" id="quotation-flavour" class="form-group contact-group form-customize">
+						</div>	
 					</div>
 
 					<div class="form-group contact-group">
