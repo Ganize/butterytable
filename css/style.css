@@ -213,6 +213,10 @@ body p {
 	border: 1px solid #C18570;
 }
 
+.form-group select {
+	border: 1px solid #C18570;
+}
+
 .form-group div:first-child {
 	text-align: right;
 }
@@ -751,5 +755,11 @@ footer {
 	}
 	.nav-dropdown .dropdown-content a {
 		display: block;
+	}
+	.form-group{
+		display: block;
+	}
+	.form-group input {
+		width:250px;
 	}
 }

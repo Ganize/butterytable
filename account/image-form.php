@@ -57,15 +57,15 @@
 							<textarea class="validation_text" name="gallery_description" style="width: 300px; resize: none; height: 150px;"><?php echo $gallery_description; ?></textarea>
 						</div>
 					</div>
-
-					<label for="quotation-category">Category</label>
-					<select name="quotation-category" id="quotation-category">
-						<option <?php echo ($category === '') ?  "selected" : ""; ?> disabled value="-1">Select an option</option>
-						<option <?php echo ($category === 'cakes') ?  "selected" : ""; ?> value="cakes">Cakes</option>
-						<option <?php echo ($category === 'desserts') ?  "selected" : ""; ?> value="desserts">Desserts</option>
-						<option <?php echo ($category === 'desserts table') ?  "selected" : ""; ?> value="dessert table">Dessert Table</option>
-					</select>
-
+					<div class="form-group account-group">
+						<label for="quotation-category">Category</label>
+						<select name="quotation-category" id="quotation-category">
+							<option <?php echo ($category === '') ?  "selected" : ""; ?> disabled value="-1">Select an option</option>
+							<option <?php echo ($category === 'cakes') ?  "selected" : ""; ?> value="cakes">Cakes</option>
+							<option <?php echo ($category === 'desserts') ?  "selected" : ""; ?> value="desserts">Desserts</option>
+							<option <?php echo ($category === 'desserts table') ?  "selected" : ""; ?> value="dessert table">Dessert Table</option>
+						</select>
+					</div>
 					<div class="form-group account-group">
 						<div>
 							<label for="instalink">Link :</label>
@@ -123,14 +123,14 @@
 							}
 							?>
 						</div>
-				
-					<?php if(isset($_GET["gallery_id"])): ?>
-				   		<input style="display:flex;margin:auto;margin-top:20px;" type="button" class="button" id="btn_upload" value = "Update"/>
-				    <?php else: ?>
-				    	<input style="display:flex;margin:auto;margin-top:20px;" type="button" class="button" id="btn_upload" value = "Add"/>
-				    <?php endif;?>
-				
-					<button style="display: none;" class="button" type="submit" id="submit_form" name="submit">UPDATE</button>
+
+						<?php if (isset($_GET["gallery_id"])) : ?>
+							<input style="display:flex;margin:auto;margin-top:20px;" type="button" class="button" id="btn_upload" value="Update" />
+						<?php else : ?>
+							<input style="display:flex;margin:auto;margin-top:20px;" type="button" class="button" id="btn_upload" value="Add" />
+						<?php endif; ?>
+
+						<button style="display: none;" class="button" type="submit" id="submit_form" name="submit">UPDATE</button>
 				</form>
 			</div>
 		</div>

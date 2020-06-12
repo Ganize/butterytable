@@ -52,12 +52,3 @@ h3 {
   }
 }
 
-/* @media only screen and (min-width: 1440px) {
-  .gallery-row {
-    grid-template-columns: 33% 33% 33%;
-  }
-  .gallery-row > div {
-    margin-bottom: 18px;
-  }
-} */
-
