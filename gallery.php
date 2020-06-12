@@ -11,7 +11,20 @@
     <a href="https://sg.carousell.com/butterytablebakery/"><img src="<?php echo $link;?>images/icon/carousell.png" width="50px" height="50px"></a>
 </div>
 
-<?php require 'includes/display_gallery.inc.php'?>
+<?php include 'includes/display_gallery.inc.php'?>
 
+<script>
+function myFunction() {
+  jQuery("#btnGallery").click(function(){
+		$.ajax({
+		type: "POST",
+		url:   "includes/display_gallery.inc.php",
+		}).done(function( msg ) {
+      jQuery("#gallerycontainer").append(msg);
+      console.log(msg);
+	  	});	
+	});
+}
+</script>
 
 <?php include('templates/footer.php'); ?>

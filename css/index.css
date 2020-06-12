@@ -90,8 +90,9 @@ h2 {
 
 .caroimg{
     height:600px;
-    margin-left: 25%;
+    margin-left: 15%;
 }
+
 
 @media only screen and (max-width: 600px) {
     .post-grid{
@@ -105,12 +106,14 @@ h2 {
     }
     .caroimg{
         height:250px;
-        margin-left: 25%;
+        margin-left: 0%;
+        width:100%;
     }
 
     .iconphotos{
         margin-left: 31px;
     }
+
 }
 
 .post-col

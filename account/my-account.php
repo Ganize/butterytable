@@ -10,9 +10,9 @@ if (empty($_SESSION["user_role"]) || empty($_SESSION["userUid"])) {
 
 ?>
 
-<?php include('../includes/display_account.inc.php');?>
-<?php include('../includes/display_account_address.inc.php');?>
-	<script src="<?php echo $link ?>/scripts/account.js"></script>
+<?php include('../includes/display_account.inc.php'); ?>
+<?php include('../includes/display_account_address.inc.php'); ?>
+<script src="<?php echo $link ?>/scripts/account.js"></script>
 
 <div class="container" style="margin-bottom:10px; height:100vh;">
 	<div class="account-grid">
@@ -36,7 +36,7 @@ if (empty($_SESSION["user_role"]) || empty($_SESSION["userUid"])) {
 							<div class="account-first-name">
 								<label for="first_name">First Name :</label>
 								<div>
-									<input class="account-border-style"  type="text" name="first_name" id="first_name" value="<?php echo $user_first; ?>" />
+									<input class="account-border-style" type="text" name="first_name" id="first_name" value="<?php echo $user_first; ?>" />
 								</div>
 							</div>
 						</div>
@@ -70,7 +70,7 @@ if (empty($_SESSION["user_role"]) || empty($_SESSION["userUid"])) {
 							</div>
 							<div>
 								#
-								<input style="width:40px;" class="account-border-style"  type="text" name="user_floor" class="digits" id="user_floor" value="<?php echo $user_floor; ?>" />
+								<input style="width:40px;" class="account-border-style" type="text" name="user_floor" class="digits" id="user_floor" value="<?php echo $user_floor; ?>" />
 								-
 								<input style="width:40px;" class="account-border-style" type="text" name="user_unit" class="digits" id="user_unit" value="<?php echo $user_unit; ?>" />
 							</div>
@@ -113,14 +113,14 @@ if (empty($_SESSION["user_role"]) || empty($_SESSION["userUid"])) {
 								<input class="account-border-style" type="password" name="repeat_password" id="repeat_password">
 								<span class="pass-validation"></span>
 							</div>
-							<input type="button" style="display:flex;margin:auto;margin-top:20px;" id="btn_update" class="button" type="submit" name="update_user" value="UPDATE"/>
+							<input type="button" style="display:flex;margin:auto;margin-top:20px;" id="btn_update" class="button" type="submit" name="update_user" value="UPDATE" />
 
 							<button style="display:none" id="submit_form" class="button" type="submit" name="update_user">UPDATE</button>
-					</form>
-				</div>
+				</form>
 			</div>
 		</div>
 	</div>
+</div>
 </div>
 </div>
 <?php include('../templates/footer.php'); ?>
