@@ -83,15 +83,19 @@
 							<select name="quotation-category" id="quotation-category">
 								<option disabled selected value="-1">Select an option</option>
 								<option value="cakes">Cakes</option>
-								<option value="cupcakes">Cupcakes</option>
-								<option value="desserts">Desserts Table</option>
+								<option value="desserts">Desserts</option>
+								<option value="dessert table">Desserts Table</option>
 							</select>
 						</div>
 
 						<div class="form-group contact-group form-customize" style="display: none;">
 							
 							<?php 
-								if(!empty($_GET["gId"]))
+								if(!empty($_GET["pages"]))
+								{
+									include 'includes/display_quotation_menu.inc.php';
+								}
+								else if(!empty($_GET["gId"]))
 								{
 									include 'includes/display_quotation_menu.inc.php';
 								} 
