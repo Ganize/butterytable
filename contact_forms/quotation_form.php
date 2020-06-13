@@ -88,25 +88,12 @@
 							</select>
 						</div>
 
-						<div class="form-group contact-group form-customize" style="display: none;">
+						<div class="form-group contact-group form-customize" id="quotation_menu" style="display: none;">
 							
-							<?php 
-								if(!empty($_GET["pages"]))
-								{
-									include 'includes/display_quotation_menu.inc.php';
-								}
-								else if(!empty($_GET["gId"]))
-								{
-									include 'includes/display_quotation_menu.inc.php';
-								} 
-								else
-								{
-									include '../includes/display_quotation_menu.inc.php';
-								}
-							?>
-						
+					
 
 						</div>
+
 						<div name="quotation-flavour" id="quotation-flavour" class="form-group contact-group form-customize">
 						</div>	
 					</div>
@@ -127,12 +114,20 @@
 							<label for="">Delivery from $15</label>
 						</div>
 					</div>
+
+					<div class="form-group contact-group">
+						<label for="">Date of Collection/Delivery</label>
+						<div style="margin-left:0px">
+							<input type="date" name="quotation-date" id="quotation-date" class="require" value="">
+						</div>
+					</div>
+
 					<div class="form-group contact-group">
 						<label for="">Additional Comments</label>
 						<textarea name="quotation-comments" id="quotation-comments" class="empty txtarea"></textarea>
 					</div>
 					<input type="button" class="button" value="Submit" name="btn-submit" />
-					<button class="button" type="submit" name="btn-quotation" style="display:none;">Submit</button>
+					<button class="button" type="submit" name="btn-quotation" id="btn-quotation" style="display:none;">Submit</button>
 				</form>
 			</div>
 		</div>
@@ -144,3 +139,17 @@
 </div>
 
 <script src="scripts/contact_validation.js"></script>
+<script>
+	jQuery("#quotation-category").change(function(){
+		var selectedOption = $(this).children("option:selected").val();
+
+		$.ajax({
+		type: "POST",
+		url:   "http://localhost/butterytable/includes/display_quotation_menu.inc.php",
+		data: { menu_category: selectedOption} ,
+		}).done(function( msg ) {
+			jQuery("#quotation_menu").html(msg);
+	  	});			
+	});
+
+</script>

@@ -101,6 +101,7 @@ $("input[name='btn-submit']").click(function(){
 			switch(select_val)
 			{
 				case "-1":
+					console.log("selectbox")
 					alert("Please fill up accordingly!");
 					return;
 				break;
@@ -119,6 +120,7 @@ $("input[name='btn-submit']").click(function(){
 				var select_val = $($(get_selectbox)[i]).find(":selected").val();
 				if(select_val == "-1")
 				{
+					console.log("select_val");
 					alert("Please fill up accordingly!");
 					return;
 				}
@@ -126,31 +128,38 @@ $("input[name='btn-submit']").click(function(){
 
 		}
 
-		if(empty <= 0 || nonValid <= 0)
+
+
+		if(empty > 0 || nonValid > 0)
 		{
+			console.log("empty");
 			alert("Please fill up accordingly!");
+			
 		}
 		else
 		{
+
 			if(get_quotation_checkbox != 0)
 			{
-				if(jQuery("input[name='quotation-collection']:checked").length < 0 )
+				if(jQuery("input[name='quotation-collection']:checked").length == 0 )
 				{
 					alert("Please fill up accordingly!");
+					return;
 				}
 			}
-			else
+		
+	
+			if(jQuery('#btn-enquiry').length == 1)
 			{
-				if(jQuery('#btn-enquiry').length == 1)
-				{
-					jQuery('#btn-enquiry').click();	
-				}
-				else if(jQuery('#btn-quotation').length == 1)
-				{
-					jQuery('#btn-quotation').click();	
-				}
-			}			
-		}
+				jQuery('#btn-enquiry').click();	
+			}
+			else if(jQuery('#btn-quotation').length == 1)
+			{
+
+				jQuery('#btn-quotation').click();	
+			}
+		}			
+		
 	}
 });
 

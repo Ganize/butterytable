@@ -7,6 +7,7 @@
 		$quotation_email = $_POST['quotation-email'];
 		$quotation_contact = $_POST['quotation-contact'];
 		$quotation_size = $_POST['quotation-size'];
+		$quotation_date_of_delivery = $_POST['quotation-date'];
 
 		$quotation_category = "";
 		$quotation_menu = "";
@@ -16,7 +17,8 @@
 		$quotation_collection = $_POST['quotation-collection'];
 		$quotation_comments = $_POST['quotation-comments'];
 
-		$quotation_option = $_POST['quotation-option'];
+	
+
 		$quotation_wishlist = "";
 
 
@@ -38,19 +40,41 @@
 		}
 		else
 		{
-			if($quotation_option == "wishlist")
+			if(!empty($_POST['quotation-option']))
 			{
-				if( empty($_POST['quotation-wishlist']))
+				if($_POST['quotation-option'] == "wishlist")
 				{
-					header("Location: ../contact-us.php?error=emptyfield2");
-					exit();
+					if( empty($_POST['quotation-wishlist']))
+					{
+						header("Location: ../contact-us.php?error=emptyfield2");
+						exit();
+					}
+					else
+					{
+						$quotation_wishlist = $_POST['quotation-wishlist'];
+					}
+
+					$sql = "INSERT INTO bt_quotation (quotation_name, quotation_email, quotation_contact, quotation_size, quotation_wishlist, quotation_design, quotation_collection, quotation_comments, quotation_date_of_delivery, quotation_datetime ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+						echo "helo1";
 				}
 				else
 				{
-					$quotation_wishlist = $_POST['quotation-wishlist'];
-				}
+					if( empty($_POST['quotation-category']) || empty($_POST['quotation-menu']) || empty($_POST['quotation-flavour']) )
+					{
+						header("Location: ../contact-us.php?error=emptyfield3");
+						exit();
+					}
+					else
+					{
+						$quotation_category = $_POST['quotation-category'];
+						$quotation_menu = $_POST['quotation-menu'];
+						$quotation_flavour = $_POST['quotation-flavour'];
+					}
+						echo "helo2";
 
-				$sql = "INSERT INTO bt_quotation (quotation_name, quotation_email, quotation_contact, quotation_size, quotation_wishlist, quotation_design, quotation_collection, quotation_comments, quotation_datetime ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+					$sql = "INSERT INTO bt_quotation (quotation_name, quotation_email, quotation_contact, quotation_size, quotation_category, quotation_menu, quotation_flavour, quotation_design, quotation_collection, quotation_comments, quotation_date_of_delivery, quotation_datetime ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)" ;
+				}
+				
 			}
 			else
 			{
@@ -65,28 +89,32 @@
 					$quotation_menu = $_POST['quotation-menu'];
 					$quotation_flavour = $_POST['quotation-flavour'];
 				}
-
-				$sql = "INSERT INTO bt_quotation (quotation_name, quotation_email, quotation_contact, quotation_size, quotation_category, quotation_menu, quotation_flavour, quotation_design, quotation_collection, quotation_comments, quotation_datetime ) VALUES (?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?)" ;
+				echo "helo3";
+				$sql = "INSERT INTO bt_quotation (quotation_name, quotation_email, quotation_contact, quotation_size, quotation_category, quotation_menu, quotation_flavour, quotation_design, quotation_collection, quotation_comments, quotation_date_of_delivery, quotation_datetime ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			}
 
 			$stmt = mysqli_stmt_init($conn);
 
 			if(!mysqli_stmt_prepare($stmt, $sql))
 			{
-				header("Location: ../contact-us.php?error=sqlerror");
+					header("Location: ../contact-us.php?error=sqlerror");
+
 				exit();
 			}
 			else
 			{	
 				date_default_timezone_set('Asia/Singapore');
 				$date = date('Y-m-d H:i:s');
-				if($quotation_option == "wishlist")
+
+				$date_delivery = date('Y-m-d H:i:s', strtotime($quotation_date_of_delivery));
+
+				if($_POST['quotation-option'] == "wishlist" && !empty($_POST['quotation-option']))
 				{
-					mysqli_stmt_bind_param($stmt, "ssiisssss", $quotation_name, $quotation_email, $quotation_contact, $quotation_size,$quotation_wishlist, $quotation_design, $quotation_collection, $quotation_comments, $date); //Prepare statement
+					mysqli_stmt_bind_param($stmt, "ssiissssss", $quotation_name, $quotation_email, $quotation_contact, $quotation_size,$quotation_wishlist, $quotation_design, $quotation_collection, $quotation_comments, $date_delivery, $date); //Prepare statement
 				}
 				else
 				{
-					mysqli_stmt_bind_param($stmt, "ssiisssssss", $quotation_name, $quotation_email, $quotation_contact, $quotation_size, $quotation_category,$quotation_menu, $quotation_flavour, $quotation_design, $quotation_collection, $quotation_comments, $date); //Prepare statement
+					mysqli_stmt_bind_param($stmt, "ssiissssssss", $quotation_name, $quotation_email, $quotation_contact, $quotation_size, $quotation_category,$quotation_menu, $quotation_flavour, $quotation_design, $quotation_collection, $quotation_comments, $date_delivery, $date); //Prepare statement
 				}
 				mysqli_stmt_execute($stmt);
 				
