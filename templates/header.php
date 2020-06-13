@@ -155,9 +155,9 @@ if ($_SESSION['LAST_ACTIVITY'] + 30 * 60 < time()) {
 
 					case "FAQ":
 						echo '<li style="margin:auto;" class="nav-item nav-dropdown dropdown ' . active($url) . '">';
-						echo '<a class="nav-link dropbtn" href="' . $link . 'gallery.php">FAQ</a>';
+						echo '<a class="nav-link dropbtn" href="' . $link . 'faq.php">FAQ</a>';
 						echo '<div class="dropdown-content">';
-						echo '<a style="font-size:15px; font-family: myGeorgia; color: #A2A2A2;" class="nav-link" href="' . (($currentPage === $name) ? $link : $link .  'gallerycat/cakes.php') . '">Terms & Condition</a>';
+						echo '<a style="font-size:15px; font-family: myGeorgia; color: #A2A2A2;" class="nav-link" href="' . (($currentPage === $name) ? $link : $link .  't&c.php') . '">Terms & Condition</a>';
 						echo '</li>';
 						echo '</div>';
 					break;

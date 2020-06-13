@@ -19,7 +19,7 @@
 <div>
     <div class="container">
         <input type="button" class="button" id="btnEnquiry" value="Enquiry" />
-        <input type="button" class="button" id="btnQuotation" value="Quotation" />
+        <input type="button" class="button" id="btnQuotation" value="Order" />
         <?php if (!empty($_GET["pages"])) :?>
             <?php if (($_GET["pages"]) == "quotation") { ?>
                 <?php include 'contact_forms/quotation_form.php'; ?>

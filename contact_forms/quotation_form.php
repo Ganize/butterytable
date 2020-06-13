@@ -7,7 +7,7 @@
 	<div class="row mq-row">
 		<div class="col-7 g-form">
 			<div class="form-container">
-				<h4>Quotation Form</h4>
+				<h4>Order Form</h4>
 				<hr class="eline">
 				</hr>
 				<br />
@@ -84,7 +84,7 @@
 								<option disabled selected value="-1">Select an option</option>
 								<option value="cakes">Cakes</option>
 								<option value="desserts">Desserts</option>
-								<option value="dessert table">Desserts Table</option>
+								<option value="dessert table">Dessert Table</option>
 							</select>
 						</div>
 
@@ -104,7 +104,7 @@
 					</div>
 			
 					<div class="form-group contact-group">
-						<label for="">Date of Collection</label>
+						<label for="">Collection Method</label>
 						<div style="margin-left:0px">
 							<input type="checkbox" id="quotation-collection" name="quotation-collection" value="Self-Collection">
 							<label for="quotation-collection">Self-Collection</label>
