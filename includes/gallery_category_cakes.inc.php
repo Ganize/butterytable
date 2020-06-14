@@ -30,7 +30,7 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
                         if ($count == 0) {
                             echo '<div class="row-' . $row_num . ' gallery-row">';
                         }
-                        echo '<div><a href="'. $row1["insta_url"] . '" ><img id="borderimg" src="http://localhost/butterytable/images/' . $row1["gallery_path"] . '" width="400" height="400">';
+                        echo '<div><a href="'. $row1["insta_url"] . '" ><img id="borderimg" src="https://butterytablebakery.com/images/' . $row1["gallery_path"] . '" width="400" height="400">';
                         echo '</a><div>';
                         echo '<span class="galleryname">' . $row1["gallery_name"] . '</span>';
                         echo '<br />';

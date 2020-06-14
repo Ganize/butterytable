@@ -77,7 +77,7 @@
 								echo '<span class="fa fa-heart checked" id="menuid_'. $row1["gallery_id"] .'" name="'. $row1["gallery_id"] .'"></span>';
 							}
 							
-							echo '<img src="http://localhost/butterytable/images/'.$row1["gallery_path"].'" alt="'. $row1["gallery_name"].'" width="150" height="150">';
+							echo '<img src="https://butterytablebakery.com/images/'.$row1["gallery_path"].'" alt="'. $row1["gallery_name"].'" width="150" height="150">';
 							echo '<div class="fname">'. $row1["gallery_name"] .'</div>';
 							echo '<input type="button" class="button" style="margin-left:15px" value="Order" name="flavour_'.$row1["gallery_id"].'" onclick="order(this)"/>';
 							echo "</div>";

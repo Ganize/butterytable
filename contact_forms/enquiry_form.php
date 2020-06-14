@@ -52,7 +52,7 @@
 			</div>
 		</div>
 		<div class="col-5 g-img">
-			<img src="http://localhost/butterytable/images/icon/enquiry.jpg" width="450px" height="450px">
+			<img src="https://butterytablebakery.com/images/icon/enquiry.jpg" width="450px" height="450px">
 		</div>
 	</div>
 </div>

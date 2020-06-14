@@ -18,7 +18,7 @@ Terms & Conditions
     We recommend a car as a means of transport
     <br>Please place cakes on a flat surface during transportation, at the leg space of the passenger seat
     <br>The car should be as cool as possible when transporting the cake and drive straight to the location if possible
-    <br>**For self-collection, we will not be liable for any damages occurring during your own transportation
+    <div class="starwords">**For self-collection, we will not be liable for any damages occurring during your own transportation</div>
   </p>
 </div>
 
@@ -30,7 +30,7 @@ Terms & Conditions
   <p class="words">
     Always refrigerate your cake and defrost 1 hour prior to consumption
     <br>Cakes can be placed in an air-conditioned environment for a maximum of 2 hours
-    <br>**We recommend you to take the above steps as we will not be liable for any damages resulting from any melted cakes/desserts
+    <div class="starwords">**We recommend you to take the above steps as we will not be liable for any damages resulting from any melted cakes/desserts</div>
   </p>
 </div>
 
@@ -43,7 +43,7 @@ Terms & Conditions
   <p class="words">
     As all our bakes are made-to-order, we recommend you to send in your orders at least 1 - 2 weeks in advance
     <br>For urgent cases, please place orders 3 days in advance depending on slot availability.
-    <br>**We reserve the rights to accept or reject any orders
+    <div class="starwords">**We reserve the rights to accept or reject any orders</div>
   </p>
 </div>
 
@@ -55,8 +55,7 @@ Terms & Conditions
   <p class="words">
     Payment is to be made through PayNow/Paylah/Bank transfer upon receiving the order confirmation email with the provided bank account details.
     <br />
-    <br />
-    ***Your order will only be confirmed once full payment is received.
+    <div class="starwords">***Your order will only be confirmed once full payment is received.</div>
   </p>
 
 </div>
@@ -68,7 +67,8 @@ Terms & Conditions
   </ul>
   <p class="words">
     We only allow changes up to 1 week before the order date.
-    <br>**We reserve the rights to reject any last minute changes
+    <br>
+    <div class="starwords"></div>**We reserve the rights to reject any last minute changes
   </p>
 </div>
 
@@ -80,8 +80,7 @@ Terms & Conditions
   <p class="words">
     Full refunds will be provided up to 2 weeks before the order date. Thereafter, we will not issue any refunds.
     <br />
-    <br />
-    ***Refunds will be made within a period of 4 weeks from the date of acknowledgement.
+    <div class="starwords">***Refunds will be made within a period of 4 weeks from the date of acknowledgement.</div>
   </p>
 </div>
 

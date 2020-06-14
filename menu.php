@@ -33,7 +33,7 @@
                 <span class="dot"></span>
             </div>
             <br />
-            <ul class="div3">
+            <ul class="div4">
                 <li>Biscoff Vanilla</li>
                 <li>Nutella Chocolate</li>
                 <li>Matcha Black Sesame</li>

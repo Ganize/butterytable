@@ -1,0 +1,134 @@
+[14-Jun-2020 03:37:09 UTC] PHP Warning:  require(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/brucegan/public_html/includes/email.inc.php on line 5
+[14-Jun-2020 03:37:09 UTC] PHP Warning:  require(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/brucegan/public_html/includes/email.inc.php on line 5
+[14-Jun-2020 03:37:09 UTC] PHP Fatal error:  require(): Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/brucegan/public_html/includes/email.inc.php on line 5
+[14-Jun-2020 03:37:36 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 03:37:36 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/display_wishlist.inc.php on line 6
+[14-Jun-2020 03:37:36 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/display_wishlist.inc.php on line 7
+[14-Jun-2020 03:37:47 UTC] PHP Warning:  require(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/brucegan/public_html/includes/email.inc.php on line 5
+[14-Jun-2020 03:37:47 UTC] PHP Warning:  require(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/brucegan/public_html/includes/email.inc.php on line 5
+[14-Jun-2020 03:37:47 UTC] PHP Fatal error:  require(): Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/brucegan/public_html/includes/email.inc.php on line 5
+[14-Jun-2020 03:38:14 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 03:38:14 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/wishlist.inc.php on line 9
+[14-Jun-2020 03:38:14 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/wishlist.inc.php on line 10
+[14-Jun-2020 03:38:18 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 03:38:18 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/wishlist_count.inc.php on line 6
+[14-Jun-2020 03:38:18 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/wishlist_count.inc.php on line 7
+[14-Jun-2020 03:38:36 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 03:38:36 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/display_account.inc.php on line 10
+[14-Jun-2020 03:38:36 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/display_account.inc.php on line 11
+[14-Jun-2020 03:38:43 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 03:38:43 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/display_account_address.inc.php on line 12
+[14-Jun-2020 03:38:43 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/display_account_address.inc.php on line 14
+[14-Jun-2020 03:38:51 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 03:38:51 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/display_account_image.inc.php on line 7
+[14-Jun-2020 03:38:51 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/display_account_image.inc.php on line 8
+[14-Jun-2020 03:38:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/brucegan/public_html/includes/display_account_image.inc.php:2) in /home/brucegan/public_html/includes/display_account_image.inc.php on line 10
+[14-Jun-2020 03:38:57 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 03:38:57 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/display_account_wishlist.inc.php on line 18
+[14-Jun-2020 03:38:57 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/display_account_wishlist.inc.php on line 19
+[14-Jun-2020 03:38:57 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/brucegan/public_html/includes/display_account_wishlist.inc.php:12) in /home/brucegan/public_html/includes/display_account_wishlist.inc.php on line 21
+[14-Jun-2020 03:39:04 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 03:39:04 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/display_gallery.inc.php on line 17
+[14-Jun-2020 03:39:04 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/display_gallery.inc.php on line 18
+[14-Jun-2020 04:52:20 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 04:52:20 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 18
+[14-Jun-2020 04:52:20 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 04:52:25 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 04:52:25 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 18
+[14-Jun-2020 04:52:25 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 04:53:56 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 04:53:56 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 18
+[14-Jun-2020 04:53:56 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 04:54:00 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 04:54:00 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 18
+[14-Jun-2020 04:54:00 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 04:54:00 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 04:57:37 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'brucegan_butterfly'@'localhost' (using password: YES) in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 04:57:37 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 18
+[14-Jun-2020 04:57:37 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 04:58:35 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'brucegan_butterfly'@'localhost' (using password: YES) in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 04:58:35 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 18
+[14-Jun-2020 04:58:35 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:07:48 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'brucegan_test'@'localhost' (using password: YES) in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 05:07:48 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 18
+[14-Jun-2020 05:07:48 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:10:41 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 05:10:41 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 18
+[14-Jun-2020 05:10:41 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:10:41 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 05:10:41 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 18
+[14-Jun-2020 05:10:41 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:10:44 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 05:10:44 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 18
+[14-Jun-2020 05:10:44 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:11:53 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'brucegan_butterfly'@'167.88.166.153' (using password: YES) in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 05:11:53 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 18
+[14-Jun-2020 05:11:53 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:11:58 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'brucegan_butterfly'@'167.88.166.153' (using password: YES) in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 05:11:58 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 18
+[14-Jun-2020 05:11:58 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:12:34 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'brucegan_butterfly'@'167.88.166.153' (using password: YES) in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 05:12:34 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 18
+[14-Jun-2020 05:12:34 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:13:53 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'brucegan_butterfly'@'167.88.166.153' (using password: YES) in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 05:13:53 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 18
+[14-Jun-2020 05:13:53 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:13:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/brucegan/public_html/includes/login.inc.php:21) in /home/brucegan/public_html/includes/login.inc.php on line 22
+[14-Jun-2020 05:14:44 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'brucegan_butterfly'@'167.88.166.153' (using password: YES) in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 05:14:44 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 18
+[14-Jun-2020 05:14:44 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:14:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/brucegan/public_html/includes/db_conn.inc.php:17) in /home/brucegan/public_html/includes/login.inc.php on line 22
+[14-Jun-2020 05:15:14 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 05:15:14 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 18
+[14-Jun-2020 05:15:14 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:15:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/brucegan/public_html/includes/db_conn.inc.php:17) in /home/brucegan/public_html/includes/login.inc.php on line 22
+[14-Jun-2020 05:17:04 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 05:17:04 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 18
+[14-Jun-2020 05:17:04 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:17:04 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 21
+[14-Jun-2020 05:17:04 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/brucegan/public_html/includes/login.inc.php:21) in /home/brucegan/public_html/includes/login.inc.php on line 22
+[14-Jun-2020 05:18:51 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 05:18:51 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 18
+[14-Jun-2020 05:18:51 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:18:51 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 20
+[14-Jun-2020 05:18:59 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 05:18:59 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 18
+[14-Jun-2020 05:18:59 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:18:59 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 20
+[14-Jun-2020 05:19:51 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'brucegan_butterfly'@'localhost' to database 'brucegan_butterfly' in /home/brucegan/public_html/includes/db_conn.inc.php on line 8
+[14-Jun-2020 05:19:51 UTC] PHP Warning:  mysqli_stmt_init(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 18
+[14-Jun-2020 05:19:51 UTC] PHP Warning:  var_dump(): Property access is not allowed yet in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:19:51 UTC] PHP Warning:  var_dump(): Property access is not allowed yet in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:19:51 UTC] PHP Warning:  var_dump(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:19:51 UTC] PHP Warning:  var_dump(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:19:51 UTC] PHP Warning:  var_dump(): Property access is not allowed yet in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:19:51 UTC] PHP Warning:  var_dump(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:19:51 UTC] PHP Warning:  var_dump(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:19:51 UTC] PHP Warning:  var_dump(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:19:51 UTC] PHP Warning:  var_dump(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:19:51 UTC] PHP Warning:  var_dump(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:19:51 UTC] PHP Warning:  var_dump(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:19:51 UTC] PHP Warning:  var_dump(): Property access is not allowed yet in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:19:51 UTC] PHP Warning:  var_dump(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:19:51 UTC] PHP Warning:  var_dump(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:19:51 UTC] PHP Warning:  var_dump(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:19:51 UTC] PHP Warning:  var_dump(): Couldn't fetch mysqli in /home/brucegan/public_html/includes/login.inc.php on line 19
+[14-Jun-2020 05:19:51 UTC] PHP Warning:  mysqli_stmt_prepare() expects parameter 1 to be mysqli_stmt, null given in /home/brucegan/public_html/includes/login.inc.php on line 20
+[14-Jun-2020 05:30:59 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/brucegan/public_html/includes/login.inc.php:19) in /home/brucegan/public_html/includes/login.inc.php on line 61
+[14-Jun-2020 05:38:40 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/brucegan/public_html/includes/enquiry.inc.php on line 15
+[14-Jun-2020 05:43:37 UTC] PHP Warning:  require(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/brucegan/public_html/includes/email.inc.php on line 5
+[14-Jun-2020 05:43:37 UTC] PHP Warning:  require(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/brucegan/public_html/includes/email.inc.php on line 5
+[14-Jun-2020 05:43:37 UTC] PHP Fatal error:  require(): Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/brucegan/public_html/includes/email.inc.php on line 5
+[14-Jun-2020 05:44:47 UTC] PHP Warning:  require(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/brucegan/public_html/includes/email.inc.php on line 5
+[14-Jun-2020 05:44:47 UTC] PHP Warning:  require(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/brucegan/public_html/includes/email.inc.php on line 5
+[14-Jun-2020 05:44:47 UTC] PHP Fatal error:  require(): Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/brucegan/public_html/includes/email.inc.php on line 5
+[14-Jun-2020 05:45:02 UTC] PHP Warning:  require(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/brucegan/public_html/includes/email.inc.php on line 5
+[14-Jun-2020 05:45:02 UTC] PHP Warning:  require(PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/brucegan/public_html/includes/email.inc.php on line 5
+[14-Jun-2020 05:45:02 UTC] PHP Fatal error:  require(): Failed opening required 'PHPMailer/src/Exception.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/brucegan/public_html/includes/email.inc.php on line 5
+[14-Jun-2020 05:46:16 UTC] PHP Warning:  require(..\PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/brucegan/public_html/includes/email.inc.php on line 5
+[14-Jun-2020 05:46:16 UTC] PHP Warning:  require(..\PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/brucegan/public_html/includes/email.inc.php on line 5
+[14-Jun-2020 05:46:16 UTC] PHP Fatal error:  require(): Failed opening required '..\PHPMailer/src/Exception.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/brucegan/public_html/includes/email.inc.php on line 5
+[14-Jun-2020 13:50:20 Asia/Singapore] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/brucegan/public_html/includes/email.inc.php:36) in /home/brucegan/public_html/includes/enquiry.inc.php on line 45
+[14-Jun-2020 13:52:43 Asia/Singapore] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/brucegan/public_html/includes/email.inc.php:40) in /home/brucegan/public_html/includes/enquiry.inc.php on line 45
+[14-Jun-2020 13:53:16 Asia/Singapore] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/brucegan/public_html/includes/email.inc.php:36) in /home/brucegan/public_html/includes/enquiry.inc.php on line 45
+[14-Jun-2020 14:57:08 Asia/Singapore] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/butteryt/public_html/includes/quotation.inc.php:92) in /home/butteryt/public_html/includes/quotation.inc.php on line 126

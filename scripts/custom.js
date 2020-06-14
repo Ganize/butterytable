@@ -6,7 +6,7 @@ jQuery(document).ready(function($){
 	var current_host = window.location.href;
 	$.ajax({
 		type: "POST",
-		url:   "http://localhost/butterytable/includes/wishlist.inc.php",
+		url:   "https://butterytablebakery.com/includes/wishlist.inc.php",
 		data: { gId: galleryId} ,
 		}).done(function( msg ) {
 			var target_star = document.getElementById(selectedId);
