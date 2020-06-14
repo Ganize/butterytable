@@ -84,7 +84,7 @@ if ($_SESSION['LAST_ACTIVITY'] + 30 * 60 < time()) {
 			<?php else : ?>
 				<div>
 					<img width="25px" height="25px" src="<?php echo $link; ?>images/icon/login.png" />
-					<a style="color:#A2A2A2" href="/login.php">LOG IN</a>
+					<a style="color:#A2A2A2" href="<?php echo $link; ?>login.php">LOG IN</a>
 				</div>
 			<?php endif; ?>
 

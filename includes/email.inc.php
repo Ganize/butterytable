@@ -24,7 +24,6 @@
       $mail->setFrom('demo@brucegan.net', 'Mailer');
       $mail->addAddress('rotiboy55@gmail.com', 'Joe User');     // Add a recipient
    
-
       // Content
       $mail->isHTML(true);                                  // Set email format to HTML
       $mail->Subject = $enquiry_subject;
@@ -32,12 +31,4 @@
       $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
       $mail->send();
-
-//     echo 'Message has been sent';
-//   }
-//   catch(Exception $e)
-//   {
-//      echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-//   }
-
 ?>

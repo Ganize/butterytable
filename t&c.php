@@ -55,7 +55,7 @@ Terms & Conditions
   <p class="words">
     Payment is to be made through PayNow/Paylah/Bank transfer upon receiving the order confirmation email with the provided bank account details.
     <br />
-    <div class="starwords">***Your order will only be confirmed once full payment is received.</div>
+    <div class="starwords">**Your order will only be confirmed once full payment is received.</div>
   </p>
 
 </div>
@@ -68,7 +68,7 @@ Terms & Conditions
   <p class="words">
     We only allow changes up to 1 week before the order date.
     <br>
-    <div class="starwords"></div>**We reserve the rights to reject any last minute changes
+    <div class="starwords">**We reserve the rights to reject any last minute changes</div>
   </p>
 </div>
 
@@ -80,7 +80,7 @@ Terms & Conditions
   <p class="words">
     Full refunds will be provided up to 2 weeks before the order date. Thereafter, we will not issue any refunds.
     <br />
-    <div class="starwords">***Refunds will be made within a period of 4 weeks from the date of acknowledgement.</div>
+    <div class="starwords">**Refunds will be made within a period of 4 weeks from the date of acknowledgement.</div>
   </p>
 </div>
 

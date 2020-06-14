@@ -16,7 +16,6 @@
 		{
 			$sql =  "SELECT * FROM bt_user WHERE user_email= ?";
 			$stmt = mysqli_stmt_init($conn);
-			 var_dump(mysqli_stmt_prepare($stmt, $sql));
 			if(!mysqli_stmt_prepare($stmt, $sql))
 			{
 				//header("Location: ../login.php?error=sqlerror");

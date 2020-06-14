@@ -43,7 +43,7 @@
 						<input type="text" maxlength="8" name="quotation-contact" id="quotation-contact" class="digits require empty"/>
 					</div>
 					<div class="form-group contact-group">
-						<label for="quotation-size">Serving Size/Quantity</label>
+						<label for="quotation-size">Pax</label>
 						<input type="number" name="quotation-size" id="quotation-size" class="empty">
 					</div>
 				

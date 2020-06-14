@@ -1,3 +1,0 @@
-[14-Jun-2020 08:15:40 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/butteryt/public_html/gallerycat/cakes.php:2) in /home/butteryt/public_html/templates/header.php on line 13
-[14-Jun-2020 16:15:40 Asia/Singapore] PHP Warning:  include(/home/butteryt/public_html\includes\wishlist_count.inc.php): failed to open stream: No such file or directory in /home/butteryt/public_html/templates/header.php on line 60
-[14-Jun-2020 16:15:40 Asia/Singapore] PHP Warning:  include(): Failed opening '/home/butteryt/public_html\includes\wishlist_count.inc.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/butteryt/public_html/templates/header.php on line 60

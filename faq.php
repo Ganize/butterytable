@@ -2,7 +2,7 @@
 <?php include('templates/header.php');?>
 <link rel="stylesheet" href="css/faq.css" type="text/css">
 <h2>
-  Frequently Answered Questions
+  Frequently Asked Questions
 </h2>
 <hr class="bline">
 </hr>
@@ -62,7 +62,7 @@
   <span class="dot1"></span>
   </ul>
   <p class="words">
-    We provide a basic happy birthday topper, plastic knife & candles & fondant names up to 8 letters!
+    We provide a basic happy birthday topper, plastic knife, candles & fondant names up to 8 letters!
     <div class="starwords">**Additional fondant letters at 50 cents each</div>
   </p>
 </div>
@@ -74,7 +74,7 @@
   </ul>
   <p class="words">
     We only provide a basic happy birthday topper. However, we do provide premium toppers at a custom rate.
-    <br>Do send us an inquiry via our order/enquire form to check out the pricing
+    <br>Do send us an enquiry via our order/enquire form to check out the pricing
   </p>
 </div>
 

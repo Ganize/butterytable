@@ -36,7 +36,7 @@
           </p>
 
           <p>
-            You can contact us at our order/inquiry form for any orders/inquiries.
+            You can contact us at our order/enquiry form for any orders/enquiries.
           </p>
         </div>
       </div>
