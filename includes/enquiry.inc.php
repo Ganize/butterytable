@@ -8,7 +8,6 @@
 		$enquiry_contact = $_POST['enquiry-contact'];
 		$enquiry_subject = $_POST['enquiry-subject'];
 		$enquiry_message = $_POST['enquiry-message'];
-		
 
 		if(empty($enquiry_name) || empty($enquiry_email) || empty($enquiry_contact) || empty($enquiry_subject)  || empty($enquiry_message) ) //Error when Empty Field
 		{
@@ -40,12 +39,18 @@
 				$date = date('Y-m-d H:i:s');
 				mysqli_stmt_bind_param($stmt, "ssisss", $enquiry_name, $enquiry_email, $enquiry_contact,$enquiry_subject, $enquiry_message, $date); //Prepare statement
 				mysqli_stmt_execute($stmt);
+				
+				$message = "<div>Name ".$enquiry_name."<br>Email : ".$enquiry_email."<br>Contact:".$enquiry_contact."<br>Message: ".$enquiry_message." </div>";
+				include 'email.inc.php';
 				header("Location: ../contact-us.php?result=success");
 				exit();
 			}
 		}
 		mysqli_stmt_close($stmt);
-		mysqli_close($conn);		
+		mysqli_close($conn);
+		
+	
+		
 	}
 	else
 	{

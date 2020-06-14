@@ -63,7 +63,7 @@
   </ul>
   <p class="words">
     We provide a basic happy birthday topper, plastic knife & candles & fondant names up to 8 letters!
-    <br>**Additional fondant letters at 50 cents each
+    <div class="starwords">**Additional fondant letters at 50 cents each</div>
   </p>
 </div>
 

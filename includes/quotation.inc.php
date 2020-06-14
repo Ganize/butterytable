@@ -55,7 +55,6 @@
 					}
 
 					$sql = "INSERT INTO bt_quotation (quotation_name, quotation_email, quotation_contact, quotation_size, quotation_wishlist, quotation_design, quotation_collection, quotation_comments, quotation_date_of_delivery, quotation_datetime ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-						echo "helo1";
 				}
 				else
 				{
@@ -70,7 +69,6 @@
 						$quotation_menu = $_POST['quotation-menu'];
 						$quotation_flavour = $_POST['quotation-flavour'];
 					}
-						echo "helo2";
 
 					$sql = "INSERT INTO bt_quotation (quotation_name, quotation_email, quotation_contact, quotation_size, quotation_category, quotation_menu, quotation_flavour, quotation_design, quotation_collection, quotation_comments, quotation_date_of_delivery, quotation_datetime ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)" ;
 				}
@@ -89,7 +87,6 @@
 					$quotation_menu = $_POST['quotation-menu'];
 					$quotation_flavour = $_POST['quotation-flavour'];
 				}
-				echo "helo3";
 				$sql = "INSERT INTO bt_quotation (quotation_name, quotation_email, quotation_contact, quotation_size, quotation_category, quotation_menu, quotation_flavour, quotation_design, quotation_collection, quotation_comments, quotation_date_of_delivery, quotation_datetime ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			}
 
@@ -117,6 +114,9 @@
 					mysqli_stmt_bind_param($stmt, "ssiissssssss", $quotation_name, $quotation_email, $quotation_contact, $quotation_size, $quotation_category,$quotation_menu, $quotation_flavour, $quotation_design, $quotation_collection, $quotation_comments, $date_delivery, $date); //Prepare statement
 				}
 				mysqli_stmt_execute($stmt);
+				
+				$message = "<div>Name ".$quotation_name."<br>Email : ".$quotation_email."<br>Contact:".$quotation_contact. "<br>Serving Size/Quantity:".$quotation_size. "<br>Category:" .$quotation_category. "<br>Item:". $quotation_menu . "<br>Flavour:" . $quotation_flavour . "<br>Customisation:" . $quotation_design.  "<br>Collection method:".$quotation_collection. "<br>Date of collection/delivery:" . $date_delivery . "<br>Additional comments:" .$quotation_comments ." </div>";
+				include 'email.inc.php';
 				
 				mysqli_stmt_close($stmt);
 				mysqli_close($conn);

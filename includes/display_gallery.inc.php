@@ -31,7 +31,7 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
             if ($count == 0) {
                 echo '<div class="row-' . $row_num . ' gallery-row gallerycontainer">';
             }
-            echo '<div><a href="' . $row["insta_url"] . '" ><img id="borderimg" src="http://localhost/butterytable/images/' . $row["gallery_path"] . '" width="400" height="400">';
+            echo '<div><a href="' . $row["insta_url"] . '" ><img id="borderimg" src="https://butterytablebakery.com/images/' . $row["gallery_path"] . '" width="400" height="400">';
             echo '</a><div>';
             echo '<span class="galleryname">' . $row["gallery_name"] . '</span>';
             echo '<br />';

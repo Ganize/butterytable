@@ -99,7 +99,7 @@
 					</div>
 
 					<div class="form-group contact-group">
-						<label for="quotation-design">Cake Design</label>
+						<label for="quotation-design">Customisation</label>
 						<textarea name="quotation-design" id="quotation-design" class="empty txtarea"></textarea>
 					</div>
 			
@@ -133,7 +133,7 @@
 		</div>
 
 		<div class="col-5 g-img">
-			<img src="http://localhost/butterytable/images/icon/quotation.jpg" width="450px" height="600px">
+			<img src="https://butterytablebakery.com/images/icon/quotation.jpg" width="450px" height="600px">
 		</div>
 	</div>
 </div>
@@ -142,12 +142,13 @@
 <script>
 	jQuery("#quotation-category").change(function(){
 		var selectedOption = $(this).children("option:selected").val();
-
+	
 		$.ajax({
 		type: "POST",
-		url:   "http://localhost/butterytable/includes/display_quotation_menu.inc.php",
+		url:   "https://butterytablebakery.com/includes/display_quotation_menu.inc.php",
 		data: { menu_category: selectedOption} ,
 		}).done(function( msg ) {
+			console.log(msg);
 			jQuery("#quotation_menu").html(msg);
 	  	});			
 	});

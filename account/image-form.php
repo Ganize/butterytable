@@ -17,7 +17,7 @@
 					</div>
 				<?php endif; ?>
 				<br>
-				<form method="post" action="/butterytable/includes/gallery.inc.php?gallery_id=<?php echo $gallery_id; ?>" enctype="multipart/form-data">
+				<form method="post" action="/includes/gallery.inc.php?gallery_id=<?php echo $gallery_id; ?>" enctype="multipart/form-data">
 
 					<div class="uploader">
 						<span class="upload-text">Upload Image </span>

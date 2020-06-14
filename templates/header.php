@@ -2,7 +2,7 @@
 <?php
 $title = 'Home';
 $currentPage = 'index';
-$link = "http://localhost/butterytable/";
+$link = "https://butterytablebakery.com/";
 $DIR = realpath(dirname(__FILE__) . '/..');
 ?>
 
@@ -84,7 +84,7 @@ if ($_SESSION['LAST_ACTIVITY'] + 30 * 60 < time()) {
 			<?php else : ?>
 				<div>
 					<img width="25px" height="25px" src="<?php echo $link; ?>images/icon/login.png" />
-					<a style="color:#A2A2A2" href="/butterytable/login.php">LOG IN</a>
+					<a style="color:#A2A2A2" href="/login.php">LOG IN</a>
 				</div>
 			<?php endif; ?>
 
@@ -105,7 +105,7 @@ if ($_SESSION['LAST_ACTIVITY'] + 30 * 60 < time()) {
 				</div>
 			<?php endif; ?>
 		</div>
-		<a href="http://localhost/butterytable/index"><img src="<?php echo $link; ?>/images/icon/BT_Logo.jpg" width="200px" height="200px" class="img-fluid mx-auto d-block "></a>
+		<a href="<?php echo $link; ?>"><img src="<?php echo $link; ?>images/BT_Logo.jpg" width="200px" height="200px" class="img-fluid mx-auto d-block "></a>
 	</div>
 
 	<a class="menu-toggle" aria-label="Open main menu" onclick="openNav()">
@@ -132,11 +132,11 @@ if ($_SESSION['LAST_ACTIVITY'] + 30 * 60 < time()) {
 		<ul class="nav_bar">
 			<?php
 			$nav_bar = array(
-				"Our Story" => 	"our-story",
-				"Gallery" => 	"gallery",
-				"Menu" => "menu",
-				"Contact Us" => "contact-us",
-				"FAQ" => "faq"
+				"Our Story" => 	"our-story.php",
+				"Gallery" => 	"gallery.php",
+				"Menu" => "menu.php",
+				"Contact Us" => "contact-us.php",
+				"FAQ" => "faq.php"
 			);
 
 			foreach ($nav_bar as $name => $url) {
@@ -157,7 +157,7 @@ if ($_SESSION['LAST_ACTIVITY'] + 30 * 60 < time()) {
 						echo '<li style="margin:auto;" class="nav-item nav-dropdown dropdown ' . active($url) . '">';
 						echo '<a class="nav-link dropbtn" href="' . $link . 'faq.php">FAQ</a>';
 						echo '<div class="dropdown-content">';
-						echo '<a style="font-size:15px; font-family: myGeorgia; color: #A2A2A2;" class="nav-link" href="' . (($currentPage === $name) ? $link : $link .  't&c.php') . '">Terms & Condition</a>';
+						echo '<a style="font-size:15px; font-family: myGeorgia; color: #A2A2A2;" class="nav-link" href="' . (($currentPage === $name) ? $link : $link .  't&c.php') . '">Terms & Conditions</a>';
 						echo '</li>';
 						echo '</div>';
 					break;
@@ -185,7 +185,7 @@ if ($_SESSION['LAST_ACTIVITY'] + 30 * 60 < time()) {
 
 						<?php else : ?>
 							<div>
-								<a style="color:white" href="/butterytable/login.php">LOG IN</a>
+								<a style="color:white" href="/login.php">LOG IN</a>
 							</div>
 						<?php endif; ?>
 
