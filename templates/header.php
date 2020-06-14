@@ -2,7 +2,7 @@
 <?php
 $title = 'Home';
 $currentPage = 'index';
-$link = "https://butterytablebakery.com/";
+$link = "http://localhost/butterytable/";
 $DIR = realpath(dirname(__FILE__) . '/..');
 ?>
 

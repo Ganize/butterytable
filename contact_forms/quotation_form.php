@@ -32,11 +32,11 @@
 				<form action="includes/quotation.inc.php" method="post" id="contact_form">
 					<div class="form-group contact-group">
 						<label for="quotation-name">Name*</label>
-						<input type="text" name="quotation-name" id="quotation-name" class="require empty" value="<?php echo $name;?>">
+						<input type="text" name="quotation-name" id="quotation-name" class="require <?php echo (($name === "") ? "empty" : "");?> " value="<?php echo $name;?>">
 					</div>
 					<div class="form-group contact-group">
 						<label for="quotation-email">Email*</label>
-						<input type="email" name="quotation-email" id="quotation-email" class="require empty" value="<?php echo isset($_SESSION['userEmail']) ? $_SESSION['userEmail'] : ""; ?>">
+						<input type="email" name="quotation-email" id="quotation-email" class="require  <?php echo isset($_SESSION['userEmail']) ? "" : "empty"; ?> " value="<?php echo isset($_SESSION['userEmail']) ? $_SESSION['userEmail'] : ""; ?>">
 					</div>
 					<div class="form-group contact-group">
 						<label for="quotation-contact">Contact Number*</label>
@@ -52,8 +52,8 @@
 							<label for="quotation-option">Option</label>
 							<select name="quotation-option" id="quotation-option" onchange="display_menu_form(this)">
 								<option disabled <?php echo (empty($_GET["gId"])) ?  "selected" :  ""; ?> value="-1">Select an option</option>
-								<option <?php echo (!empty($_GET["gId"])) ?  "selected" :  ""; ?> value="0">Wishlist</option>
-								<option  value="1">Customize</option>
+								<option <?php echo (!empty($_GET["gId"])) ?  "selected" :  ""; ?> value="wishlist">Wishlist</option>
+								<option  value="customize">Customize</option>
 							</select>
 						</div>
 
@@ -100,7 +100,7 @@
 
 					<div class="form-group contact-group">
 						<label for="quotation-design">Customisation</label>
-						<textarea name="quotation-design" id="quotation-design" class="empty txtarea"></textarea>
+						<textarea name="quotation-design" id="quotation-design" class="txtarea"></textarea>
 					</div>
 			
 					<div class="form-group contact-group">
@@ -124,7 +124,7 @@
 
 					<div class="form-group contact-group">
 						<label for="">Additional Comments</label>
-						<textarea name="quotation-comments" id="quotation-comments" class="empty txtarea"></textarea>
+						<textarea name="quotation-comments" id="quotation-comments" class="txtarea"></textarea>
 					</div>
 					<input type="button" class="button" value="Submit" name="btn-submit" />
 					<button class="button" type="submit" name="btn-quotation" id="btn-quotation" style="display:none;">Submit</button>

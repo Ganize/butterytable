@@ -13,11 +13,20 @@
 		$quotation_menu = "";
 		$quotation_flavour = "";
 
-		$quotation_design = $_POST['quotation-design'];
+		
 		$quotation_collection = $_POST['quotation-collection'];
-		$quotation_comments = $_POST['quotation-comments'];
+		$quotation_design = "";
+		$quotation_comments = "";
 
-	
+		if(!empty($_POST['quotation-design']))
+		{
+			$quotation_design = $_POST['quotation-design'];
+		}
+		if(!empty($_POST['quotation-comments']))
+		{
+			$quotation_comments = $_POST['quotation-comments'];
+		}
+		
 
 		$quotation_wishlist = "";
 
@@ -53,7 +62,7 @@
 					{
 						$quotation_wishlist = $_POST['quotation-wishlist'];
 					}
-
+					echo "here";
 					$sql = "INSERT INTO bt_quotation (quotation_name, quotation_email, quotation_contact, quotation_size, quotation_wishlist, quotation_design, quotation_collection, quotation_comments, quotation_date_of_delivery, quotation_datetime ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 				}
 				else
@@ -94,8 +103,7 @@
 
 			if(!mysqli_stmt_prepare($stmt, $sql))
 			{
-					header("Location: ../contact-us.php?error=sqlerror");
-
+				header("Location: ../contact-us.php?error=sqlerror1");
 				exit();
 			}
 			else

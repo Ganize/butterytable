@@ -77,13 +77,14 @@ function order(e)
 function display_menu_form(e)
 {
 	var selectedVal = e.options[e.selectedIndex].value;
+	console.log(selectedVal);
 	switch(selectedVal)
 	{
-		case "0":
+		case "wishlist":
 			jQuery(".form-wishlist").show();
 			jQuery(".form-customize").hide();
 			break;
-		case "1":
+		case "customize":
 			jQuery(".form-customize").show();
 			jQuery(".form-wishlist").hide();
 			break;
