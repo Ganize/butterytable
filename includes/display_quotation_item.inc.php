@@ -13,7 +13,7 @@
 	{
 		
 		echo '<label for="quotation-wishlist">Flavour series</label>';
-		echo '<select name="quotation-wishlist" id="quotation-wishlist"  style="width:fit-content;">';
+		echo '<select name="quotation-wishlist" id="quotation-wishlist" onchange="retrieve_flavour(this)" style="width:fit-content;">';
 		echo '<option disabled selected value="-1">Select an option</option>';
 		mysqli_stmt_bind_param($stmt, "s", $menu_category ); //Prepare statement
 		mysqli_stmt_execute($stmt);
@@ -21,7 +21,7 @@
 	
 		while($row = mysqli_fetch_assoc($result)) //Fectching the data from result
 		{	
-			echo '<option value="'.$row["menu_name"].'">'.ucwords($row["menu_name"]).'</option>';
+			echo '<option value="'.$row["menu_id"].'">'.ucwords($row["menu_name"]).'</option>';
 		}
 		echo '</select>';
 

@@ -12,8 +12,8 @@
 	else
 	{
 
-		echo '<label for="quotation-flavour">Item</label>';
-		echo '<select name="quotation-flavour" id="quotation-flavour"  style="width:fit-content;">';
+		echo '<label for="quotation-wishlist">Item</label>';
+		echo '<select name="quotation-menu" id="quotation-menu"  style="width:fit-content;">';
 		echo '<option disabled selected value="-1">Select an option</option>';
 		mysqli_stmt_bind_param($stmt, "s", $menu_category ); //Prepare statement
 		mysqli_stmt_execute($stmt);

@@ -94,6 +94,9 @@
 						<div class="form-group contact-group form-customize" id="quotation_wishlist" class="form-group contact-group form-customize">
 						</div>	
 
+						<div class="form-group contact-group form-customize" id="quotation-flavour" class="form-group contact-group form-customize">
+						</div>	
+
 
 					</div>
 
@@ -158,7 +161,8 @@
 		}).done(function( msg ) {
 			console.log(msg);
 			jQuery("#quotation_wishlist").html(msg);
-	  	});			
+	  	});
+			
 	});
 
 </script>
