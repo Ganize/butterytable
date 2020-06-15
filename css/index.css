@@ -114,6 +114,10 @@ h2 {
         margin-left: 31px;
     }
 
+    .column {
+        width: 100%;
+      }
+
 }
 
 .post-col
