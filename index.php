@@ -15,6 +15,8 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
     $result = mysqli_stmt_get_result($stmt);
 }
 ?>
+
+
 <div class="container-fluid" style="background-color:#F7ECEC;">
     <div class="row justify-content-center mb-2">
         <div class="col-lg-10">
@@ -94,38 +96,31 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
     <a style="text-decoration: none;" href="<?php echo $link; ?>contact-us.php?pages=quotation" class="btn-quotes button">get a quote</a>
 </div>
 <div class="posts">
-    <h2>Posts</h2>
+    <?php
+
+    $sql1 = "SELECT * FROM (
+        SELECT * FROM bt_cakegallery ORDER BY gallery_id DESC LIMIT 2
+    ) sub
+    ORDER BY gallery_id DESC";
+    $stmt1 = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt1, $sql1)) {
+        header("Location: ../login/login.php?error=sqlerror");
+        exit();
+    } else {
+        mysqli_stmt_execute($stmt1);
+        $result1 = mysqli_stmt_get_result($stmt1);
+    }
+    ?>
+    <h2>Latest Arrivals</h2>
     <hr style="width: 8%; border-color: #C18281;" />
 
-    <div class="container post-container">
-        <div class="row">
-            <div class="col post-col mcol-4">
-                <div class="post-grid">
-                    <div class="postimg">
-                        <img src="images/cake1.jpg">
-                    </div>
-                    <div>
-                        <h2>test</h2>
-                        <hr class="bline">
-                        </hr>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col post-col">
-                <div class="post-grid">
-                    <div class="postimg">
-                        <img src="images/cake2.jpg">
-                    </div>
-                    <div>
-                        <h2>test</h2>
-                        <hr class="bline">
-                        </hr>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php
+    foreach ($result1 as $row1) {
+        if (!empty($row1['gallery_name'])) {
+            echo '<h2>' . $row1['gallery_name'] . '</h2>';
+            echo '<img style="width:400px; height:400px" src="images/' . $row1['gallery_path'] . '">';
+        }
+    } ?>
 
 </div>
 
