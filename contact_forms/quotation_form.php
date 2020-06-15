@@ -91,8 +91,10 @@
 						<div class="form-group contact-group form-customize" id="quotation_menu" style="display: none;">
 						</div>
 
-						<div name="quotation-flavour" id="quotation-flavour" class="form-group contact-group form-customize">
+						<div class="form-group contact-group form-customize" id="quotation_wishlist" class="form-group contact-group form-customize">
 						</div>	
+
+
 					</div>
 
 					<div class="form-group contact-group">
@@ -147,6 +149,15 @@
 		}).done(function( msg ) {
 			console.log(msg);
 			jQuery("#quotation_menu").html(msg);
+	  	});			
+
+	  	$.ajax({
+		type: "POST",
+		url:   "http://localhost/butterytable/includes/display_quotation_item.inc.php",
+		data: { menu_category: selectedOption} ,
+		}).done(function( msg ) {
+			console.log(msg);
+			jQuery("#quotation_wishlist").html(msg);
 	  	});			
 	});
 

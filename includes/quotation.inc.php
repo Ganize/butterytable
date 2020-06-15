@@ -18,6 +18,7 @@ if (isset($_POST['btn-quotation'])) {
 	$quotation_design = "";
 	$quotation_comments = "";
 
+
 	if (!empty($_POST['quotation-design'])) {
 		$quotation_design = $_POST['quotation-design'];
 	}
@@ -54,29 +55,30 @@ if (isset($_POST['btn-quotation'])) {
 				echo "here";
 				$sql = "INSERT INTO bt_quotation (quotation_name, quotation_email, quotation_contact, quotation_size, quotation_wishlist, quotation_design, quotation_collection, quotation_comments, quotation_date_of_delivery, quotation_datetime ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			} else {
-				if (empty($_POST['quotation-wishlist']) || empty($_POST['quotation-category']) || empty($_POST['quotation-menu']) || empty($_POST['quotation-flavour'])) {
+				if (empty($_POST['quotation-wishlist']) || empty($_POST['quotation-category']) || empty($_POST['quotation-flavour'])) {
+
+	
 					header("Location: ../contact-us.php?error=emptyfield3");
 					exit();
 				} else {
 					$quotation_category = $_POST['quotation-category'];
-					$quotation_menu = $_POST['quotation-menu'];
+					// $quotation_menu = $_POST['quotation-menu'];
 					$quotation_flavour = $_POST['quotation-flavour'];
 					$quotation_wishlist = $_POST['quotation-wishlist'];
 				}
 
-				$sql = "INSERT INTO bt_quotation (quotation_name, quotation_email, quotation_contact, quotation_size, quotation_wishlist, quotation_category, quotation_menu, quotation_flavour, quotation_design, quotation_collection, quotation_comments, quotation_date_of_delivery, quotation_datetime ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+				$sql = "INSERT INTO bt_quotation (quotation_name, quotation_email, quotation_contact, quotation_size, quotation_wishlist, quotation_category, quotation_flavour, quotation_design, quotation_collection, quotation_comments, quotation_date_of_delivery, quotation_datetime ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			}
 		} else {
-			if (empty($_POST['quotation-wishlist']) ||empty($_POST['quotation-category']) || empty($_POST['quotation-menu']) || empty($_POST['quotation-flavour'])) {
+			if (empty($_POST['quotation-wishlist']) ||empty($_POST['quotation-category'])  || empty($_POST['quotation-flavour'])) {
 				header("Location: ../contact-us.php?error=emptyfield3");
 				exit();
 			} else {
 				$quotation_category = $_POST['quotation-category'];
-				$quotation_menu = $_POST['quotation-menu'];
 				$quotation_flavour = $_POST['quotation-flavour'];
 				$quotation_wishlist = $_POST['quotation-wishlist'];
 			}
-			$sql = "INSERT INTO bt_quotation (quotation_name, quotation_email, quotation_contact, quotation_size, quotation_wishlist, quotation_category, quotation_menu, quotation_flavour, quotation_design, quotation_collection, quotation_comments, quotation_date_of_delivery, quotation_datetime ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			$sql = "INSERT INTO bt_quotation (quotation_name, quotation_email, quotation_contact, quotation_size, quotation_wishlist, quotation_category, quotation_flavour, quotation_design, quotation_collection, quotation_comments, quotation_date_of_delivery, quotation_datetime ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		}
 
 		$stmt = mysqli_stmt_init($conn);
@@ -94,8 +96,8 @@ if (isset($_POST['btn-quotation'])) {
 				mysqli_stmt_bind_param($stmt, "ssiissssss", $quotation_name, $quotation_email, $quotation_contact, $quotation_size, $quotation_wishlist, $quotation_design, $quotation_collection, $quotation_comments, $date_delivery, $date); //Prepare statement
 				$message = "<div>Name " . $quotation_name . "<br>Email : " . $quotation_email . "<br>Contact:" . $quotation_contact . "<br>Serving Size/Quantity:" . $quotation_size . "<br>Wishlist:" . $quotation_wishlist . "<br>Collection method:" . $quotation_collection . "<br>Date of collection/delivery:" . $date_delivery . "<br>Additional comments:" . $quotation_comments . " </div>";
 			} else {
-				mysqli_stmt_bind_param($stmt, "ssiisssssssss", $quotation_name, $quotation_email, $quotation_contact, $quotation_size, $quotation_wishlist, $quotation_category, $quotation_menu, $quotation_flavour, $quotation_design, $quotation_collection, $quotation_comments, $date_delivery, $date); //Prepare statement
-				$message = "<div>Name " . $quotation_name . "<br>Email : " . $quotation_email . "<br>Contact:" . $quotation_contact . "<br>Serving Size/Quantity:" . $quotation_size . "<br>Category:" . $quotation_category .  "<br>Item:" . $quotation_wishlist . "<br>Flavour Series:" . $quotation_flavour . "<br>Flavour:". $quotation_menu . "<br>Customisation:" . $quotation_design .  "<br>Collection method:" . $quotation_collection . "<br>Date of collection/delivery:" . $date_delivery . "<br>Additional comments:" . $quotation_comments . " </div>";
+				mysqli_stmt_bind_param($stmt, "ssiissssssss", $quotation_name, $quotation_email, $quotation_contact, $quotation_size, $quotation_wishlist, $quotation_category, $quotation_flavour, $quotation_design, $quotation_collection, $quotation_comments, $date_delivery, $date); //Prepare statement
+				$message = "<div>Name " . $quotation_name . "<br>Email : " . $quotation_email . "<br>Contact:" . $quotation_contact . "<br>Serving Size/Quantity:" . $quotation_size . "<br>Category:" . $quotation_category .  "<br>Item:" . $quotation_wishlist . "<br>Flavour Series:" . $quotation_flavour . "<br>Customisation:" . $quotation_design .  "<br>Collection method:" . $quotation_collection . "<br>Date of collection/delivery:" . $date_delivery . "<br>Additional comments:" . $quotation_comments . " </div>";
 			}
 			mysqli_stmt_execute($stmt);
 			$enquiry_subject = "Order";

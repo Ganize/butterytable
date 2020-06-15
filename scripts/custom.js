@@ -64,6 +64,7 @@ function retrieve_flavour(e)
 	url:   "includes/display_quotation_flavour.inc.php",
 	data: { mId: selectedVal} ,
 	}).done(function( msg ) {
+	
 		jQuery("#quotation-flavour").replaceWith(msg);
   	});	
 }

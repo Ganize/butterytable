@@ -23,7 +23,7 @@
 		}
 		else
 		{
-			echo '<div id="quotation-flavour" class="form-group contact-group form-customize">';
+
 			echo '<label for="quotation-category">Cake Flavour</label>';
 			echo '<select name="quotation-flavour" id="quotation-flavour" style="width:fit-content";>';
 			echo '<option disabled selected value="-1"> -- Select an option -- </option>';
@@ -32,9 +32,7 @@
 				echo '<option value="'.$row["flavour_name"].'">'.ucwords($row["flavour_name"]).'</option>';
 			}
 			echo '</select>';
-			echo '</div>';
+
 		}
 	}
 ?>
-
-
