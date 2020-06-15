@@ -89,9 +89,6 @@
 						</div>
 
 						<div class="form-group contact-group form-customize" id="quotation_menu" style="display: none;">
-							
-					
-
 						</div>
 
 						<div name="quotation-flavour" id="quotation-flavour" class="form-group contact-group form-customize">
@@ -145,7 +142,7 @@
 	
 		$.ajax({
 		type: "POST",
-		url:   "https://butterytablebakery.com/includes/display_quotation_menu.inc.php",
+		url:   "http://localhost/butterytable/includes/display_quotation_menu.inc.php",
 		data: { menu_category: selectedOption} ,
 		}).done(function( msg ) {
 			console.log(msg);

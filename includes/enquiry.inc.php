@@ -34,6 +34,7 @@ if (isset($_POST['btn-enquiry'])) {
 			mysqli_stmt_execute($stmt);
 
 			$message = "<div>Name " . $enquiry_name . "<br>Email : " . $enquiry_email . "<br>Contact:" . $enquiry_contact . "<br>Message: " . $enquiry_message . " </div>";
+			
 			include 'email.inc.php';
 			header("Location: ../contact-us.php?result=success");
 			exit();

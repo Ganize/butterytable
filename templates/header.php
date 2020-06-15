@@ -201,7 +201,7 @@ if ($_SESSION['LAST_ACTIVITY'] + 30 * 60 < time()) {
 						<?php if (isset($_SESSION['userUid'])) : ?>
 							<div class="vl"></div>
 							<div class="nav-header-div ">
-								<a href="/butterytable/account/my-wishlist"><img src="<?php echo $link; ?>/images/icon/heart.png" class="wishlist-icon" width="25px" height="25px"></a>
+								<a href="/account/my-wishlist.php"><img src="<?php echo $link; ?>/images/icon/heart.png" class="wishlist-icon" width="25px" height="25px"></a>
 							</div>
 						<?php endif; ?>
 					</div>

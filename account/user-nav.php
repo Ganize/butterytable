@@ -5,9 +5,9 @@
 					if($_SESSION["user_role"] == "ujiz4_admin")
 					{
 						$nav_bar = array(
-						"MY ACCOUNT" => "account/my-account",
-						"MEMBERS LIST" => "account/member-list",
-						"UPDATES IMAGES" => "account/update-images");
+						"MY ACCOUNT" => "account/my-account.php",
+						"MEMBERS LIST" => "account/member-list.php",
+						"UPDATES IMAGES" => "account/update-images.php");
 
 						foreach ($nav_bar as $name => $url) {
 							echo '<li class="nav-item '.(($currentPage === $url) ? 'active" ': '"').'><a  style="display: block" class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">'.$name.'</a></li>';
@@ -16,8 +16,8 @@
 					else
 					{
 						$nav_bar = array(
-						"MY ACCOUNT" => "account/my-account",
-						"MY WISHLIST" => "account/my-wishlist");
+						"MY ACCOUNT" => "account/my-account.php",
+						"MY WISHLIST" => "account/my-wishlist.php");
 
 						foreach ($nav_bar as $name => $url) {
 							echo '<li class="nav-item '.(($currentPage === $url) ? 'active" ': '"').'><a  style="display: block" class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">'.$name.'</a></li>';

@@ -9,8 +9,6 @@
   // Instantiation and passing true enables exceptions
   $mail = new PHPMailer(true);
 
-//   try
-//   {
   //Server settings
       $mail->isSMTP();                                            // Send using SMTP
       $mail->Host = 'mail.brucegan.net';                    // Set the SMTP server to send through
@@ -19,10 +17,10 @@
       $mail->Password   = 'Firaga123456!';                       // SMTP password
       $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; PHPMailer::ENCRYPTION_SMTPS encouraged
       $mail->Port       = 465;                                    // TCP port to connect to, use 465 for PHPMailer::ENCRYPTION_SMTPS above
-
+      // $mail->From = $email;
       //Recipients
-      $mail->setFrom('demo@brucegan.net', 'Mailer');
-      $mail->addAddress('rotiboy55@gmail.com', 'Joe User');     // Add a recipient
+      $mail->setFrom('butterytablebakery@gmail.com', "ButteryTable");
+      $mail->addAddress('rotiboy55@gmail.com', 'Butterytable');     // Add a recipient
    
       // Content
       $mail->isHTML(true);                                  // Set email format to HTML
