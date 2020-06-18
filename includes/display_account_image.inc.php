@@ -15,8 +15,8 @@
 		mysqli_stmt_execute($stmt);
 		$result = mysqli_stmt_get_result($stmt);
 
-		if($row = mysqli_fetch_assoc($result)) //Fectching the data from result
-		{
+// 		if($row = mysqli_fetch_assoc($result)) //Fectching the data from result
+// 		{
 			while($row = mysqli_fetch_assoc($result)) //Fectching the data from result
 			{
 
@@ -36,15 +36,15 @@
 
 				echo "<td>".$row["gallery_page"]."</td>";
 				echo "<td>".$row["category"]."</td>";
-				echo '<td><a href="image-form?gallery_id='.$row["gallery_id"].'"">View</a></td>';
+				echo '<td><a href="image-form.php?gallery_id='.$row["gallery_id"].'"">View</a></td>';
 				echo "</tr>";		
 			}
-		}
-		else
-		{
-			echo "<tr>";
-			echo '<td colspan="4" style="text-align:center;">No images is being set</td>';
-			echo "</tr>";
-		}
+// 		}
+// 		else
+// 		{
+// 			echo "<tr>";
+// 			echo '<td colspan="4" style="text-align:center;">No images is being set</td>';
+// 			echo "</tr>";
+// 		}
 	}
 ?>

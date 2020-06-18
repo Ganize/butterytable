@@ -1,4 +1,4 @@
-<?php if ($_SERVER['REQUEST_URI'] == "/butterytable/index") : ?>
+<?php if ($_SERVER['REQUEST_URI'] == "/" || $SERVER['REQUEST_URI'] == "index.php") : ?>
 	<div class="socialmedia">
 		<h2 style="color: white;">Follow us</h2>
 		<hr style="width: 8%; border-color: #FFFFFF;" />
@@ -9,6 +9,7 @@
 		</div>
 	</div>
 <?php endif; ?>
+
 
 </div>
 <footer>

@@ -44,9 +44,7 @@
 
 						$_SESSION['user_first'] = $row["first_name"];
 						$_SESSION['user_last'] = $row["last_name"];
-				
-
-						//header("Location: ../index.php?login=success");
+						header("Location: ../index.php?login=success");
 						exit();
 					}
 					else

@@ -13,14 +13,14 @@
       $mail->isSMTP();                                            // Send using SMTP
       $mail->Host = 'mail.brucegan.net';                    // Set the SMTP server to send through
       $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-      $mail->Username   = 'demo@brucegan.net';                  // SMTP username
-      $mail->Password   = 'Firaga123456!';                       // SMTP password
+      $mail->Username   = 'admin@butterytablebakery.com';                  // SMTP username
+      $mail->Password   = 'buttery9597!';                       // SMTP password
       $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; PHPMailer::ENCRYPTION_SMTPS encouraged
       $mail->Port       = 465;                                    // TCP port to connect to, use 465 for PHPMailer::ENCRYPTION_SMTPS above
       // $mail->From = $email;
       //Recipients
       $mail->setFrom('butterytablebakery@gmail.com', "ButteryTable");
-      $mail->addAddress('rotiboy55@gmail.com', 'Butterytable');     // Add a recipient
+      $mail->addAddress('butterytablebakery@gmail.com', 'Butterytable');     // Add a recipient
    
       // Content
       $mail->isHTML(true);                                  // Set email format to HTML

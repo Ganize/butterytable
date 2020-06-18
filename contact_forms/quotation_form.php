@@ -147,7 +147,7 @@
 	
 		$.ajax({
 		type: "POST",
-		url:   "http://localhost/butterytable/includes/display_quotation_menu.inc.php",
+		url:   "https://butterytablebakery.com/includes/display_quotation_menu.inc.php",
 		data: { menu_category: selectedOption} ,
 		}).done(function( msg ) {
 			console.log(msg);
@@ -156,7 +156,7 @@
 
 	  	$.ajax({
 		type: "POST",
-		url:   "http://localhost/butterytable/includes/display_quotation_item.inc.php",
+		url:   "https://butterytablebakery.com/includes/display_quotation_item.inc.php",
 		data: { menu_category: selectedOption} ,
 		}).done(function( msg ) {
 			console.log(msg);

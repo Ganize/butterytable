@@ -16,13 +16,13 @@ if (empty($_SESSION["user_role"]) || empty($_SESSION["userUid"])) {
 
 ?>
 
-<<<<<<< HEAD
+
 	<div class="container" style="margin-bottom:10px;">
 		<div class="account-grid">
 			<?php include('user-nav.php'); ?>
 			<div class="user-details">
 				<div class="wishlist-container">
-						<a href="<?php echo $link;?>account/member-list">Back to list</a>
+						<a href="<?php echo $link;?>account/member-list.php">Back to list</a>
 						<div>
 							User Info
 							<hr class="account-hr">
@@ -39,29 +39,9 @@ if (empty($_SESSION["user_role"]) || empty($_SESSION["userUid"])) {
 							<hr class="account-hr">	
 						</div>
 						<?php include("../includes/display_account_wishlist.inc.php"); ?>
-=======
-<div class="container" style="margin-bottom:10px;">
-	<div class="account-grid">
-		<?php include('user-nav.php'); ?>
-		<div class="user-details">
-			<div class="wishlist-container">
-				<a href="<?php echo $link; ?>account/member-list">Back to list</a>
-				<div>
-					User Info
-					<hr class="account-hr">
-					<?php require("../includes/display_member.inc.php"); ?>
-				</div>
-				<br>
-				<div>
-					Wishlist
-					<hr class="account-hr">
-				</div>
-				<?php include("../includes/display_account_wishlist.inc.php"); ?>
-			</div>
-		</div>
-	</div>
-</div>
 
-
-
+    </div>
+    </div>
+    </div>
+    </div>
 <?php include('../templates/footer.php'); ?>

@@ -20,21 +20,21 @@ $('input[type="email"]').keyup(function(value){
 	}
 });
 
-$('.txtarea').focusout(function(e){	
-	var val = e.target.value;
-	$(this).removeClass("empty");
+// $('.txtarea').focusout(function(e){	
+// 	var val = e.target.value;
+// 	$(this).removeClass("empty");
 
-	if (val.trim() == "")
-	{
-		$(this).addClass("non-valid");
-		$(this).removeClass("valid");
-	}
-	else
-	{			
-		$(this).addClass("valid");
-		$(this).removeClass("non-valid");
-	}
-});
+// 	if (val.trim() == "")
+// 	{
+// 		$(this).addClass("non-valid");
+// 		$(this).removeClass("valid");
+// 	}
+// 	else
+// 	{			
+// 		$(this).addClass("valid");
+// 		$(this).removeClass("non-valid");
+// 	}
+// });
 
 $('input[type="text"]').focusout(function(e){	
 	var val = e.target.value;

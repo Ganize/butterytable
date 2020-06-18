@@ -23,7 +23,7 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
 			mysqli_stmt_execute($stmt1);
 			mysqli_stmt_store_result($stmt1);
 
-			if (current_url() == "contact-us") {
+			if (current_url() == "contact-us.php") {
 
 				echo '<option name="" value="" id="menuid_' . $gallery_id . '" name="' . $gallery_id . '"></span>';
 			} else {

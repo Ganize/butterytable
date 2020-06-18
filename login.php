@@ -44,7 +44,7 @@
          <p>CREATE A NEW ACCOUNT</p>
         <hr class="bline">
 
-        <form action="/includes/signup.inc.php" method="post" id="signup_form">
+        <form action="includes/signup.inc.php" method="post" id="signup_form">
             <div class="form-group">
                 <div>
                     <label for="user_email">Email :</label>

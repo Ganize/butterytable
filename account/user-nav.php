@@ -7,7 +7,7 @@
 						$nav_bar = array(
 						"MY ACCOUNT" => "account/my-account.php",
 						"MEMBERS LIST" => "account/member-list.php",
-						"UPDATES IMAGES" => "account/update-images.php");
+						"UPDATE IMAGES" => "account/update-images.php");
 
 						foreach ($nav_bar as $name => $url) {
 							echo '<li class="nav-item '.(($currentPage === $url) ? 'active" ': '"').'><a  style="display: block" class="nav-link" href="'.(($currentPage === $name) ? $link : $link.$url).'">'.$name.'</a></li>';

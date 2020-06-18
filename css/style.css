@@ -120,6 +120,10 @@ body {
 	cursor: default;
 }
 
+.postimg{
+    display:inline-flex;
+}
+
 @supports (position: fixed) {
 	.main-menu, .main-menu:target+.backdrop, .main-menu[aria-expanded="true"]+.backdrop {
 		position: fixed;
@@ -144,7 +148,8 @@ body {
 		-moz-box-shadow: none;
 		box-shadow: none;
 		height: auto;
-		width: auto;
+		width: 60%;
+		margin:auto;
 		background: none;
 	}
 	.main-menu a {
@@ -251,6 +256,12 @@ body p {
 
 .form-group input:focus {
 	outline: none;
+}
+
+.post-container {
+    display: flex; 
+    justify-content: space-evenly;
+    padding-bottom:20px;
 }
 
 .checked {
@@ -637,6 +648,7 @@ footer {
 
 .fa {
 	cursor: pointer !important;
+	font-size:25px;
 }
 
 .nav_bar .active a {
@@ -650,7 +662,7 @@ footer {
 .wishlist-icon::before
 {
    content: '';
-   display: inline-block;
+   display: none;
    width: 15px;
    height: 15px;
    -moz-border-radius: 7.5px;
@@ -742,7 +754,7 @@ footer {
 		grid-area: g-form;
 	}
 	.contact-container .form-group {
-		display: initial;
+		display: block;
 	}
 	.form-group textarea {
 		width: 230px;
@@ -762,4 +774,11 @@ footer {
 	.form-group input {
 		width:250px;
 	}
+	
+	.postimg, .post-container{
+    display:initial;
+}
+    .posts {
+    text-align:center;
+}
 }

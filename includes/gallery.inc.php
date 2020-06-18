@@ -2,7 +2,7 @@
 if (isset($_POST['submit'])) {
     require 'db_conn.inc.php';
 
-    $uploads_dir = '../images';
+    $uploads_dir = 'https://butterytablebakery.com/images';
     $gallery_name = $_POST['gallery_name'];
     $gallery_description = $_POST['gallery_description'];
     $gallery_page = "";
@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
     $gallery_path = basename($_FILES["filePhoto"]["name"]);
     $gallery_id = $_GET["gallery_id"];
 
-    if (empty($gallery_name) ||  empty($gallery_description) ||  empty($gallery_page) || empty($gallery_category)) {
+    if (empty($gallery_name) ||  empty($gallery_page) || empty($gallery_category)) {
         header("Location: ../account/image-form.php?gallery_id=".$gallery_id."&error=emptyfield");
         exit();
     } 
@@ -85,8 +85,8 @@ if (isset($_POST['submit'])) {
 
             }
             mysqli_stmt_execute($stmt);
-            header("Location: ../account/update-images.php?addedgallery=success");
             move_uploaded_file($tmp_name, "$uploads_dir/$gallery_path");
+            header("Location: ../account/update-images.php?addedgallery=success");
         }
     }
     mysqli_stmt_close($stmt);

@@ -44,7 +44,7 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
 				$email_sub = substr($row["user_email"], 0, $len) . '...';
 				echo "<td>" . $email_sub . "</td>";
 			}
-			echo '<td><a href="account-details?user_id=' . $row["user_id"] . '"">View</a></td>';
+			echo '<td><a href="account-details.php?user_id=' . $row["user_id"] . '"">View</a></td>';
 			echo "</tr>";
 		}
 	}

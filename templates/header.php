@@ -2,7 +2,7 @@
 <?php
 $title = 'Home';
 $currentPage = 'index';
-$link = "http://localhost/butterytable/";
+$link = "https://butterytablebakery.com/";
 $DIR = realpath(dirname(__FILE__) . '/..');
 ?>
 
@@ -101,7 +101,7 @@ if ($_SESSION['LAST_ACTIVITY'] + 30 * 60 < time()) {
 				<div class="vl"></div>
 
 				<div class="nav-header-div wishlist-icon" style="margin-left: 10px;">
-					<a href="/butterytable/account/my-wishlist"><img src="<?php echo $link; ?>/images/icon/wishlist.png" width="25px" height="25px"></a>
+					<a href="account/my-wishlist.php"><img src="<?php echo $link; ?>/images/icon/wishlist.png" width="25px" height="25px"></a>
 				</div>
 			<?php endif; ?>
 		</div>
@@ -175,7 +175,7 @@ if ($_SESSION['LAST_ACTIVITY'] + 30 * 60 < time()) {
 
 							<div>
 								<div class="dropdown">
-									<a href="<?php echo $link; ?>account/my-account">
+									<a href="<?php echo $link; ?>account/my-account.php">
 										<img width="25px" height="25px" class="dropbtn" src="<?php echo $link; ?>images/icon/login_header.png" />
 									</a>
 									<!-- 	<button class="dropbtn"><?php echo $_SESSION['userEmail'] ?></button> -->

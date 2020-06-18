@@ -37,6 +37,7 @@ h3 {
   font-family: myGeorgia;
   color: #A2A2A2;
   text-transform: capitalize;
+  font-size:22px;
 }
 
 @media only screen and (max-width: 1024px) {

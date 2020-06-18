@@ -63,7 +63,7 @@
 					if($row1 = mysqli_fetch_assoc($result1))
 					{ //Fectching the data from result
 	
-						if(current_url() == "account-details" || current_url() == "my-wishlist")
+						if(current_url() == "account-details.php" || current_url() == "my-wishlist.php")
 						{
 							if($count == 0)
 							{

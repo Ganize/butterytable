@@ -73,7 +73,7 @@ function retrieve_flavour(e)
 function order(e)
 {
 	var value = e.name;
-	window.location.href = "../contact-us?gId=" + value.replace("flavour_","");		
+	window.location.href = "../contact-us.php?gId=" + value.replace("flavour_","");		
 }
 
 function display_menu_form(e)

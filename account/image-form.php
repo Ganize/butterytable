@@ -8,7 +8,7 @@
 		<?php include('user-nav.php'); ?>
 		<div class="user-details">
 			<div class="wishlist-container">
-				<a href="<?php echo $link; ?>account/update-images">Back to list </a>
+				<a href="<?php echo $link; ?>account/update-images.php">Back to list </a>
 				<br>
 				<?php if (isset($_GET["gallery_id"])) : ?>
 					<div style="text-align: right;">
@@ -54,7 +54,7 @@
 							<label for="gallery_description">Description :</label>
 						</div>
 						<div>
-							<textarea class="validation_text" name="gallery_description" style="width: 300px; resize: none; height: 150px;"><?php echo $gallery_description; ?></textarea>
+							<textarea name="gallery_description" style="width: 300px; resize: none; height: 150px;"><?php echo $gallery_description; ?></textarea>
 						</div>
 					</div>
 					<div class="form-group account-group">
@@ -71,7 +71,7 @@
 							<label for="instalink">Link :</label>
 						</div>
 						<div>
-							<input class="validation_text" style="width:300px;" type="text" name="instalink" id="instalink" value="<?php echo $insta_link; ?>" />
+							<input style="width:300px;" type="text" name="instalink" id="instalink" value="<?php echo $insta_link; ?>" />
 						</div>
 					</div>
 

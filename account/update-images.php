@@ -40,7 +40,7 @@ if (empty($_SESSION["user_role"]) || empty($_SESSION["userUid"])) {
 						<?php require("../includes/display_account_image.inc.php"); ?>
 					</table>
 					<div class="image_btn_container" style="margin-top: 20px; display: flex; justify-content: center;">
-						<a href="image-form" class="button">Add</a>
+						<a href="image-form.php" class="button">Add</a>
 						<a href="#" class="button">Delete</a>
 					</div>
 				</div>

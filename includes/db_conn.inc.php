@@ -1,5 +1,9 @@
 <?php
 
+	// $servername = "localhost";
+	// $dbUser = "butteryt_butterfly";
+	// $dbPass = "buttery9597!";
+	// $dbName = "butteryt_butterfly";
 	$servername = "localhost";
 	$dbUser = "root";
 	$dbPass = "";

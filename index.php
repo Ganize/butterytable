@@ -113,14 +113,14 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
     ?>
     <h2>Latest Arrivals</h2>
     <hr style="width: 8%; border-color: #C18281;" />
-    <div style="display: flex; justify-content: space-evenly;">
+    <div class="post-container">
     <?php
     foreach ($result1 as $row1) {
         if (!empty($row1['gallery_name'])) {
-            echo '<div style="display:inline-flex">';
+            echo '<div class="postimg">';
         
             echo '<img style="width:300px; height:300px" src="images/' . $row1['gallery_path'] . '">';
-            echo '<h2 style="align-self:center; margin-left:20px; text-decoration: underline;  text-decoration-color: #C18281;">' . $row1['gallery_name'] . '</h2>';
+            echo '<div class="postwords"><h3>' . $row1['gallery_name'] . '</h3></div>';
             echo '</div>';
         }
     } ?>

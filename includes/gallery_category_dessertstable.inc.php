@@ -24,7 +24,7 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
                 mysqli_stmt_execute($stmt1);
                 $result1 = mysqli_stmt_get_result($stmt1);
                 if (mysqli_num_rows($result1) == 0) {
-                    echo "<p style='text-align:center;'>No item in the gallery</p>";
+                    echo "<p style='text-align:center; font-size:30px;'>Stay tuned for more!</p>";
                 } else {
                     while ($row1 = mysqli_fetch_assoc($result1)) {
                         if ($count == 0) {

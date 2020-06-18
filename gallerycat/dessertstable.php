@@ -11,7 +11,6 @@
     <a href="https://sg.carousell.com/butterytablebakery/"><img src="<?php echo $link;?>images/icon/carousell.png" width="50px" height="50px"></a>
 </div>
 
-<p style="text-align:center">Stay Tuned for more!</p>
 
 <?php require '../includes/gallery_category_dessertstable.inc.php'?>
 

@@ -24,7 +24,7 @@
 		else
 		{
 
-			echo '<label for="quotation-category">Cake Flavour</label>';
+			echo '<label for="quotation-category">Flavour</label>';
 			echo '<select name="quotation-flavour" id="quotation-test" style="width:fit-content";>';
 			echo '<option disabled selected value="-1"> -- Select an option -- </option>';
 			while($row = mysqli_fetch_assoc($result)) //Fectching the data from result
